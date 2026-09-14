@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 450" width="820" height="450" style="background: #ffffff; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;">
+  <!-- Card Background with subtle border -->
+  <rect x="2" y="2" width="816" height="446" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  
+  <!-- Header Title -->
+  <rect x="2" y="2" width="816" height="48" rx="14" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">데이터 크기(N) 증가에 따른 시간 복잡도(Big-O) 실행 시간 비교</text>
+  <line x1="2" y1="50" x2="818" y2="50" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="110" x2="740" y2="110" stroke="#f1f5f9" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="80" y1="170" x2="740" y2="170" stroke="#f1f5f9" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="80" y1="230" x2="740" y2="230" stroke="#f1f5f9" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="80" y1="290" x2="740" y2="290" stroke="#f1f5f9" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="80" y1="350" x2="740" y2="350" stroke="#f1f5f9" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Axes Definition -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+  </defs>
+
+  <!-- Y Axis -->
+  <line x1="80" y1="380" x2="80" y2="65" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="85" y="78" font-size="13" font-weight="bold" fill="#334155">연산 횟수 / 실행 시간 (Time) ▲</text>
+
+  <!-- X Axis -->
+  <line x1="80" y1="380" x2="760" y2="380" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="755" y="402" font-size="13" font-weight="bold" fill="#334155" text-anchor="end">입력 데이터 크기 (N) ►</text>
+  <text x="72" y="395" font-size="12" font-weight="bold" fill="#94a3b8" text-anchor="end">0</text>
+
+  <!-- Curves -->
+  <!-- 1. O(N^2) Red Quadratic Curve -->
+  <path d="M 80,380 Q 160,360 205,90" fill="none" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="205" cy="90" r="6" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+  <text x="218" y="96" font-size="14" font-weight="bold" fill="#dc2626">O(N²) [제곱 시간 - 가파른 수직 상승 / 위험]</text>
+
+  <!-- 2. O(N) Orange Linear Line -->
+  <line x1="80" y1="380" x2="430" y2="110" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="430" cy="110" r="6" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <text x="442" y="116" font-size="14" font-weight="bold" fill="#d97706">O(N) [선형 시간 - 45° 정직한 비례 증가]</text>
+
+  <!-- 3. O(log N) Blue Logarithmic Curve -->
+  <path d="M 80,380 C 140,305 280,285 710,270" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="710" cy="270" r="6" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+  <text x="430" y="258" font-size="14" font-weight="bold" fill="#2563eb">O(log N) [로그 시간 - N이 커져도 매우 완만/고효율]</text>
+
+  <!-- 4. O(1) Green Constant Horizontal Line -->
+  <line x1="80" y1="355" x2="710" y2="355" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="710" cy="355" r="6" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+  <text x="450" y="345" font-size="14" font-weight="bold" fill="#059669">O(1) [상수 시간 - 항상 일정 / 빛의 속도]</text>
+
+  <!-- Bottom Legend Bar -->
+  <rect x="25" y="415" width="770" height="28" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="410" y="434" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">
+    실행 속도 비교: 
+    <tspan fill="#059669"> O(1) </tspan> &lt; 
+    <tspan fill="#2563eb"> O(log N) </tspan> &lt; 
+    <tspan fill="#d97706"> O(N) </tspan> &lt; 
+    <tspan fill="#dc2626"> O(N²) </tspan>
+    <tspan font-weight="normal" fill="#64748b"> (오른쪽으로 갈수록 연산량이 폭발하여 느려짐)</tspan>
+  </text>
+</svg>
