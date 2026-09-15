@@ -282,9 +282,19 @@ function buildTarget(name, files, title, options = {}) {
         combinedMarkdown += content + '\n\n<div class="page-break"></div>\n\n';
     });
 
-    const mdPath = `${name}.md`;
-    const htmlPath = `${name}.html`;
-    const pdfPath = `${name}.pdf`;
+    const outDir = path.join('01_일반전형', '05_소질적성검사_완성본');
+    const mdDir = path.join(outDir, 'md');
+    const htmlDir = path.join(outDir, 'html');
+    const pdfDir = path.join(outDir, 'pdf');
+
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
+    if (!fs.existsSync(mdDir)) fs.mkdirSync(mdDir);
+    if (!fs.existsSync(htmlDir)) fs.mkdirSync(htmlDir);
+    if (!fs.existsSync(pdfDir)) fs.mkdirSync(pdfDir);
+
+    const mdPath = path.join(mdDir, `${name}.md`);
+    const htmlPath = path.join(htmlDir, `${name}.html`);
+    const pdfPath = path.join(pdfDir, `${name}.pdf`);
 
     fs.writeFileSync(mdPath, combinedMarkdown, 'utf8');
     console.log(`  -> 마크다운 저장: ${mdPath}`);
@@ -297,7 +307,7 @@ function buildTarget(name, files, title, options = {}) {
 }
 
 // [타겟 1] 이론 통합본 (01_가이드및용어집, 02_기본개념, 03_심화과정)
-const theoryFolders = ['01_가이드및용어집', '02_기본개념', '03_심화과정'];
+const theoryFolders = ['01_가이드및용어집', '02_기본개념', '03_심화과정'].map(f => path.join('01_일반전형', f));
 let theoryFiles = [];
 theoryFolders.forEach(folder => {
     theoryFiles = theoryFiles.concat(getMarkdownFiles(folder));
@@ -305,7 +315,7 @@ theoryFolders.forEach(folder => {
 buildTarget('디미고_소질적성검사_이론통합본', theoryFiles, '한국디지털미디어고등학교 소질·적성검사 이론 통합본', { fontDelta: 4 });
 
 // [타겟 2] 실전 모의고사 문제지 (04_실전모의고사 내 00_안내 및 01_문제지들: 1회~6회)
-const mockDir = '04_실전모의고사';
+const mockDir = path.join('01_일반전형', '04_실전모의고사');
 let questionFiles = getMarkdownFiles(mockDir, /00_모의고사_안내\.md|01_문제지\.md/);
 buildTarget('디미고_실전모의고사_문제지', questionFiles, '디미고 소질·적성검사 실전 모의고사 (문제지)');
 
