@@ -25,6 +25,7 @@ function getMarkdownFiles(dir, filterRegex = null) {
         if (entry.isDirectory()) {
             results = results.concat(getMarkdownFiles(fullPath, filterRegex));
         } else if (entry.isFile() && entry.name.endsWith('.md')) {
+            if (entry.name.toLowerCase() === 'readme.md') continue; // README 안내 문서는 교재 빌드 대상에서 제외
             if (filterRegex && !filterRegex.test(entry.name)) continue;
             results.push(fullPath);
         }
