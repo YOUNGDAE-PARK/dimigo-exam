@@ -59,7 +59,7 @@ function renderMathInMarkdown(text) {
 }
 
 // 3. 인쇄 최적화 A4 HTML 생성기
-function generateHtml(title, markdownBody) {
+function generateHtml(title, markdownBody, is2Up = false) {
     const renderer = new marked.Renderer();
     const originalCode = renderer.code.bind(renderer);
     renderer.code = (code, language) => {
@@ -81,6 +81,15 @@ function generateHtml(title, markdownBody) {
         katexCss = rawCss.replace(/url\(fonts\//g, `url('file:///${fontsDir}/`);
     }
 
+    const pageMargin = is2Up ? '10mm 10mm 10mm 10mm' : '18mm 15mm 18mm 15mm';
+    const bodyFontSize = is2Up ? '20px' : '14.5px';
+    const h1FontSize = is2Up ? '29px' : '23px';
+    const h2FontSize = is2Up ? '24px' : '18px';
+    const h3FontSize = is2Up ? '20px' : '15px';
+    const codeFontSize = is2Up ? '17.5px' : '13px';
+    const tableFontSize = is2Up ? '16.5px' : '13px';
+    const blockquoteFontSize = is2Up ? '19px' : '14px';
+
     return `<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -91,55 +100,55 @@ ${katexCss}
 
   @page {
     size: A4;
-    margin: 18mm 15mm 18mm 15mm;
+    margin: ${pageMargin};
   }
   body {
     font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
-    line-height: 1.65;
-    color: #222;
+    line-height: 1.68;
+    color: #1a202c;
     background-color: #fff;
     margin: 0;
     padding: 0;
-    font-size: 14.5px;
+    font-size: ${bodyFontSize};
   }
   h1 {
-    font-size: 23px;
+    font-size: ${h1FontSize};
     color: #1a365d;
-    border-bottom: 2px solid #2b6cb0;
-    padding-bottom: 6px;
-    margin-top: 26px;
+    border-bottom: 2.5px solid #2b6cb0;
+    padding-bottom: 7px;
+    margin-top: 28px;
     page-break-after: avoid;
   }
   h2 {
-    font-size: 18px;
+    font-size: ${h2FontSize};
     color: #2c5282;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1.5px solid #e2e8f0;
     padding-bottom: 5px;
-    margin-top: 22px;
+    margin-top: 24px;
     page-break-after: avoid;
   }
   h3 {
-    font-size: 15px;
+    font-size: ${h3FontSize};
     color: #2b6cb0;
-    margin-top: 18px;
+    margin-top: 20px;
     page-break-after: avoid;
   }
-  p { margin: 8px 0; }
+  p { margin: 9px 0; }
   code {
     background-color: #f1f5f9;
     color: #c53030;
-    padding: 2px 5px;
+    padding: 2px 6px;
     border-radius: 4px;
     font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 13px;
+    font-size: ${codeFontSize};
   }
   pre {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
-    padding: 12px;
+    padding: 14px;
     overflow-x: auto;
-    font-size: 13px;
+    font-size: ${codeFontSize};
     line-height: 1.5;
   }
   pre code {
@@ -149,21 +158,23 @@ ${katexCss}
   }
   blockquote {
     border-left: 4px solid #3182ce;
-    margin: 12px 0;
-    padding: 10px 14px;
+    margin: 14px 0;
+    padding: 10px 16px;
     background: #ebf8ff;
     border-radius: 0 6px 6px 0;
     color: #2b6cb0;
+    font-size: ${blockquoteFontSize};
+    line-height: 1.6;
   }
   table {
     border-collapse: collapse;
     width: 100%;
     margin: 15px 0;
-    font-size: 13px;
+    font-size: ${tableFontSize};
   }
   th, td {
     border: 1px solid #cbd5e1;
-    padding: 8px 10px;
+    padding: 8px 11px;
     text-align: left;
   }
   th {
@@ -185,7 +196,7 @@ ${katexCss}
     padding: 0;
   }
   .katex {
-    font-size: 1.05em;
+    font-size: 1.1em;
   }
   .katex-display {
     margin: 12px 0;
@@ -229,9 +240,12 @@ function convertHtmlToPdf(htmlPath, pdfPath) {
 }
 
 // 5. 단일 타겟 빌드 함수 (HTML 생성 -> PDF 생성)
-function buildBook(bookNumber, name, title, files) {
+function buildBook(bookNumber, name, title, files, is2Up = false) {
+    const finalName = is2Up ? `${name}_모아찍기용` : name;
+    const finalTitle = is2Up ? `${title} (모아찍기용 - 큰 글씨)` : title;
+
     console.log(`\n==================================================`);
-    console.log(`[제${bookNumber}권] ${title}`);
+    console.log(`[제${bookNumber.replace('권', '')}권${is2Up ? ' - 모아찍기용' : ''}] ${finalTitle}`);
     console.log(`==================================================`);
 
     let combinedMarkdown = '';
@@ -254,12 +268,12 @@ function buildBook(bookNumber, name, title, files) {
         if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
     });
 
-    const htmlPath = path.join(htmlDir, `${name}.html`);
-    const pdfPath = path.join(pdfDir, `${name}.pdf`);
+    const htmlPath = path.join(htmlDir, `${finalName}.html`);
+    const pdfPath = path.join(pdfDir, `${finalName}.pdf`);
 
     // 1단계: HTML 생성
     console.log(`  -> [1단계] HTML 변환 및 저장 중...`);
-    const htmlContent = generateHtml(title, combinedMarkdown);
+    const htmlContent = generateHtml(finalTitle, combinedMarkdown, is2Up);
     fs.writeFileSync(htmlPath, htmlContent, 'utf8');
     console.log(`  -> [완료] HTML 저장: ${path.basename(htmlPath)}`);
 
@@ -267,49 +281,75 @@ function buildBook(bookNumber, name, title, files) {
     convertHtmlToPdf(htmlPath, pdfPath);
 }
 
-// ==============================================================================
-// [제1권] 입시전형요강 종합 안내 (일반전형 소질적성/면접 + 특별전형 심층면접)
-// ==============================================================================
-const book1Files = [
-    path.join(__dirname, '00_입시요강', '일반전형', '01_소질적성검사_안내.md'),
-    path.join(__dirname, '00_입시요강', '일반전형', '02_일반면접_안내.md'),
-    path.join(__dirname, '00_입시요강', '특별전형', '01_심층면접_안내.md')
+// 도서 목록 정의
+const books = [
+    {
+        num: '1권',
+        name: '01_디미고_입시전형요강_종합안내',
+        title: '디미고 입시 전형 요강 종합 안내서 (일반전형 소질적성·면접 및 특별전형 심층면접)',
+        files: [
+            path.join(__dirname, '00_입시요강', '일반전형', '01_소질적성검사_안내.md'),
+            path.join(__dirname, '00_입시요강', '일반전형', '02_일반면접_안내.md'),
+            path.join(__dirname, '00_입시요강', '특별전형', '01_심층면접_안내.md')
+        ]
+    },
+    {
+        num: '2권',
+        name: '02_디미고_IT필수_용어사전_및_영어독해',
+        title: '디미고 소질·적성검사 IT 필수 용어사전 및 영어 융합 독해집',
+        files: [
+            path.join(__dirname, '01_일반전형', '01_가이드및용어집', '01_IT_및_소질적성_통합_용어사전.md')
+        ]
+    },
+    {
+        num: '3권',
+        name: '03_디미고_소질적성검사_기본개념_완성본',
+        title: '디미고 소질·적성검사 3대 영역 기본개념 완성본',
+        files: [
+            path.join(__dirname, '01_일반전형', '02_기본개념', '01_논리적추론.md'),
+            path.join(__dirname, '01_일반전형', '02_기본개념', '02_이산수학.md'),
+            path.join(__dirname, '01_일반전형', '02_기본개념', '03_컴퓨팅사고력.md')
+        ]
+    },
+    {
+        num: '4권',
+        name: '04_디미고_소질적성검사_심화특강_완성본',
+        title: '디미고 소질·적성검사 100점 만점 심화특강 완성본',
+        files: [
+            path.join(__dirname, '01_일반전형', '03_심화과정', '01_비버챌린지_집중공략.md'),
+            path.join(__dirname, '01_일반전형', '03_심화과정', '02_정렬알고리즘_특강.md'),
+            path.join(__dirname, '01_일반전형', '03_심화과정', '03_필수_알고리즘_및_회로특강.md')
+        ]
+    }
 ];
-buildBook('1권', '01_디미고_입시전형요강_종합안내', '디미고 입시 전형 요강 종합 안내서 (일반전형 소질적성·면접 및 특별전형 심층면접)', book1Files);
 
-// ==============================================================================
-// [제2권] IT 필수 용어사전 및 영어 융합 독해집
-// ==============================================================================
-const book2Files = [
-    path.join(__dirname, '01_일반전형', '01_가이드및용어집', '01_IT_및_소질적성_통합_용어사전.md')
-];
-buildBook('2권', '02_디미고_IT필수_용어사전_및_영어독해', '디미고 소질·적성검사 IT 필수 용어사전 및 영어 융합 독해집', book2Files);
+// CLI 옵션 분석
+const rawArgs = process.argv.slice(2);
+const is2Up = rawArgs.includes('--2up');
+let targetBookNums = null;
 
-// ==============================================================================
-// [제3권] 일반전형 소질적성검사 기본개념 완성본
-// ==============================================================================
-const book3Files = [
-    path.join(__dirname, '01_일반전형', '02_기본개념', '01_논리적추론.md'),
-    path.join(__dirname, '01_일반전형', '02_기본개념', '02_이산수학.md'),
-    path.join(__dirname, '01_일반전형', '02_기본개념', '03_컴퓨팅사고력.md')
-];
-buildBook('3권', '03_디미고_소질적성검사_기본개념_완성본', '디미고 소질·적성검사 3대 영역 기본개념 완성본', book3Files);
+const bookArgIndex = rawArgs.indexOf('--book');
+if (bookArgIndex !== -1 && rawArgs[bookArgIndex + 1]) {
+    targetBookNums = [rawArgs[bookArgIndex + 1]];
+} else {
+    const bookArgEquals = rawArgs.find(a => a.startsWith('--book='));
+    if (bookArgEquals) targetBookNums = [bookArgEquals.split('=')[1]];
+}
 
-// ==============================================================================
-// [제4권] 일반전형 소질적성검사 100점 만점 심화특강 완성본
-// ==============================================================================
-const book4Files = [
-    path.join(__dirname, '01_일반전형', '03_심화과정', '01_비버챌린지_집중공략.md'),
-    path.join(__dirname, '01_일반전형', '03_심화과정', '02_정렬알고리즘_특강.md'),
-    path.join(__dirname, '01_일반전형', '03_심화과정', '03_필수_알고리즘_및_회로특강.md')
-];
-buildBook('4권', '04_디미고_소질적성검사_심화특강_완성본', '디미고 소질·적성검사 100점 만점 심화특강 완성본', book4Files);
+const targets = targetBookNums
+    ? books.filter(b => targetBookNums.some(n => b.num.includes(n) || b.name.includes(n)))
+    : books;
+
+targets.forEach(b => {
+    buildBook(b.num, b.name, b.title, b.files, is2Up);
+});
 
 console.log('\n==================================================');
-console.log('🎉 4대 A4 인쇄용 통합 HTML 및 PDF 생성이 모두 완료되었습니다!');
+console.log(`🎉 작업이 완료되었습니다! (모드: ${is2Up ? '2쪽 모아찍기용 큰 글씨' : '1쪽 표준'})`);
 console.log('저장 위치: 00_A4인쇄용_통합교재_4종/');
-console.log('  1. 01_디미고_입시전형요강_종합안내.pdf');
-console.log('  2. 02_디미고_IT필수_용어사전_및_영어독해.pdf');
-console.log('  3. 03_디미고_소질적성검사_기본개념_완성본.pdf');
-console.log('  4. 04_디미고_소질적성검사_심화특강_완성본.pdf');
+targets.forEach(b => {
+    const fn = is2Up ? `${b.name}_모아찍기용.pdf` : `${b.name}.pdf`;
+    console.log(`  - ${fn}`);
+});
 console.log('==================================================\n');
+
