@@ -1,0 +1,222 @@
+<!DOCTYPE html><html><head>
+      <title>실적설명서</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\younh\.antigravity-ide\extensions\nanyeglm.markdown-preview-enhanced-plus-0.8.20-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\younh\.antigravity-ide\extensions\nanyeglm.markdown-preview-enhanced-plus-0.8.20-universal\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="디미고-e-비즈니스과-특별전형-실적설명서-공부를-게임처럼-실시간-양방향-에듀테크-플랫폼-배틀스터디">[디미고 e-비즈니스과 특별전형 실적설명서] 공부를 게임처럼, 실시간 양방향 에듀테크 플랫폼 '배틀스터디' </h1>
+<p><strong>지원자:</strong> 청계중학교 3학년 박윤하<br>
+<strong>지원 학과:</strong> 한국디지털미디어고등학교 e-비즈니스과</p>
+<hr>
+<h2 id="1-프로젝트-개요">1. 프로젝트 개요 </h2>
+<ul>
+<li><strong>서비스명</strong>: 배틀스터디 (Battle Study)</li>
+<li><strong>서비스 정의</strong>: 학생의 승부욕(게임의 재미 요소)과 교사의 업무 자동화를 연결한 양방향 에듀테크 웹 플랫폼</li>
+<li><strong>핵심 슬로건</strong>: "공부를 게임처럼"</li>
+<li><strong>현재 개발 단계</strong>: 핵심 아이디어를 직접 테스트해 보기 위한 첫 시제품 완성 및 GitHub Pages 실제 배포 완료</li>
+</ul>
+<h2 id="2-문제-정의-및-기획-배경">2. 문제 정의 및 기획 배경 </h2>
+<p>학교와 학원을 오가며 문득 이런 생각이 들었습니다. "친구들과 롤(LoL) 랭크 게임을 할 때는 밤을 새우면서, 왜 시험공부와 문제 풀이는 30분 만에 지루해질까?" 그 차이는 바로 **'즉각적인 피드백'**과 **'또래 집단과의 경쟁(보상)'**에 있었습니다. 혼자 푸는 문제집은 너무 외롭고 지루했습니다.<br>
+반면 선생님들의 상황은 어떨지 고민해 보았습니다. 학기마다 수백 명의 학생들을 대상으로 수행평가 문제를 출제하고, 일일이 서술형을 채점하며, <strong>학부모님의 채점 기준 이의신청 민원을 방어</strong>해야 하는 엄청난 업무 스트레스를 겪고 계셨습니다.<br>
+수업 시간에 가끔 하는 단발성 퀴즈쇼(카훗 등)는 재미있지만 수업이 끝나면 끝이고, 단방향 문제풀이 앱은 지속적인 동기부여가 부족했습니다. 저는 이 둘 사이의 틈새를 찾아, 학생은 방과 후에도 자발적으로 접속해 <strong>1:1 라이벌 퀴즈 배틀</strong>을 즐기고, 선생님은 <strong>교사의 법적 평가권을 보장받으며 공정하고 편리하게 수행평가를 관리</strong>할 수 있는 도구가 있다면 어떨까 하는 생각에 '배틀스터디'를 기획하게 되었습니다.</p>
+<h2 id="3-예상-사용자-분석">3. 예상 사용자 분석 </h2>
+<p>서비스를 명확히 하기 위해 두 가지 핵심 사용자를 설정했습니다.</p>
+<ul>
+<li><strong>학생 타깃 (본인)</strong>: 게임 티어 경쟁에는 열정적이지만 혼자 하는 공부에는 금방 지치는 학생. 학교나 또래 사이에서 <strong>자신의 실력을 증명하고 랭킹을 높이며 인정받고 싶은 욕구</strong>가 강함.</li>
+<li><strong>선생님 타깃 (수학선생님)</strong>: 학생들에게 다양한 서술형/과정형 평가를 제공하고 싶지만, <strong>과도한 채점 업무와 민원 방어에 치여 결국 객관식 위주의 시험에 의존</strong>하게 되는 공교육 현직 선생님들.</li>
+</ul>
+<h2 id="4-경쟁사-분석-및-차별화-전략">4. 경쟁사 분석 및 차별화 전략 </h2>
+<p>현재 온라인 교육 시장을 주도하는 메가스터디나 EBS 같은 플랫폼은 훌륭한 강사진을 보유하고 있지만, 결국 <strong>'단방향 동영상 강의'</strong> 중심이기에 학생 개인의 엄청난 의지력이 필요합니다. 또한 콴다(Qanda)와 같은 문제 풀이 앱은 모르는 문제를 검색할 때만 잠깐 쓰고 끄게 됩니다. 기존 학교에서 쓰이는 카훗(Kahoot) 역시 교사가 수업 시간에 방을 열어주어야만 수동적으로 참여할 수 있었습니다.<br>
+배틀스터디는 이들이 가진 '자발적 지속성'의 한계를 다음과 같이 돌파했습니다.</p>
+<ol>
+<li><strong>모를 때만 찾는 게 아니라, 이기려고 매일 접속하는 앱</strong>: 방과 후에도 친구나 다른 학교 학생과 1:1로 맞붙고, 우리 학교의 랭킹을 올리기 위해 학생들이 게임을 켜듯 스스로 접속하게 만듭니다. <strong>의지력이 없어도 승부욕을 자극해 매일 접속하게 만드는 장치</strong>를 기획했습니다.</li>
+<li><strong>공교육 실용성</strong>: 단순한 넌센스나 상식 퀴즈가 아닌, 실제 <strong>2022 개정 교육과정 성취기준과 연계된 문항</strong>을 제공합니다. 더 나아가, 선생님들이 주도적으로 AI의 1차 채점을 검토하고 최종 점수를 확정할 수 있는 <strong>2단계 채점 시스템</strong>을 통해 실제 학교 수행평가에 즉시 도입할 수 있는 실용성을 갖추었습니다.</li>
+</ol>
+<h2 id="5-핵심-서비스-로직-및-uiux-기획-게임-요소--재방문-유도-설계">5. 핵심 서비스 로직 및 UI/UX 기획 (게임 요소 &amp; 재방문 유도 설계) </h2>
+<div class="mermaid">graph TD
+    A[랜딩 페이지&lt;br&gt;닉네임/학교 1초 진입] --&gt; B(메인 로비)
+    B --&gt; C[배틀 아레나 탭]
+    B --&gt; D[전적 분석 탭]
+    B --&gt; E[오답 복습 던전 탭]
+    C --&gt; F((1:1 개인전))
+    C --&gt; G((학교/학급 대항전))
+    C --&gt; H((수행평가 모드))
+    F &amp; G &amp; H --&gt; I[결과 페이지&lt;br&gt;승패 연출 및 AI 해설]
+    I --&gt; B
+</div><p>단순한 퀴즈 앱이 되지 않기 위해 게임의 재미 요소를 서비스 로직 깊숙이 설계했습니다.</p>
+<ul>
+<li><strong>실시간 타임어택 배틀 (1:1 및 단체 대항전)</strong>: 개인전(HP, Health Point 100)뿐만 아니라 학급 및 학교 간 단체전 모드도 지원합니다. 대항전에서는 팀 전체가 하나의 HP 바를 줄다리기처럼 공유하여 협동심을 자극합니다. 공통적으로 제한 시간의 30% 이내에 정답을 맞히면 '크리티컬 데미지'가 들어가고, 상대가 먼저 풀면 시간이 10초로 단축되는 심리 압박 시뮬레이터를 구현했습니다.</li>
+<li><strong>강력한 복습 강제 루프 (오답 복습 던전)</strong>: 배틀을 하려면 '번개 에너지'라는 입장권이 필요합니다. 이 에너지를 다 쓰면, 내가 전에 틀렸던 문제들이 몬스터로 등장하는 '오답 복습 던전'을 클리어해야만 에너지가 다시 충전됩니다. 특히 던전을 클리어할 때 단순히 정답만 확인하는 것이 아니라, <strong>마치 대치동 1타 과외 선생님이 내 약점을 짚어주듯 AI 1:1 튜터가 내 눈높이에 맞춘 상세한 해설을 제공합니다.</strong> 이를 통해 지루한 오답 노트가 '다음 배틀 승리를 위한 전략 회의'로 변하는 완벽한 복습 인센티브 구조입니다.</li>
+</ul>
+<div class="mermaid">graph LR
+    A[배틀 입장&lt;br&gt;에너지 1 소모] --&gt; B{배틀 진행 및&lt;br&gt;오답 발생}
+    B --&gt; C[에너지 방전&lt;br&gt;배틀 불가]
+    C --&gt; D[오답 복습 던전&lt;br&gt;몬스터 토벌]
+    D --&gt; E[개념 복습 완료 및&lt;br&gt;에너지 재충전]
+    E --&gt; A
+</div><ul>
+<li><strong>소속감 기반 입소문 유도 장치 및 점수/승급 체계</strong>: 개인의 승점이 '청계중학교' 전체 LP(League Point)로 합산되어 전국 학교 랭킹에 반영됩니다. 우리 학교 순위를 방어하기 위해 친구들을 자연스럽게 초대하게 되는 시스템을 기획했습니다. 또한 LP 100점을 돌파하면 화려한 애니메이션과 함께 다음 티어(아이언→브론즈 등)로 승급하여 학생들의 성취감을 극대화합니다.</li>
+</ul>
+<div class="mermaid">flowchart TD
+    Start[배틀 승리 시 LP 획득&lt;br&gt;패배 시 LP 차감] --&gt; Check{LP 100 도달?}
+    Check -- Yes --&gt; Promo[전체 화면 승격 연출&lt;br&gt;TIER PROMOTED!]
+    Check -- No --&gt; Accumulate[학교 전체 LP에 개인 승점 합산]
+    Promo --&gt; NextTier[다음 티어로 승급&lt;br&gt;아이언 → 브론즈 → 실버...]
+    Accumulate --&gt; Rank[전국 학교 랭킹 실시간 반영]
+    NextTier --&gt; Rank
+</div><h2 id="6-시제품mvp-구현-범위">6. 시제품(MVP) 구현 범위 </h2>
+<p>처음부터 모든 기능을 다 만들 수는 없었기에, 가장 먼저 달성하고 싶은 두 가지 핵심 목표를 세우고 시제품을 기획했습니다.</p>
+<ul>
+<li><strong>[목표 1. 학생 측면]</strong>: 실시간 게임 경쟁 요소를 도입하여 <strong>학생들의 자발적인 문제 풀이 시간 극대화</strong></li>
+<li><strong>[목표 2. 선생님 측면]</strong>: AI 문제 자동 생성과 1차 자동 채점을 함께 도입하여, <strong>교사의 수행평가 출제 및 채점 행정 업무 부담을 획기적으로 경감</strong></li>
+</ul>
+<p>이 두 가지 목표를 달성하기 위해 다음 5가지 핵심 기능만으로 시제품을 압축했습니다.</p>
+<ol>
+<li>1:1 실시간 퀴즈 배틀 아레나</li>
+<li>학급/학교 대항전 (단체 줄다리기 체력 공유 모드)</li>
+<li>오답 복습 던전 모듈</li>
+<li>교사용 수행평가 통합 대시보드</li>
+</ol>
+<div class="mermaid">flowchart LR
+    Step1[선생님: 평가 단원 및 난이도 설정] --&gt; Step2[AI: 성취기준에 맞춘 문제 자동 생성]
+    Step2 --&gt; Step3[선생님: 문제 확정 및 일회성 시험 PIN 발급]
+    Step3 --&gt; Step4[학생: PIN 입력 후 부정행위 방지 모드로 시험 응시]
+    Step4 --&gt; Step5[AI: 학생이 제출한 답안을 즉시 1차 자동 채점]
+    Step5 --&gt; Step6[선생님: 대시보드에서 AI 채점 확인 후 최종 점수 확정]
+</div><ol start="5">
+<li>학업 6대 핵심 역량 지표 분석 (게임 전적 검색 스타일의 리포트)</li>
+</ol>
+<h2 id="7-기획은-내가-코딩은-ai가-1인-개발-과정의-어려움-극복">7. 기획은 내가, 코딩은 AI가: 1인 개발 과정의 어려움 극복 </h2>
+<p>학생과 선생님의 고통을 덜어주겠다는 목표는 뚜렷했지만, 대규모 웹 서비스를 직접 만들어 본 적이 없어 처음에는 눈앞이 캄캄했습니다. 하지만 1인 기획자로서의 한계를 극복하기 위해 다음과 같은 노력으로 난관을 돌파했습니다.</p>
+<ul>
+<li>
+<p><strong>난관 1: 처음 해보는 웹 서비스 기획의 막막함</strong><br>
+큰 규모의 웹 서비스를 처음 만들어보다 보니 어디서부터 시작해야 할지 몰라 눈앞이 캄캄했습니다.</p>
+</li>
+<li>
+<p><strong>극복 1: 미니 게임(ddino) 연습과 다방면의 학습을 통한 기초 쌓기</strong><br>
+처음부터 어려운 배틀스터디에 뛰어들지 않고, 먼저 간단한 미니 게임(ddino)을 만들어보며 기초를 다졌습니다. 또한 『2025 비즈니스 모델』, 『10대가 프로그래머가 되기 위한 방법』 등의 책을 읽으며 IT 서비스와 비즈니스의 큰 그림을 익혔고, 유튜브와 IT 블로그 등을 적극적으로 찾아보며 'AI에게 똑똑하게 질문하고 코드를 뽑아내는 실전 프롬프트 활용법'을 따로 공부했습니다.</p>
+</li>
+<li>
+<p><strong>난관 2: 'AI가 알아서 해주겠지'라는 생각과 꼬여버린 코드</strong><br>
+본격적으로 개발을 시작했을 때, '대충 말해도 AI가 다 알아서 코드를 짜주겠지'라고 생각했습니다. 하지만 복잡한 게임 규칙을 단순하게 지시하니 AI가 자꾸 엉뚱한 코드를 만들었습니다. 에러가 날 때마다 대충 고쳐달라고 하다 보니, 어느새 코드가 여기저기 꼬여서 손쓸 수 없는 상태가 되었습니다.</p>
+</li>
+<li>
+<p><strong>극복 2: 꼼꼼한 기획과 AI를 활용한 주기적인 코드 정리</strong><br>
+이 일을 겪고 나서, 무작정 지시하기 전에 **'제가 먼저 완벽하게 규칙을 정리해야 한다'**는 것을 깨달았습니다. 이후에는 종이에 1:1 매칭 규칙 등을 꼼꼼히 적어둔 뒤에만 AI에게 코드를 짜달라고 했습니다. 또한, 코드가 복잡하게 꼬일 때마다 AI에게 전체 구조를 다시 정리해 달라고 지시하여 불필요한 중복을 덜어냈습니다. 이처럼 코드를 깔끔하게 유지해야만 서비스가 안정적으로 돌아갈 뿐만 아니라, 다음에 내리는 새로운 지시도 AI가 제가 의도한 대로 잘 알아듣고 코드를 짜준다는 것을 확실히 배웠습니다.</p>
+</li>
+<li>
+<p><strong>난관 3: 깃허브(GitHub)에 올리는 과정의 어려움</strong><br>
+완성된 게임을 친구들에게 보여주기 위해 깃허브에 올려야 했지만, 처음 보는 까만 화면(터미널)과 <code>commit</code>, <code>push</code> 같은 명령어들이 너무 복잡하고 헷갈렸습니다.</p>
+</li>
+<li>
+<p><strong>극복 3: 몸이 기억할 때까지 무한 반복하기</strong><br>
+미니 게임(ddino) 코드를 깃허브에 처음 올려보는 연습부터 시작해서, 검색을 통해 명령어의 뜻을 하나씩 찾아갔습니다. 한 번 성공하고 끝낸 것이 아니라, 배틀스터디에 새로운 기능이 추가될 때마다 어떤 상황에서 어떤 명령어를 쳐야 하는지 손에 익을 때까지 수십 번씩 반복하며 연습했습니다. 그 결과, 이제는 에러가 나도 당황하지 않고 깃허브에 프로젝트를 올릴 수 있게 되었습니다.</p>
+</li>
+</ul>
+<h2 id="8-mvp-시연-및-테스트-결과">8. MVP 시연 및 테스트 결과 </h2>
+<p>완성된 배틀스터디는 브라우저만으로 즉시 시연 가능한 완결형 데모로 구축하여 GitHub Pages에 실배포를 완료했습니다.</p>
+<ul>
+<li><strong>학생 화면</strong>: LoL과 유사한 어두운 다크 테마를 적용해 몰입감을 높이고, 실시간 1:1 배틀 및 단체 줄다리기 대항전, 오답 복습 던전의 동적인 효과를 강조했습니다. 또한 게임 전적 검색 스타일의 분석 탭을 자체 구현하여, 나의 학업 6대 핵심 역량(개념 이해, 문제 해결 등)을 학교 및 전국 평균과 실시간 비교하는 정육각형 방사형 차트를 구축했습니다.</li>
+<li><strong>교사 화면</strong>: 이와 대조적으로 단정하고 신뢰감 있는 화이트 테마를 적용하여, AI 출제 ➔ 일회성 PIN 발급 ➔ 수행평가 시작 ➔ 실시간 제출 모니터링 ➔ 수행평가 종료 ➔ 2단계 점수 확정으로 이어지는 수학 수행평가 전용 통합 대시보드 UI를 시각적으로 명확하게 구현해 냈습니다.</li>
+</ul>
+<h2 id="9-사용자-피드백-기반-기획-개선-및-버전-업데이트-이력">9. 사용자 피드백 기반 기획 개선 및 버전 업데이트 이력 </h2>
+<p>단순히 시제품을 한 번 만들고 끝낸 것이 아니라, 주변 친구들과 선생님의 피드백을 바탕으로 깃허브 커밋 50여 회 이상을 기록하며 서비스를 꾸준히 발전시켰습니다.</p>
+<ul>
+<li><strong>🚀 v1.0 (핵심 기능 테스트)</strong>
+<ul>
+<li><strong>구현</strong>: 1:1 퀴즈 배틀 아레나 및 교사-학생 수행평가 흐름 최초 완성</li>
+<li><strong>수집된 피드백</strong>: "배틀은 재밌지만 내 진짜 실력이 어느 정도인지 모르겠다", "선생님 입장에서는 학생들이 PIN 코드를 공유해 부정행위를 할까 봐 걱정된다."</li>
+</ul>
+</li>
+<li><strong>🚀 v1.1 (신뢰도 확보 및 편의성 개편)</strong>
+<ul>
+<li><strong>🛠️ [교사 측면] 부정행위 차단 로직 도입</strong>: 선생님이 시험 종료를 누르면 즉시 코드가 만료(Expired)되어 담합을 차단하고, 배틀의 화려한 게임 효과를 끈 '수행평가 모드(흰색 시험지 테마)'를 도입하여 교실 현장의 평가 신뢰도를 확보했습니다.</li>
+<li><strong>🛠️ [학생 측면] 전적 분석(Analytics) 페이지 신설</strong>: 단순 랭킹을 넘어 학생 개인의 6대 핵심 학업 역량을 정육각형 방사형 차트로 시각화하여, 본인의 약점을 직관적으로 파악할 수 있게 만들었습니다.</li>
+</ul>
+</li>
+<li><strong>🚀 v1.2 (몰입감 강화 및 입소문 장치 확장)</strong>
+<ul>
+<li><strong>🛠️ [AI 고도화] 1:1 튜터 해설 정교화</strong>: 오답 복습 던전에서 AI가 단순히 정답만 알려주지 않고, 대치동 1타 과외 선생님처럼 학생의 눈높이에 맞춰 내 약점을 짚어주며 친절하게 설명해주도록 AI 시스템을 정교하게 개선했습니다.</li>
+<li><strong>🛠️ [기획 확장] 학교 대항전 신설 및 랭킹 세분화</strong>: 전국 학교 랭킹을 중등부/고등부로 분리하고, 실제 라이벌 학교(예: 청계중 vs 휘문중) 간의 친선 줄다리기 배틀 모드를 신설하여 친구 초대를 자연스럽게 유도했습니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-향후-비즈니스-확장-및-발전-계획">10. 향후 비즈니스 확장 및 발전 계획 </h2>
+<p>단순히 한 번 만들어보고 끝나는 일회성 프로젝트가 아니라, 실제로 수많은 학생들이 일상적으로 꾸준히 이용하는 진짜 서비스로 키워갈 방법도 깊이 고민했습니다.</p>
+<ul>
+<li><strong>1단계 (B2B 지역 학원 제휴)</strong>: 서비스 초기에는 지역 학원가와 제휴하여, '이번 주 OO고 vs XX고 대항전' 같은 이벤트를 열고 학원의 배너 노출 및 상품 협찬을 받는 방식으로 시작합니다.</li>
+<li><strong>2단계 (B2C 프리미엄 구독)</strong>: 단방향 인강(VOD)을 완전히 대체할 '초개인화 AI 밀착 과외'를 월 구독 모델로 제공합니다. 학생의 전적 데이터(6대 역량 지표)를 분석해, 배틀에서 틀린 문제의 원인이 되는 취약 선행 개념까지 거슬러 올라가 대치동 과외 선생님 이상으로 집요하게 설명해 주는 프리미엄 AI 오답 클리닉으로 수익을 창출합니다.</li>
+<li><strong>3단계 (B2G 학교 단위 도입)</strong>: 최종적으로는 공교육 학교 단위로 계약하여, 선생님들의 수행평가 성적 관리를 돕는 B2G 교육용 서비스로 확장하는 것이 목표입니다.</li>
+</ul>
+<h2 id="11-마치며-배틀스터디가-내게-가르쳐준-것들">11. 마치며: '배틀스터디'가 내게 가르쳐준 것들 </h2>
+<p>이번 프로젝트를 진행하며 저는 AI를 통해 누구나 아이디어를 쉽게 웹 서비스로 구현할 수 있는 시대일수록, 결국 서비스의 성패를 가르는 것은 **'사용자가 진짜로 불편해하는 점을 날카롭게 찾아내고, 이를 해결할 방법과 계속 이용하게 만들 재미 요소를 논리적으로 설계하는 기획력'**이라는 것을 깊이 체감했습니다.<br>
+현재 가설 검증 단계인 배틀스터디 MVP를 실제로 많은 학생들이 사용하는 정식 서비스로 키우기 위해서는 체계적인 경영, 마케팅, 빅데이터 융합 지식이 반드시 필요합니다. 제가 한국디지털미디어고등학교 e-비즈니스과에 지원하는 이유입니다. 저는 디미고의 교육 과정 안에서 기획과 비즈니스 지식을 체계적으로 배워, 장차 메가스터디를 뛰어넘어 대한민국 학생들의 학습 방식을 '게임처럼' 완전히 혁신하는 차세대 에듀테크 서비스 기획자로 성장하겠습니다.</p>
+
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>
