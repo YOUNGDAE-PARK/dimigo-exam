@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제3단원: 논리·추리 퍼즐 및 조건 독해 (디미고 소질·적성검사 실전 해법)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 13mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #111111;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10pt;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 8mm 10mm;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        max-width: none;
+      }
+
+      h2,
+      h3,
+      h4,
+      .diagram-box,
+      table,
+      blockquote {
+        page-break-inside: avoid;
+      }
+    }
+
+    h1 {
+      font-size: 16pt;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #111111;
+      letter-spacing: -0.3px;
+    }
+
+    h2 {
+      font-size: 12.5pt;
+      font-weight: 700;
+      margin: 16px 0 8px 0;
+      padding: 3px 0 3px 8px;
+      border-left: 4px solid #111111;
+      border-bottom: 1px solid #666666;
+    }
+
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin: 10px 0 6px 0;
+      color: #111111;
+    }
+
+    h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      margin: 8px 0 4px 0;
+      color: #111111;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    ul,
+    ol {
+      margin: 4px 0 8px 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 3px 0;
+    }
+
+    blockquote {
+      margin: 6px 0 10px 0;
+      padding: 5px 10px;
+      border-left: 2.5px solid #222222;
+      background: transparent;
+      font-size: 9.8pt;
+    }
+
+    strong {
+      font-weight: 700;
+      color: #000000;
+    }
+
+    mark {
+      background-color: #fff3a8;
+      color: #000000;
+      font-weight: 700;
+      padding: 0 3px;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 9pt;
+      padding: 0 3px;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      background: transparent;
+      color: #000000;
+    }
+
+    .diagram-box {
+      border: 1px solid #333333;
+      padding: 10px 12px;
+      margin: 6px 0 10px 0;
+      background: transparent;
+    }
+
+    .flow-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .node {
+      border: 1.5px solid #111111;
+      padding: 8px 10px;
+      text-align: center;
+      background: transparent;
+      flex: 1;
+    }
+
+    .node-title {
+      font-weight: 700;
+      font-size: 9.8pt;
+      border-bottom: 1px dashed #777777;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+    }
+
+    .node-desc {
+      font-size: 9.2pt;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 10px 0;
+      font-size: 9.5pt;
+    }
+
+    th,
+    td {
+      border: 1px solid #333333;
+      padding: 5px 8px;
+      vertical-align: middle;
+      background: transparent;
+    }
+
+    th {
+      font-weight: 700;
+      text-align: center;
+      border-bottom: 1.5px solid #111111;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>제3단원: 논리·추리 퍼즐 및 교과융합 조건 독해 (디미고 소질·적성검사 실전 해법)</h1>
+
+  <blockquote>
+    <strong>디미고 일반전형 출제 기준 점검</strong>:<br>
+    • <strong>출제 범위</strong>: 고등학교 수학의 집합·명제 용어(<code>역·이·대우</code>, <code>드모르간 법칙</code>, <code>필요충분조건</code>)를 암기해서
+    답하는 시험이 아닙니다.<br>
+    • <strong>핵심 평가 내용</strong>: 중학교 수준의 국어·영어 독해력과 논리적 사고력을 결합하여 <strong>① 조건 문장 뒤집기(<code>P → Q</code>이면
+      <code>~Q → ~P</code>)와 꼬리물기 추론</strong>, <strong>② 참말·거짓말쟁이 모순 추리</strong>, <strong>③
+      <code>O</code>/<code>X</code> 표 소거법과 순서·자리 배치 퍼즐</strong>, <strong>④ 국어 조건·규칙 독해 및 영어 IT 핵심 키워드 스캔 독해</strong>를
+    평가합니다.
+  </blockquote>
+
+  <h2>1. 조건 문장 추론과 꼬리물기 (삼단논법)</h2>
+
+  <h3>1.1 조건 문장 뒤집기 절대 법칙 (<code>"P이면 Q이다"</code> ➔ <code>"Q가 아니면 P가 아니다"</code>)</h3>
+  <p>조건 문장 <strong><code>"P이면 Q이다 (P → Q)"</code>가 참일 때, 유일하게 100% 참이 보장되는 문장은 앞뒤를 바꾸면서 동시에 부정한
+      <mark><code>"Q가 아니면 P가 아니다 (~Q → ~P)"</code></mark>뿐</strong>입니다!</p>
+
+  <div class="diagram-box">
+    <strong>[원래 조건 (참)]</strong> : "코딩 동아리 부원(<code>P</code>)이면 노트북을 가지고 있다(<code>Q</code>)." &nbsp;<strong>(
+      <code>P ──▶ Q</code> )</strong><br>
+    • ❌ <strong>앞뒤만 바꿈 (<code>Q → P</code>)</strong> : "노트북이 있으면 코딩 동아리이다." <em>(참인지 알 수 없음! 오답 함정 1순위)</em><br>
+    • ❌ <strong>단순 부정 (<code>~P → ~Q</code>)</strong> : "코딩 동아리가 아니면 노트북이 없다." <em>(참인지 알 수 없음! 오답 함정 2순위)</em><br>
+    • ⭕ <mark><strong>뒤집어 부정 (<code>~Q → ~P</code>, 대우 관계)</strong></mark>: "노트북이 없으면(<code>~Q</code>) 코딩 동아리 부원이
+    아니다(<code>~P</code>)." <strong>(무조건 100% 참!)</strong>
+  </div>
+
+  <h3>1.2 징검다리 꼬리물기 추론 (삼단논법 사슬 연결)</h3>
+  <p>복잡한 조건 문장 3~4개가 주어지고 <code>"다음 중 반드시 참인 것은?"</code>을 물으면, 각 문장과 <strong>뒤집어 부정한 문장(<code>~Q → ~P</code>)</strong>을
+    화살표로 길게 연결합니다.</p>
+
+  <div class="diagram-box">
+    <strong>[주어진 조건]</strong><br>
+    • (가) A가 참석하면 B도 참석한다. ──▶ <code>A ──▶ B</code> &nbsp;(뒤집기: <code>~B ──▶ ~A</code>)<br>
+    • (나) C가 참석하지 않으면 B도 안 한다. ──▶ <code>~C ──▶ ~B</code> &nbsp;(뒤집기:
+    <mark><strong><code>B ──▶ C</code></strong></mark>)<br>
+    • (다) C가 참석하면 D는 참석하지 않는다. ──▶ <code>C ──▶ ~D</code> &nbsp;(뒤집기: <code>D ──▶ ~C</code>)<br>
+    <div style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed #777777;">
+      <strong>[화살표 사슬 하나로 잇기]</strong><br>
+      • <strong>정방향 사슬</strong> : <strong><code>A ──▶ B ──▶ C ──▶ ~D</code></strong> &nbsp;➔ 결론 1: "A가 참석하면 D는 참석하지
+      않는다."<br>
+      • <strong>역방향 사슬</strong> : <strong><code>D ──▶ ~C ──▶ ~B ──▶ ~A</code></strong> &nbsp;➔ 결론 2: "D가 참석하면 A는 참석하지
+      않는다."
+    </div>
+  </div>
+
+  <h3>1.3 조건 부정 뒤집기(<code>그리고 ↔ 또는</code>, <code>모두 ↔ 적어도 한 명</code>) &amp; 카드 뒤집기</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 24%;">규칙 구분</th>
+        <th style="width: 42%;">핵심 변환 공식 (오답 함정 주의!)</th>
+        <th style="width: 34%;">실전 예시</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong><code>그리고(AND)</code> / <code>또는(OR)</code><br>조건을 어긴 경우</strong></td>
+        <td>• <mark><strong><code>"A 그리고 B"</code> 위반 = <code>~A 이거나(OR) ~B</code></strong></mark><br>•
+          <mark><strong><code>"A 또는 B"</code> 위반 = <code>~A 이고(AND) ~B</code></strong></mark>
+        </td>
+        <td>• <code>"수학 또는 코딩 보충에 참여해라"</code>를 어긴 경우:<br>&nbsp;&nbsp;➔
+          <strong><code>"수학도 안 가고(AND) 코딩도 안 갔다"</code></strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="center"><strong><code>모두</code> / <code>어떤</code><br>문장의 반대(부정)</strong></td>
+        <td>• <mark><strong><code>"모든 학생이 ~이다"</code>가 거짓 =
+              <code>"적어도 1명은 ~이 아니다"</code></strong></mark><br><em>(주의: "모두 ~이 아니다"로 고르면 100% 오답!)</em></td>
+        <td>• <code>"모든 학생이 안경을 썼다"</code>가 거짓이면?<br>&nbsp;&nbsp;➔
+          <strong><code>"안경을 쓰지 않은 학생이 적어도 1명 있다"</code></strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="center"><strong>규칙 확인 카드 뒤집기</strong><br>(<code>"P이면 Q이다"</code> 검증)</td>
+        <td>규칙 <strong><code>"앞면이 P이면 뒷면은 Q이다"</code></strong> 확인할 때:<br>➔ <mark><strong>① P 카드</strong> 와
+            <strong>② Q가 아닌 카드(위반)</strong></mark> 2장만 뒤집음</td>
+        <td>• <code>"모음(P) 뒷면엔 짝수(Q)"</code> (바닥: <code>[A] [B] [2] [7]</code>)<br>&nbsp;&nbsp;➔ 모음
+          <strong><code>[ A ]</code></strong> 와 홀수 <strong><code>[ 7 ]</code></strong> 딱 2장만 뒤집음!
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. 참말쟁이 · 거짓말쟁이 진위 판별 퍼즐</h2>
+
+  <h3>2.1 유형 ①: 참말/거짓말 인원수가 주어질 때 ➔ '모순 쌍(반대말)' 먼저 찾기!</h3>
+  <div class="diagram-box">
+    <strong>[실전 예제]</strong> 유리창을 깬 범인은 1명이고, 네 사람 중 <strong>'오직 1명만 참말'</strong>을 하고 나머지 3명은 거짓말을 한다.<br>
+    • <strong>A</strong>: "나는 안 깼어요." &nbsp;|&nbsp;
+    • <strong>B</strong>: "C가 유리창을 깼어요." &nbsp;|&nbsp;
+    • <strong>C</strong>: "B는 거짓말을 하고 있어요." &nbsp;|&nbsp;
+    • <strong>D</strong>: "C가 깬 게 맞아요."<br>
+    <div style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed #777777;">
+      <strong>[풀이 과정]</strong><br>
+      1) <mark><strong>[모순 쌍 발견]</strong></mark> <strong>B와 C는 서로 정반대 주장</strong>을 하므로 둘 중 1명은 무조건 참말, 1명은 무조건
+      거짓말입니다.<br>
+      2) 참말을 하는 단 1명은 반드시 <code>{B, C}</code> 안에 있으므로, 나머지 <strong>A와 D의 말은 무조건 거짓말(F)</strong>로 확정됩니다!<br>
+      3) A의 말("나는 안 깼어요")이 거짓말이므로 ──▶ <mark><strong>실제 유리창을 깬 범인은 A!</strong></mark> (10초 컷 해결)
+    </div>
+  </div>
+
+  <h3>2.2 유형 ②: 참말쟁이(기사)와 거짓말쟁이(건달) ➔ '가정 검증법(귀류법)'</h3>
+  <p>참말 인원수가 안 주어지고 <code>"우리 둘 중 적어도 한 명은 건달이다"</code>처럼 스스로를 포함한 진술이 나오면, <mark><strong>발언자 <code>A</code>가 참말쟁이(T)인
+        경우와 거짓말쟁이(F)인 경우 2가지를 가정하여 모순이 없는 쪽</strong></mark>을 고릅니다.</p>
+
+  <div class="diagram-box">
+    <strong>[실전 예제]</strong> A와 B를 만났는데, <strong>A가 "우리 둘 중 적어도 한 명은 건달(거짓말쟁이)입니다"</strong>라고 말했다.<br>
+    • <strong>가정 1 (만약 A가 건달[거짓말쟁이]이라면?)</strong>: A 자신이 이미 건달이므로 "적어도 한 명은 건달이다"라는 말은 '참말'이 되어버림! (건달이 참말을 했으므로
+    <strong>모순 ❌</strong>)<br>
+    • <strong>가정 2 (만약 A가 기사[참말쟁이]라면?)</strong>: A의 말이 참이 되려면 둘 중 적어도 한 명은 건달이어야 하므로, B가 건달이면 완벽히 성립!<br>
+    &nbsp;&nbsp;──▶ <mark><strong>정답: A는 기사(참말쟁이), B는 건달(거짓말쟁이)! ⭕</strong></mark>
+  </div>
+
+  <h2>3. <code>O</code>/<code>X</code> 그리드 매칭 &amp; 일렬 · 원탁 자리 배치 퍼즐</h2>
+
+  <h3>3.1 <code>O</code>/<code>X</code> 매트릭스 십자(<code>+</code>) 소거법 (1:1 매칭 퍼즐)</h3>
+  <p>1:1 매칭 퍼즐은 <mark><strong>표를 그려 <code>O</code>가 하나 확정될 때마다 그 칸의 가로줄·세로줄 전체를 <code>X</code>로 지우면</strong></mark> 빈칸이
+    연쇄적으로 풀립니다.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 14%;">구분</th>
+        <th style="width: 14%;">웹툰</th>
+        <th style="width: 14%;">해킹</th>
+        <th style="width: 14%;">AI</th>
+        <th style="width: 44%;">단계별 십자(<code>+</code>) 소거 추론 과정</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong>갑</strong></td>
+        <td class="center">X</td>
+        <td class="center">X</td>
+        <td class="center"><mark><strong>O</strong></mark></td>
+        <td><strong>3단계</strong>: 남은 빈칸에 <strong>갑 = AI(<code>O</code>)</strong> 자동 확정!</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>을</strong></td>
+        <td class="center"><mark><strong>O</strong></mark></td>
+        <td class="center">X</td>
+        <td class="center">X</td>
+        <td><strong>2단계</strong>: 단서 "AI 학생은 을보다 키가 크다(<code>을 ≠ AI</code>)" ➔ <strong>을 = 웹툰(<code>O</code>)</strong>
+          확정!</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>병</strong></td>
+        <td class="center">X</td>
+        <td class="center"><mark><strong>O</strong></mark></td>
+        <td class="center">X</td>
+        <td><strong>1단계</strong>: 단서 "병은 해킹 동아리다" ➔ <strong>병 = 해킹(<code>O</code>)</strong> 확정 즉시 가로·세로줄 모두
+          <code>X</code> 소거!
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>3.2 일렬 순서 배치 &amp; 원탁(마주보기) 배치 도식화 요령</h3>
+  <div class="diagram-box">
+    <div class="flow-row">
+      <div class="node" style="flex: 1.2;">
+        <div class="node-title">① 일렬 배치 / 달리기 등수 / 층별 배정</div>
+        <div class="node-desc">
+          • <strong>빈 슬롯 먼저 그리기</strong>: <code>[ 1 ] [ 2 ] [ 3 ] [ 4 ]</code><br>
+          • "D는 A 바로 다음이다" ──▶ <mark><strong><code>[ A D ]</code> 묶음 블록!</strong></mark><br>
+          • "A와 C 사이에 1명" ──▶ <code>[ A □ C ]</code> 또는 <code>[ C □ A ]</code><br>
+          • "A는 1등도 꼴찌도 아님" ──▶ <strong>2등 또는 3등</strong>으로 압축!
+        </div>
+      </div>
+
+      <div class="node" style="flex: 1.3;">
+        <div class="node-title">② 6인 원탁(정육각형) 마주보기 배치</div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+          <svg width="145" height="115" viewBox="0 0 145 115" xmlns="http://www.w3.org/2000/svg">
+            <!-- 육각형 테이블 테두리 -->
+            <polygon points="48,18 97,18 122,57 97,96 48,96 23,57" fill="none" stroke="#111" stroke-width="1.8" />
+            <!-- 마주보는 대각선 점선 -->
+            <line x1="48" y1="18" x2="97" y2="96" stroke="#777" stroke-width="1.2" stroke-dasharray="3,3" />
+            <line x1="97" y1="18" x2="48" y2="96" stroke="#777" stroke-width="1.2" stroke-dasharray="3,3" />
+            <line x1="23" y1="57" x2="122" y2="57" stroke="#777" stroke-width="1.2" stroke-dasharray="3,3" />
+            <!-- 좌석 1~6 -->
+            <circle cx="48" cy="18" r="11" fill="#fff3a8" stroke="#111" stroke-width="1.8" />
+            <text x="48" y="22" text-anchor="middle" font-size="10" font-weight="800">1</text>
+
+            <circle cx="97" cy="18" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+            <text x="97" y="22" text-anchor="middle" font-size="10" font-weight="700">2</text>
+
+            <circle cx="122" cy="57" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+            <text x="122" y="61" text-anchor="middle" font-size="10" font-weight="700">3</text>
+
+            <circle cx="97" cy="96" r="11" fill="#fff3a8" stroke="#111" stroke-width="1.8" />
+            <text x="97" y="100" text-anchor="middle" font-size="10" font-weight="800">4</text>
+
+            <circle cx="48" cy="96" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+            <text x="48" y="100" text-anchor="middle" font-size="10" font-weight="700">5</text>
+
+            <circle cx="23" cy="57" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+            <text x="23" y="61" text-anchor="middle" font-size="10" font-weight="700">6</text>
+          </svg>
+          <div class="node-desc" style="flex: 1;">
+            • <strong>마주보는 짝</strong>:<br>
+            &nbsp;&nbsp;<mark><strong><code>1↔4</code>, <code>2↔5</code>, <code>3↔6</code></strong></mark><br>
+            • 기준 인물을 <strong><code>1번</code> 자리</strong>에 먼저 고정하고 시계 방향으로 채움!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>4. 전략 게임 · 고전 퍼즐 · 국어 · 영어 교과융합 독해법</h2>
+
+  <h3>4.1 3대 고전 수리·논리 퍼즐 (필승 게임 · 하노이 탑 · 강 건너기)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">퍼즐 유형</th>
+        <th style="width: 75%;">핵심 해결 원리 및 10초 공식</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong>필승 숫자/바둑돌 게임</strong><br>(베스킨라빈스 31형)</td>
+        <td>• 한 번에 <strong><code>1개 ~ K개</code></strong>까지 가져갈 수 있을 때, <mark><strong>상대방이 몇 개를 부르든 내 턴과 합쳐 항상
+              <code>(1 + K)개</code>씩 맞추면</strong></mark> 무조건 승리합니다!<br>• <em>예</em>: 돌 20개 중 한 번에 <code>1~3개</code> 가져가고
+          <strong>마지막 돌을 가져가는 사람이 승리</strong>할 때 ➔ 묶음 단위는 <code>1 + 3 = 4개</code>. 상대가 1개 가져가면 나는 3개, 상대가 2개 가져가면 나는 2개를
+          가져가서 4의 배수를 유지!
+        </td>
+      </tr>
+      <tr>
+        <td class="center"><strong>하노이 탑 최소 이동</strong><br>(Tower of Hanoi)</td>
+        <td>• 크기순으로 쌓인 원반 <strong><code>n</code>개</strong>를 규칙에 맞게 다른 기둥으로 모두 옮기는 <mark><strong>최소 이동 횟수 =
+              <code>2ⁿ - 1</code>회</strong></mark><br>• 자주 나오는 암기값: 원반 3개 = <strong><code>7회</code></strong>, 원반 4개 =
+          <strong><code>15회</code></strong>, 원반 5개 = <strong><code>31회</code></strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="center"><strong>강 건너기 / 손전등 퍼즐</strong><br>(병목 조건 해결)</td>
+        <td>• <strong>먹이사슬 충돌형(늑대·양·양배추)</strong>: 둘만 남겨두면 안 되는 핵심 매개체(<strong>양</strong>)를 먼저 건네고, 돌아올 때 다시 데려오는 왕복을
+          활용합니다.<br>• <strong>다리 건너기 시간 단축형(1분, 2분, 5분, 10분)</strong>: 가장 느린 두 사람(<code>5분, 10분</code>)이
+          <mark><strong>반드시 함께 건너야</strong></mark> 시간을 아낄 수 있으므로, 가장 빠른 두 사람(<code>1분, 2분</code>)을 먼저 보내 손전등 배달부로 활용합니다
+          (<code>최소 17분</code>).
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4.2 국어 조건·규칙 지문 &amp; 영어 IT 융합 지문 10초 독해 전략 (★입시요강 핵심)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 24%;">융합 영역</th>
+        <th style="width: 76%;">시험장 10초 실전 공략법</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong>국어 융합 독해</strong><br>(요금 할인 · 포인트 · 비밀번호 · 부호화 규칙)</td>
+        <td>
+          1. <mark><strong>경계값 동그라미 표시</strong></mark>: <strong><code>이상 / 이하 / 부터 / 까지</code></strong>(포함 ●) vs
+          <strong><code>초과 / 미만</code></strong>(제외 ○)<br>
+          2. <mark><strong>예외·단서 조항 밑줄</strong></mark>: <code>"단, ~인 경우는 제외한다"</code>, <code>"중복 할인 불가"</code>,
+          <code>"최대 한도"</code><br>
+          3. <mark><strong>질문 사례 먼저 확인</strong></mark>: 지문을 다 외우지 말고 <strong>문제에서 묻는 사례(예: "14세 청소년, 주말 오전, 3매")를 먼저 본
+            뒤</strong> 해당 조건 줄만 찾아 대입!
+        </td>
+      </tr>
+      <tr>
+        <td class="center"><strong>영어 융합 독해</strong><br>(IT 용어 · 보안 · 네트워크 · AI 영문 지문)</td>
+        <td>
+          • 영문 지문 전체를 완벽히 번역하려 하지 말고, <mark><strong>정답과 직결되는 핵심 동사·명사 키워드를 찾아 1:1 매칭</strong></mark>합니다:<br>
+          &nbsp;&nbsp;- <code>forwards data packets / optimal path</code> ──▶
+          <strong><code>Router (라우터)</code></strong><br>
+          &nbsp;&nbsp;- <code>domain name to IP address</code> ──▶ <strong><code>DNS</code></strong><br>
+          &nbsp;&nbsp;- <code>block unauthorized access / traffic</code> ──▶
+          <strong><code>Firewall (방화벽)</code></strong><br>
+          &nbsp;&nbsp;- <code>encrypts files and demands ransom</code> ──▶
+          <strong><code>Ransomware (랜섬웨어)</code></strong><br>
+          &nbsp;&nbsp;- <code>learns from data without being explicitly programmed</code> ──▶
+          <strong><code>Machine Learning (기계학습)</code></strong>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

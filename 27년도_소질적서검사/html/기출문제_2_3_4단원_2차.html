@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027학년도 디미고 일반전형 소질·적성검사 실전 모의평가 (제2차)</title>
+<style>
+@page{size:A4;margin:13mm 15mm}
+*{box-sizing:border-box}
+body{font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:#111;background:#fff;line-height:1.55;font-size:10pt;max-width:210mm;margin:0 auto;padding:8mm 10mm}
+@media print{body{padding:0;max-width:none}table,blockquote{page-break-inside:avoid}p strong:first-child{break-after:avoid}}
+h1{font-size:15.5pt;font-weight:800;margin:0 0 8px;padding-bottom:6px;border-bottom:2px solid #111}
+h2{font-size:12pt;font-weight:700;margin:14px 0 8px;padding:3px 0 3px 8px;border-left:4px solid #111;border-bottom:1px solid #666}
+h3{font-size:11pt;margin:12px 0 6px}
+p,li{margin:3px 0}
+ul{margin:3px 0;padding-left:20px}
+blockquote{margin:6px 0;padding:4px 10px;border-left:3px solid #666}
+blockquote p{margin:2px 0}
+code{font-family:Consolas,"D2Coding",monospace;font-size:9.3pt;border:1px solid #ccc;padding:0 3px;border-radius:2px}
+table{border-collapse:collapse;margin:6px 0;font-size:9.5pt}
+th,td{border:1px solid #333;padding:3px 8px}
+th{font-weight:700}
+hr{border:0;border-top:1px dashed #999;margin:8px 0}
+</style>
+</head>
+<body>
+<h1>2027학년도 디미고 일반전형 소질·적성검사 실전 모의평가 (제2차: 전 범위 통합)</h1>
+<blockquote>
+<p><strong>[응시 안내 및 실전 수칙]</strong></p>
+<ul>
+<li><strong>출제 범위</strong>: 제1단원(정보 교과 5대 영역) · 제2단원(수리추론) · 제3단원(논리·추리 퍼즐 및 국어·영어 융합 독해) · 제4단원(알고리즘적 문제해결력) · 추가단원(심화 보강) 전 범위 통합 (제1차 모의평가와 중복 문항 없음)</li>
+<li><strong>문항 수 및 제한 시간</strong>: <strong>총 30문항 (객관식 5지선다형 ①~⑤) / 50분</strong> (문항당 평균 1분 30초)</li>
+<li><strong>실전 팁</strong>: 눈으로만 읽고 암산하면 반드시 조건 함정에 걸립니다. 시험지 여백에 <strong>변수 추적표, 원통 상태 그림, 벤다이어그램, 최단 경로 숫자</strong>를 직접 적어가며 풀이하세요.</li>
+</ul>
+</blockquote>
+<hr>
+<h2>Part 1. 정보·IT 기초 이해력 및 데이터·진법 융합 (1번 ~ 8번)</h2>
+<p><strong>1.</strong> 다음 <code>&lt;보기&gt;</code>는 컴퓨팅 시스템을 구성하는 여러 요소를 나열한 것이다. <code>&lt;보기&gt;</code> 중에서 <strong>(1) 물리적인 기계 장치인 하드웨어(Hardware)의 총개수</strong>와 <strong>(2) 전원이 꺼져도 저장된 데이터가 사라지지 않는 비휘발성 기억장치의 기호</strong>를 차례대로 바르게 짝지은 것은?</p>
+<blockquote>
+<p><strong><code>&lt;보기&gt;</code></strong><br>ㄱ. 중앙처리장치(CPU) &nbsp;&nbsp;&nbsp;&nbsp; ㄴ. 캐시 메모리(Cache Memory) &nbsp;&nbsp;&nbsp;&nbsp; ㄷ. 펌웨어(Firmware)<br>ㄹ. 솔리드 스테이트 드라이브(SSD) &nbsp;&nbsp;&nbsp;&nbsp; ㅁ. 컴파일러(Compiler) &nbsp;&nbsp;&nbsp;&nbsp; ㅂ. 램(RAM)</p>
+</blockquote>
+<p>① 하드웨어 3개 / <code>ㄹ</code><br>② 하드웨어 4개 / <code>ㄴ, ㄹ</code><br>③ 하드웨어 4개 / <code>ㄹ</code><br>④ 하드웨어 5개 / <code>ㄷ, ㄹ</code><br>⑤ 하드웨어 5개 / <code>ㄹ, ㅂ</code>  </p>
+<hr>
+<p><strong>2.</strong> 스마트 온실 자동 제어 시스템이 12시부터 16시까지 1시간 간격으로 센서 측정값을 수집한 결과가 아래 표와 같다. 시스템은 다음 두 가지 규칙에 따라 <strong>환풍기</strong>와 <strong>보조 조명</strong>을 자동으로 제어한다.</p>
+<ul>
+<li><strong>[환풍기 작동 규칙]</strong>: 온도가 <strong><code>28℃</code> 이상이거나(OR)</strong> 습도가 <strong><code>75%</code> 이상</strong>일 때 켜진다(<code>ON</code>).</li>
+<li><strong>[보조 조명 작동 규칙]</strong>: 조도가 <strong><code>300 Lux</code> 미만이면서(AND)</strong> 동시에 <strong>환풍기가 꺼져(<code>OFF</code>) 있을 때만</strong> 켜진다(<code>ON</code>).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">측정 시각</th>
+<th align="center">온도 센서 (<code>℃</code>)</th>
+<th align="center">습도 센서 (<code>%</code>)</th>
+<th align="center">조도 센서 (<code>Lux</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>12시</strong></td>
+<td align="center"><code>26</code></td>
+<td align="center"><code>70</code></td>
+<td align="center"><code>250</code></td>
+</tr>
+<tr>
+<td align="center"><strong>13시</strong></td>
+<td align="center"><code>28</code></td>
+<td align="center"><code>65</code></td>
+<td align="center"><code>200</code></td>
+</tr>
+<tr>
+<td align="center"><strong>14시</strong></td>
+<td align="center"><code>27</code></td>
+<td align="center"><code>80</code></td>
+<td align="center"><code>350</code></td>
+</tr>
+<tr>
+<td align="center"><strong>15시</strong></td>
+<td align="center"><code>25</code></td>
+<td align="center"><code>60</code></td>
+<td align="center"><code>280</code></td>
+</tr>
+<tr>
+<td align="center"><strong>16시</strong></td>
+<td align="center"><code>24</code></td>
+<td align="center"><code>75</code></td>
+<td align="center"><code>150</code></td>
+</tr>
+</tbody></table>
+<p>12시부터 16시까지 총 5번의 측정 시각 중 <strong>환풍기가 켜진 총 횟수</strong>와 <strong>보조 조명이 켜진 시각</strong>을 모두 바르게 짝지은 것은?</p>
+<p>① 환풍기 2회 / <code>12시, 15시</code><br>② 환풍기 2회 / <code>12시, 13시, 15시</code><br>③ 환풍기 3회 / <code>12시, 13시, 16시</code><br>④ 환풍기 3회 / <code>12시, 15시</code><br>⑤ 환풍기 3회 / <code>15시, 16시</code>  </p>
+<hr>
+<p><strong>3.</strong> 가로 <strong><code>1,000</code>픽셀</strong>, 세로 <strong><code>500</code>픽셀</strong> 크기의 <strong>24비트 트루컬러</strong>(픽셀 1개당 24비트 사용) 무압축 비트맵 이미지 파일 <strong>10장</strong>을 압축하지 않고 <strong><code>12 Mbps</code></strong>(초당 <code>12 × 10⁶</code> 비트 전송) 속도의 네트워크로 전송하려고 한다. 10장의 이미지 파일을 모두 전송하는 데 걸리는 <strong>최소 시간</strong>은 몇 초인가? (단, 계산 편의를 위해 <code>1 MB = 10⁶ Byte</code>, <code>1 Mbps = 10⁶ bps</code>로 계산한다.)</p>
+<p>① 5초<br>② 10초<br>③ 15초<br>④ 20초<br>⑤ 80초  </p>
+<hr>
+<p><strong>4.</strong> 영문자를 숫자로 대응시키는 아스키코드(ASCII) 체계에서 십진수 <strong><code>65</code>는 대문자 <code>&#39;A&#39;</code></strong>, 십진수 <strong><code>97</code>은 소문자 <code>&#39;a&#39;</code></strong>를 나타낸다. 컴퓨터 메모리에 저장된 다음 <strong>4개의 16진법(Hexadecimal) 아스키코드 값</strong>을 순서대로 문자로 변환했을 때 만들어지는 영단어는?</p>
+<blockquote>
+<p><strong><code>44</code> &nbsp;&nbsp;&nbsp;&nbsp; <code>61</code> &nbsp;&nbsp;&nbsp;&nbsp; <code>74</code> &nbsp;&nbsp;&nbsp;&nbsp; <code>61</code></strong></p>
+</blockquote>
+<p>① <code>Code</code><br>② <code>Dimi</code><br>③ <code>Data</code><br>④ <code>Date</code><br>⑤ <code>Disk</code>  </p>
+<hr>
+<p><strong>5.</strong> 가로 7칸으로 이루어진 흑백 비트맵 이미지의 각 줄을 압축하기 위해 다음 <strong>[런-랭스(RLE) 압축 규칙]</strong>을 사용한다.</p>
+<ul>
+<li><strong>[규칙 1]</strong> 흰색 칸(<code>□</code>)은 <code>0</code>, 검은색 칸(<code>■</code>)은 <code>1</code>을 뜻하며, 각 줄의 맨 왼쪽부터 연속된 같은 색 칸의 개수를 차례대로 적는다.</li>
+<li><strong>[규칙 2]</strong> <strong>항상 흰색 칸(<code>□</code>)의 개수부터 먼저 적기 시작</strong>한다. 만약 줄의 맨 첫 번째 칸이 검은색(<code>■</code>)으로 시작한다면, 맨 앞에 흰색 칸이 0개라는 뜻으로 반드시 <strong><code>0</code></strong>을 먼저 적는다. <em>(예: <code>■ ■ □ □ □ ■ ■</code> ➔ <code>0, 2, 3, 2</code>)</em></li>
+</ul>
+<p>다음 두 줄 <strong>(가)</strong>와 <strong>(나)</strong>를 위 규칙에 따라 압축한 결과로 올바른 것은?</p>
+<ul>
+<li><strong>(가)</strong>: <code>□ □ ■ ■ ■ □ ■</code></li>
+<li><strong>(나)</strong>: <code>■ ■ ■ □ □ ■ ■</code></li>
+</ul>
+<p>① (가) <code>2, 3, 1, 1</code> / (나) <code>3, 2, 2</code><br>② (가) <code>0, 2, 3, 1, 1</code> / (나) <code>0, 3, 2, 2</code><br>③ (가) <code>2, 3, 2</code> / (나) <code>0, 3, 2, 2</code><br>④ (가) <code>2, 3, 1, 1</code> / (나) <code>0, 3, 2, 2</code><br>⑤ (가) <code>2, 3, 1, 1</code> / (나) <code>3, 2, 2, 0</code>  </p>
+<hr>
+<p><strong>6.</strong> 다음 <strong>(가)~(다)</strong>는 기계학습(Machine Learning)의 세 가지 주요 학습 방식을 적용한 사례이다. 각 사례에 적용된 학습 유형과 인공지능 모델 학습에 관한 설명으로 <strong>옳은</strong> 것은?</p>
+<ul>
+<li><strong>(가)</strong> 수만 건의 이메일 데이터에 &#39;스팸&#39; 또는 &#39;정상&#39;이라는 정답(Label)을 미리 표시하여 학습시킨 뒤, 새로 수신된 이메일이 스팸인지 아닌지 판별한다.</li>
+<li><strong>(나)</strong> 정답(Label)을 전혀 알려주지 않은 상태에서, 쇼핑몰 고객들의 구매 내역 데이터만 입력하여 구매 성향이 비슷한 고객들끼리 스스로 몇 개의 그룹으로 묶게 한다.</li>
+<li><strong>(다)</strong> 보행 로봇이 넘어지지 않고 앞으로 걸어갈 때마다 플러스 점수(보상)를 주고, 넘어지면 감점을 주면서 시행착오를 통해 스스로 최적의 걷기 동작을 터득하게 한다.</li>
+</ul>
+<p>① (가)는 정답이 있는 데이터를 학습하는 지도학습의 &#39;분류&#39;에 해당하고, (나)는 비지도학습의 &#39;군집&#39;, (다)는 보상 기반의 &#39;강화학습&#39;에 해당한다.<br>② (가)는 연속적인 숫자 값을 예측하는 지도학습의 &#39;회귀(Regression)&#39;에 해당한다.<br>③ (나)와 같이 정답 없이 데이터의 유사한 특징끼리 그룹을 묶는 방식을 &#39;강화학습&#39;이라고 한다.<br>④ 인공지능 모델의 성능을 공정하게 평가하기 위해서는 반드시 학습에 사용했던 &#39;훈련 데이터(Training Data)&#39;를 그대로 다시 사용하여 정확도를 측정해야 한다.<br>⑤ 사람이 직접 모든 조건(<code>IF ~ ELSE</code>)과 규칙을 코드로 입력해 주어야만 작동하는 전통적 프로그래밍 방식을 &#39;딥러닝(Deep Learning)&#39;이라고 한다.  </p>
+<hr>
+<p><strong>7.</strong> 다음 보안 사고 사례 <strong>(가)</strong>가 침해한 정보 보안의 3대 핵심 목표(기밀성·무결성·가용성)와, 사진 저작물에 표시된 이용 허락 조건 <strong>(나) <code>[CC BY-NC-SA]</code></strong>에 대한 해석이 모두 바르게 짝지어진 것은?</p>
+<ul>
+<li><strong>(가)</strong> 해커가 악성코드에 감염된 수천 대의 좀비 PC를 동원해 특정 쇼핑몰 서버로 동시에 과도한 접속 요청을 보내는 DDoS 공격을 감행하였고, 이로 인해 정상적인 고객들이 쇼핑몰에 접속하지 못하는 서버 마비 사태가 발생하였다.</li>
+<li><strong>(나)</strong> 온라인 디자인 자료실에 올라온 사진에 <strong><code>[CC BY-NC-SA]</code></strong> 라이선스가 표시되어 있다.</li>
+</ul>
+<p>① (가) 기밀성 침해 / (나) 출처만 밝히면 상업적 광고 배너에 자유롭게 사용할 수 있다.<br>② (가) 무결성 침해 / (나) 비영리 목적이라도 사진의 크기를 자르거나 색상을 수정할 수 없다.<br>③ (가) 가용성 침해 / (나) 원본 수정이 금지(<code>ND</code>)되어 있으므로 사진을 일절 변경하지 않고 그대로만 써야 한다.<br>④ (가) 기밀성 침해 / (나) 비영리 목적으로 사진을 수정해 사용할 수 있으나, 수정한 창작물도 원본과 동일한 라이선스를 적용해 공유해야 한다.<br>⑤ (가) 가용성 침해 / (나) 출처를 밝히고 비영리 목적으로 사진을 수정해 사용할 수 있으나, 수정한 2차 창작물도 원본과 동일한 라이선스 조건으로 공유해야 한다.  </p>
+<hr>
+<p><strong>8.</strong> 다음 영문 설명 <strong>(A)</strong>와 <strong>(B)</strong>에서 설명하는 정보 기술 용어를 차례대로 바르게 짝지은 것은?</p>
+<blockquote>
+<ul>
+<li><strong>(A)</strong>: <em>&quot;This system acts like the phonebook of the Internet. Humans access information online through domain names like &#39;dimigo.hs.kr&#39;, while computers interact through numerical IP addresses. This translates human-readable domain names into numerical IP addresses so browsers can load Internet resources.&quot;</em></li>
+<li><strong>(B)</strong>: <em>&quot;This is an ultra-fast, small volatile memory located between the CPU and the main memory (RAM). It temporarily stores frequently accessed instructions and data to reduce the speed gap (bottleneck) between the fast CPU and the slower RAM.&quot;</em></li>
+</ul>
+</blockquote>
+<p>① (A) Router - (B) ROM<br>② (A) DNS - (B) Cache Memory<br>③ (A) Proxy Server - (B) Register<br>④ (A) DNS - (B) SSD<br>⑤ (A) Protocol - (B) Cache Memory  </p>
+<hr>
+<h2>Part 2. 수리추론 영역 (9번 ~ 16번)</h2>
+<p><strong>9.</strong> 다음과 같이 괄호 묶음마다 짝수의 개수가 1개씩 늘어나며 규칙적으로 나열된 수열이 있다.</p>
+<blockquote>
+<p><strong><code>(2),  (2, 4),  (2, 4, 6),  (2, 4, 6, 8),  (2, 4, 6, 8, 10), ...</code></strong></p>
+</blockquote>
+<p>괄호를 무시하고 맨 앞의 숫자 <code>2</code>부터 차례대로 첫 번째, 두 번째, 세 번째 항이라고 부를 때, <strong>처음부터 50번째에 놓이는 숫자</strong>는?</p>
+<p>① 6<br>② 8<br>③ 10<br>④ 12<br>⑤ 14  </p>
+<hr>
+<p><strong>10.</strong> 가로 3칸 × 세로 3칸으로 이루어진 격자판의 칸 번호를 아래 표와 같이 <code>1번</code>부터 <code>9번</code>까지 붙였다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>1번</code></th>
+<th align="center"><code>2번</code></th>
+<th align="center"><code>3번</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><code>4번</code></strong></td>
+<td align="center"><strong><code>5번</code></strong></td>
+<td align="center"><strong><code>6번</code></strong></td>
+</tr>
+<tr>
+<td align="center"><strong><code>7번</code></strong></td>
+<td align="center"><strong><code>8번</code></strong></td>
+<td align="center"><strong><code>9번</code></strong></td>
+</tr>
+</tbody></table>
+<p>어떤 도형 변환 장치에 이 격자판을 넣으면 먼저 <strong>[1단계: 격자판 전체를 시계 방향으로 90도 회전]</strong>시킨 뒤, 곧바로 <strong>[2단계: 좌우 대칭(왼쪽 끝 열과 오른쪽 끝 열을 서로 뒤집기)]</strong>을 수행하여 내보낸다. 처음에 <strong><code>1번, 2번, 7번</code></strong> 세 칸만 검은색(<code>■</code>)으로 칠해진 격자판을 이 변환 장치에 <strong>1번 통과</strong>시켰을 때, 검은색(<code>■</code>)이 위치하게 되는 세 칸의 번호는?</p>
+<p>① <code>1번, 3번, 6번</code><br>② <code>1번, 3번, 4번</code><br>③ <code>2번, 3번, 9번</code><br>④ <code>1번, 2번, 9번</code><br>⑤ <code>3번, 4번, 7번</code>  </p>
+<hr>
+<p><strong>11.</strong> 학교 서버실 보안 점검을 위해 <strong>수아</strong>는 <strong>4일마다 한 번씩</strong>(첫 점검일 후 3일 쉬고 4일째마다 점검) 서버실 점검을 나가고, <strong>지호</strong>는 매주 <strong>수요일과 토요일에만</strong> 점검을 나간다. 두 학생이 어느 주 <strong>토요일(1일째)</strong>에 처음으로 함께 서버실 점검을 나갔다면, <strong>그 첫 토요일(1일째)을 포함하여 총 300일 동안</strong> 두 학생이 같은 날 함께 서버실 점검을 나가는 날은 모두 며칠인가?</p>
+<p>① 19일<br>② 20일<br>③ 21일<br>④ 22일<br>⑤ 23일  </p>
+<hr>
+<p><strong>12.</strong> 디미고 e-비즈니스과 신입생 <strong>40명</strong>을 대상으로 방학 중 자격증 취득 현황을 조사하였더니, <strong>컴퓨터활용능력 자격증을 취득한 학생이 23명</strong>, <strong>정보처리기능사 자격증을 취득한 학생이 19명</strong>이었다. 두 자격증 중 <strong>어느 것도 취득하지 못한 학생 수가 두 자격증을 모두 취득한 학생 수의 절반(<code>1/2</code>)</strong>일 때, <strong>컴퓨터활용능력 자격증만 단독으로 취득한 학생</strong>은 몇 명인가?</p>
+<p>① 15명<br>② 17명<br>③ 18명<br>④ 21명<br>⑤ 19명  </p>
+<hr>
+<p><strong>13.</strong> 일정한 속력으로 달리는 열차가 길이가 <strong><code>550m</code></strong>인 철교(다리)에 앞머리가 진입하기 시작하여 꼬리까지 완전히 빠져나오는 데 <strong>30초</strong>가 걸렸고, 같은 속력으로 길이가 <strong><code>1,050m</code></strong>인 터널에 진입하기 시작하여 완전히 빠져나오는 데는 <strong>50초</strong>가 걸렸다. 이 열차의 <strong>자체 길이(<code>m</code>)</strong>와 <strong>초속(<code>m/초</code>)</strong>을 바르게 짝지은 것은?</p>
+<p>① 열차 길이 <code>150m</code>, 초속 <code>20m</code><br>② 열차 길이 <code>200m</code>, 초속 <code>25m</code><br>③ 열차 길이 <code>200m</code>, 초속 <code>20m</code><br>④ 열차 길이 <code>250m</code>, 초속 <code>25m</code><br>⑤ 열차 길이 <code>250m</code>, 초속 <code>30m</code>  </p>
+<hr>
+<p><strong>14.</strong> 정점(꼭짓점)과 간선(선분)으로 이루어진 그래프(Graph) 및 트리(Tree) 구조에 관한 다음 설명 중 <strong>옳지 않은(틀린)</strong> 것은?</p>
+<p>① 정점이 12개인 트리(순환하는 고리가 없이 하나로 연결된 그래프)가 가지는 간선의 개수는 항상 11개이다.<br>② 루트 노드(1층)부터 4층까지 모든 부모 노드가 자식 노드를 2개씩 꽉 채워 가진 포화 이진 트리의 전체 노드 개수는 15개이다.<br>③ 꼭짓점이 5개인 어떤 그래프에서 각 꼭짓점에 연결된 선의 개수(차수)가 각각 <code>4, 3, 3, 2, 2</code>라면, 이 그래프의 전체 선분(간선) 개수는 7개이다.<br>④ 네 변으로 이루어진 사각형 내부에 두 대각선(<code>X</code>자)을 모두 그은 도형은 홀수점(연결된 선이 홀수 개인 꼭짓점)이 4개이므로 연필을 떼지 않고 한붓그리기를 할 수 없다.<br>⑤ 꼭짓점이 6개인 어떤 그래프에서 각 꼭짓점에 연결된 선의 개수(차수)를 조사했더니 각각 <code>3, 3, 3, 2, 2, 2</code>였다.  </p>
+<hr>
+<p><strong>15.</strong> 아래 표와 같이 가로 2칸, 세로 2칸으로 나뉜 4개의 전시 부스 <strong><code>A, B, C, D</code></strong>에 <strong>서로 다른 4가지 색깔(빨강, 파랑, 노랑, 초록)</strong>의 페인트 중 일부 또는 전부를 사용하여 색칠하려고 한다. 변(선분)을 맞대고 이웃한 부스끼리는 같은 색을 칠할 수 없을 때(단, 대각선으로만 마주 보는 <strong><code>A</code>와 <code>D</code></strong>, 또는 <strong><code>B</code>와 <code>C</code></strong>는 서로 같은 색을 칠해도 됨), 4개의 부스를 색칠할 수 있는 <strong>모든 경우의 수</strong>는?</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>A (좌측 상단)</code></th>
+<th align="center"><code>B (우측 상단)</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><code>C (좌측 하단)</code></strong></td>
+<td align="center"><strong><code>D (우측 하단)</code></strong></td>
+</tr>
+</tbody></table>
+<p>① 48가지<br>② 64가지<br>③ 72가지<br>④ 84가지<br>⑤ 96가지  </p>
+<hr>
+<p><strong>16.</strong> 아래 표는 가로 4칸(0열<del>4열), 세로 3칸(0행</del>3행)으로 이루어진 격자 도로망의 교차점 위치를 나타낸다. 출발점 <strong><code>S(0행 0열)</code></strong>에서 도착점 <strong><code>G(3행 4열)</code></strong>까지 <strong>오른쪽(<code>→</code>), 위쪽(<code>↑</code>), 또는 지정된 대각선 지름길(<code>↗</code>)</strong>로만 이동하려고 한다. 이 도로망에는 <strong><code>(1행 1열)</code> 교차점에서 <code>(2행 2열)</code> 교차점으로 바로 가로질러 가는 대각선 지름길(<code>↗</code>)이 단 1개</strong> 설치되어 있으며, <strong><code>(2행 3열)</code> 교차점은 도로 공사로 인해 지나갈 수 없다(<code>[✕]</code>)</strong>. 출발점 <code>S</code>에서 도착점 <code>G</code>까지 이동 가능한 <strong>최단 경로의 총 가짓수</strong>는?</p>
+<table>
+<thead>
+<tr>
+<th align="center">구분</th>
+<th align="center">0열</th>
+<th align="center">1열</th>
+<th align="center">2열</th>
+<th align="center">3열</th>
+<th align="center">4열</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>3행</strong></td>
+<td align="center">·</td>
+<td align="center">·</td>
+<td align="center">·</td>
+<td align="center">·</td>
+<td align="center"><strong><code>G (도착)</code></strong></td>
+</tr>
+<tr>
+<td align="center"><strong>2행</strong></td>
+<td align="center">·</td>
+<td align="center">·</td>
+<td align="center"><strong><code>· [↗도착]</code></strong></td>
+<td align="center"><strong><code>[✕ 공사중]</code></strong></td>
+<td align="center">·</td>
+</tr>
+<tr>
+<td align="center"><strong>1행</strong></td>
+<td align="center">·</td>
+<td align="center"><strong><code>· [↗출발]</code></strong></td>
+<td align="center">·</td>
+<td align="center">·</td>
+<td align="center">·</td>
+</tr>
+<tr>
+<td align="center"><strong>0행</strong></td>
+<td align="center"><strong><code>S (출발)</code></strong></td>
+<td align="center">·</td>
+<td align="center">·</td>
+<td align="center">·</td>
+<td align="center">·</td>
+</tr>
+</tbody></table>
+<p>① 13가지<br>② 15가지<br>③ 17가지<br>④ 19가지<br>⑤ 21가지  </p>
+<hr>
+<h2>Part 3. 논리·추리 퍼즐 및 국어 조건 독해 영역 (17번 ~ 23번)</h2>
+<p><strong>17.</strong> 어느 중학교 과학반 동아리실의 사물함을 점검한 부장이 <strong>&quot;과학반의 모든 부원이 개인 사물함에 실험복과 보안경을 둘 다 넣어 두었다&quot;</strong>라고 보고하였는데, 확인 결과 부장의 보고는 <strong>거짓(False)</strong>인 것으로 밝혀졌다. 이 사실로부터 논리적으로 <strong>항상 참(True)이라고 확신할 수 있는</strong> 문장은?</p>
+<p>① 과학반의 모든 부원이 사물함에 실험복과 보안경을 둘 다 넣어 두지 않았다.<br>② 과학반 부원 중 실험복과 보안경을 둘 다 넣어 두지 않은 부원이 적어도 1명 있다.<br>③ 과학반의 모든 부원이 실험복은 넣어 두었지만 보안경은 넣어 두지 않았다.<br>④ 과학반 부원 중 실험복을 넣어 두지 않았거나 보안경을 넣어 두지 않은 부원이 적어도 1명 있다.<br>⑤ 과학반 부원 중 실험복을 넣어 둔 부원은 아무도 없다.  </p>
+<hr>
+<p><strong>18.</strong> 네 명의 학생 <strong><code>갑, 을, 병, 정</code></strong> 중 누군가 <strong>단 1명</strong>이 아침에 일찍 와서 교실 화분에 물을 주었다. 네 학생이 다음과 같이 진술했을 때, 네 명 중 <strong>정확히 2명은 참말</strong>을 하고 <strong>2명은 거짓말</strong>을 했다면 실제로 화분에 물을 준 학생과 참말을 한 두 사람을 바르게 짝지은 것은?</p>
+<ul>
+<li><strong>갑</strong>: &quot;을이나 병 중 한 명이 화분에 물을 주었어.&quot;</li>
+<li><strong>을</strong>: &quot;병이 화분에 물을 주었어.&quot;</li>
+<li><strong>병</strong>: &quot;정이 화분에 물을 주었어.&quot;</li>
+<li><strong>정</strong>: &quot;병의 말은 거짓말이야.&quot;</li>
+</ul>
+<p>① 물을 준 학생: <code>을</code> / 참말을 한 사람: <code>갑, 정</code><br>② 물을 준 학생: <code>병</code> / 참말을 한 사람: <code>갑, 을</code><br>③ 물을 준 학생: <code>정</code> / 참말을 한 사람: <code>갑, 병</code><br>④ 물을 준 학생: <code>갑</code> / 참말을 한 사람: <code>을, 정</code><br>⑤ 물을 준 학생: <code>을</code> / 참말을 한 사람: <code>을, 정</code>  </p>
+<hr>
+<p><strong>19.</strong> 6명의 학생 <strong><code>A, B, C, D, E, F</code></strong>가 정육각형 모양의 둥근 탁자 둘레에 같은 간격으로 놓인 <code>1번 ~ 6번</code> 의자에 시계 방향 순서로 앉아 회의를 하고 있다. (단, <code>1번↔4번</code>, <code>2번↔5번</code>, <code>3번↔6번</code> 의자가 서로 정면으로 마주 보는 자리이다.) 다음 조건을 모두 만족할 때, <strong><code>D</code>와 정면으로 마주 보고 앉은 학생</strong>과 <strong><code>5번</code> 의자에 앉은 학생</strong>을 차례대로 바르게 짝지은 것은?</p>
+<ul>
+<li><strong>(가)</strong> <code>A</code>는 <code>1번</code> 의자에 앉아 있고, <code>C</code>와 정면으로 마주 보고 있다.</li>
+<li><strong>(나)</strong> <code>B</code>는 <code>A</code>의 바로 양옆 이웃한 자리(<code>2번</code>, <code>6번</code>)에 앉아 있지 않다.</li>
+<li><strong>(다)</strong> <code>E</code>는 <code>2번</code> 의자에 앉아 있으며, <code>B</code>와 정면으로 마주 보고 있다.</li>
+<li><strong>(라)</strong> <code>D</code>는 <code>C</code>의 바로 양옆 이웃한 자리에 앉아 있지 않다.</li>
+</ul>
+<p>① <code>F</code>, <code>D</code><br>② <code>B</code>, <code>F</code><br>③ <code>E</code>, <code>B</code><br>④ <code>C</code>, <code>F</code><br>⑤ <code>F</code>, <code>B</code>  </p>
+<hr>
+<p><strong>20.</strong> 서로 다른 세 개의 숫자(<code>1 ~ 9</code>)로 이루어진 3자리 금고 비밀번호를 찾기 위해 네 번 시도한 결과가 다음과 같다.</p>
+<ul>
+<li><strong>[시도 1] <code>2 6 8</code></strong>: 숫자와 위치가 모두 맞는 것(스트라이크)이 <strong>1개</strong>, 숫자는 맞지만 위치가 틀린 것(볼)은 <strong>0개</strong>이다.</li>
+<li><strong>[시도 2] <code>2 1 4</code></strong>: 숫자는 맞지만 위치가 틀린 것(볼)만 <strong>1개</strong>이다.</li>
+<li><strong>[시도 3] <code>8 9 2</code></strong>: 숫자는 맞지만 위치가 틀린 것(볼)만 <strong>2개</strong>이다.</li>
+<li><strong>[시도 4] <code>5 6 7</code></strong>: 맞는 숫자가 <strong>하나도 없다</strong> (0 스트라이크, 0 볼).</li>
+</ul>
+<p>이 금고의 3자리 비밀번호로 알맞은 것은?</p>
+<p>① <code>1 9 8</code><br>② <code>4 9 8</code><br>③ <code>9 1 8</code><br>④ <code>9 8 4</code><br>⑤ <code>9 4 8</code>  </p>
+<hr>
+<p><strong>21.</strong> 다음 두 가지 고전 퍼즐을 해결할 때 필요한 최소 횟수 <strong><code>(가)</code></strong>와 <strong><code>(나)</code></strong>의 합 <strong><code>(가) + (나)</code></strong>의 값은?</p>
+<ul>
+<li><strong>[퍼즐 1: 양팔 저울]</strong> 겉모양과 크기가 똑같은 동전 <strong>25개</strong> 중 무게가 살짝 가벼운 가짜 동전이 <strong>단 1개</strong> 섞여 있다. 눈금이 없는 양팔 저울을 최소 <strong><code>(가)</code>번</strong> 사용하면 운이 나쁜 최악의 경우에도 가짜 동전 1개를 반드시 찾아낼 수 있다.</li>
+<li><strong>[퍼즐 2: 하노이 탑]</strong> 세 개의 기둥 <code>A, B, C</code> 중 <code>A</code> 기둥에 크기가 서로 다른 원반 <strong>5개</strong>가 큰 원반이 아래로 가도록 순서대로 꽂혀 있다. 한 번에 원반을 1개씩만 옮길 수 있고 작은 원반 위에 큰 원반을 올릴 수 없을 때, 5개의 원반을 모두 <code>C</code> 기둥으로 옮기는 최소 이동 횟수는 <strong><code>(나)</code>번</strong>이다.</li>
+</ul>
+<p>① 33<br>② 34<br>③ 35<br>④ 36<br>⑤ 40  </p>
+<hr>
+<p><strong>22.</strong> 캄캄한 밤에 네 명의 탐험가 <strong><code>A, B, C, D</code></strong>가 좁은 다리를 건너려고 한다. 각 탐험가가 다리를 건너는 데 걸리는 시간은 <strong><code>A</code>는 1분, <code>B</code>는 2분, <code>C</code>는 6분, <code>D</code>는 8분</strong>이다. 다리는 한 번에 <strong>최대 2명까지만</strong> 함께 건널 수 있고, 다리를 건널 때는 반드시 <strong>단 1개뿐인 손전등</strong>을 들고 이동해야 한다. 두 사람이 함께 건널 때는 <strong>더 느린 사람의 속도에 맞추어</strong> 이동한다고 할 때, 네 명이 모두 다리를 건너는 데 걸리는 <strong>최소 시간</strong>은?</p>
+<p>① 15분<br>② 16분<br>③ 17분<br>④ 18분<br>⑤ 19분  </p>
+<hr>
+<p><strong>23.</strong> 다음은 어느 클라우드 서비스의 비밀번호 보안 점수(기본 <code>0점</code>에서 시작) 산정 규정이다.</p>
+<blockquote>
+<p><strong>[비밀번호 보안 점수 산정 규정]</strong></p>
+<ol>
+<li><strong>길이 점수</strong>: 비밀번호 전체 글자 수가 <code>8자 이상 ~ 10자 이하</code>이면 <strong><code>+20점</code></strong>, <code>11자 이상</code>이면 <strong><code>+35점</code></strong>을 부여한다. (<code>8자 미만</code>이면 길이 점수는 <code>0점</code>이다.)</li>
+<li><strong>문자 조합 가산점</strong>: 영문 대문자, 영문 소문자, 숫자, 특수기호(<code>!</code>, <code>@</code>, <code>#</code> 등) 4가지 종류 중 <strong>포함된 종류 1가지당 <code>+10점</code>씩</strong> 가산한다. <em>(단, 4가지 종류가 모두 포함되고 전체 글자 수가 <strong>10자 이상</strong>인 경우에만 추가 보너스 <strong><code>+15점</code></strong>을 더 부여한다.)</em></li>
+<li><strong>감점 조항</strong>: 같은 문자가 3번 이상 연속되거나(예: <code>aaa</code>, <code>111</code>), 연속된 3자리 이상의 오름차순 숫자(예: <code>123</code>, <code>4567</code>)가 포함되어 있으면 각각 항목당 <strong><code>-15점</code></strong>을 감점한다.</li>
+</ol>
+</blockquote>
+<p>위 규정에 따라 총 9자리로 된 비밀번호 <strong><code>Dimi!1234</code></strong>의 최종 보안 점수를 계산한 값은?</p>
+<p>① 40점<br>② 45점<br>③ 55점<br>④ 60점<br>⑤ 75점  </p>
+<hr>
+<h2>Part 4. 알고리즘적 문제해결력 영역 (24번 ~ 30번)</h2>
+<p><strong>24.</strong> 위쪽만 열려 있어 맨 위의 공부터 꺼낼 수 있는 세 개의 원통 <strong><code>(가)</code>, <code>(나)</code>, <code>(다)</code></strong>가 있다. 처음에 원통 <strong><code>(가)</code>에는 위에서부터 아래로 <code>9, 4, 3, 8, 6</code> 순서로 5개의 공</strong>이 들어 있고, <code>(나)</code>와 <code>(다)</code>는 비어 있다. 다음 규칙을 순서대로 적용하여 공을 옮겼을 때, 모든 과정이 종료된 직후 <strong>원통 <code>(다)</code>에 들어 있는 공의 숫자를 위에서부터 차례대로 나열한 것</strong>은?</p>
+<blockquote>
+<ul>
+<li><strong>단계 1</strong> : <code>(가)</code>에 공이 없으면 <strong>단계 5</strong>로 이동하고, 공이 있으면 <strong>단계 2</strong>로 이동한다.</li>
+<li><strong>단계 2</strong> : <code>(가)</code>에 있는 맨 위의 공을 꺼낸다.</li>
+<li><strong>단계 3</strong> : 꺼낸 공의 숫자가 <strong>홀수</strong>이면 <code>(나)</code>에 넣고, <strong>짝수</strong>이면 <code>(다)</code>에 넣는다.</li>
+<li><strong>단계 4</strong> : <strong>단계 1</strong>로 이동한다.</li>
+<li><strong>단계 5</strong> : <code>(나)</code>에 있는 맨 위의 공을 꺼낸다.</li>
+<li><strong>단계 6</strong> : 꺼낸 공의 숫자가 <strong>3의 배수</strong>이면 <code>(다)</code>에 넣고, 그렇지 않으면 버린다.</li>
+<li><strong>단계 7</strong> : 종료한다.</li>
+</ul>
+</blockquote>
+<p>① <code>6, 8, 4</code><br>② <code>4, 8, 6, 3</code><br>③ <code>3, 9, 6, 8, 4</code><br>④ <code>3, 6, 8, 4</code><br>⑤ <code>9, 3, 6, 8, 4</code>  </p>
+<hr>
+<p><strong>25.</strong> 자연수 <code>N</code>의 각 자릿수를 처리하는 다음 절차(알고리즘)를 실행할 때, 처음에 <strong><code>N = 2508</code></strong>로 시작하면 반복이 모두 종료된 후 최종 출력되는 <strong><code>S</code></strong>와 <strong><code>CNT</code></strong>의 값은?</p>
+<ul>
+<li><strong>[1단계]</strong> <code>N = 2508</code>, <code>S = 0</code>, <code>CNT = 0</code>으로 시작한다.</li>
+<li><strong>[2단계]</strong> <code>N &gt; 0</code>인지 판단하여, <strong>거짓(<code>N = 0</code>)</strong>이면 <strong>[6단계]</strong>로 이동한다.</li>
+<li><strong>[3단계]</strong> <code>N</code>을 <code>10</code>으로 나눈 <strong>나머지</strong>를 변수 <strong><code>R</code></strong>에 저장한다.</li>
+<li><strong>[4단계]</strong> 만약 <strong><code>R &gt; 0</code></strong>이면 <strong><code>S ← S + R</code></strong>과 <strong><code>CNT ← CNT + 1</code></strong>을 수행한다. (만약 <code>R = 0</code>이면 <code>S</code>와 <code>CNT</code>를 변경하지 않고 그대로 둔다.)</li>
+<li><strong>[5단계]</strong> <code>N</code>을 <code>10</code>으로 나눈 <strong>몫(소수점 아래 버림)</strong>을 새로운 <strong><code>N</code></strong>으로 저장한 뒤 다시 <strong>[2단계]</strong>로 돌아간다.</li>
+<li><strong>[6단계]</strong> 최종 <code>S</code>와 <code>CNT</code>의 값을 출력하고 종료한다.</li>
+</ul>
+<p>① <code>S = 15</code>, <code>CNT = 2</code><br>② <code>S = 15</code>, <code>CNT = 3</code><br>③ <code>S = 15</code>, <code>CNT = 4</code><br>④ <code>S = 16</code>, <code>CNT = 3</code><br>⑤ <code>S = 16</code>, <code>CNT = 4</code>  </p>
+<hr>
+<p><strong>26.</strong> 일렬로 놓인 5장의 숫자 카드 <strong><code>[ 4, 2, 5, 1, 3 ]</code></strong>을 작은 수부터 큰 수 순서(<code>[ 1, 2, 3, 4, 5 ]</code>)로 정렬하기 위해 다음 규칙(선택 정렬 원리)을 적용한다.</p>
+<ul>
+<li><strong>[1단계(1회전)]</strong>: 1번째부터 5번째 카드 중 <strong>가장 작은 숫자</strong>를 찾아 <strong>1번째 자리의 카드</strong>와 자리를 맞바꾼다.</li>
+<li><strong>[2단계(2회전)]</strong>: 남은 2번째부터 5번째 카드 중 <strong>가장 작은 숫자</strong>를 찾아 <strong>2번째 자리의 카드</strong>와 자리를 맞바꾼다. <em>(단, 찾은 가장 작은 숫자가 이미 그 자리에 놓여 있는 경우에는 자리를 바꾸지 않는다.)</em></li>
+<li>같은 방식으로 3단계(3번째 자리 확정), 4단계(4번째 자리 확정)까지 차례대로 수행한다.</li>
+</ul>
+<p>위 규칙에 따라 <strong>1단계(1회전)를 마친 직후의 카드 배열 상태</strong>와, 4단계까지 정렬이 완전히 끝나는 동안 <strong>두 카드의 자리를 실제로 맞바꾼(교환한) 총 횟수</strong>를 바르게 짝지은 것은?</p>
+<p>① <code>[ 1, 2, 5, 4, 3 ]</code>, 총 <code>2회</code> 교환<br>② <code>[ 1, 2, 5, 4, 3 ]</code>, 총 <code>3회</code> 교환<br>③ <code>[ 1, 4, 2, 5, 3 ]</code>, 총 <code>3회</code> 교환<br>④ <code>[ 2, 4, 1, 3, 5 ]</code>, 총 <code>2회</code> 교환<br>⑤ <code>[ 1, 2, 5, 4, 3 ]</code>, 총 <code>4회</code> 교환  </p>
+<hr>
+<p><strong>27.</strong> 다음 <strong>[문제 A]</strong>와 <strong>[문제 B]</strong>의 정답을 차례대로 바르게 짝지은 것은?</p>
+<ul>
+<li><strong>[문제 A: 올바른 괄호 판별]</strong> 여는 괄호 <code>(</code>와 닫는 괄호 <code>)</code>로만 이루어진 다음 4개의 문자열 <code>(가)~(라)</code> 중에서 여는 괄호와 닫는 괄호의 짝이 올바르게 맞는 문자열은 모두 몇 개인가?<blockquote>
+<p><code>(가) (()())()</code> &nbsp;&nbsp;&nbsp;&nbsp; <code>(나) ())(()</code> &nbsp;&nbsp;&nbsp;&nbsp; <code>(다) ((())())</code> &nbsp;&nbsp;&nbsp;&nbsp; <code>(라) (()()(()</code></p>
+</blockquote>
+</li>
+<li><strong>[문제 B: 나머지 사물함 배정]</strong> <code>0번</code>부터 <code>6번</code>까지 7개의 빈 사물함이 있을 때, 학생 번호 <code>X</code>를 <code>7</code>로 나눈 나머지(<code>X MOD 7</code>)에 해당하는 번호의 사물함을 배정한다. 만약 해당 번호의 사물함이 이미 다른 학생에게 배정되어 있다면(충돌 발생), 비어 있는 사물함이 나올 때까지 사물함 번호를 <code>1</code>씩 늘려가며(<code>+1</code>) 바로 다음 빈 사물함에 배정한다. 학생 번호 <strong><code>16번 → 25번 → 9번 → 30번</code></strong> 순서로 사물함을 배정할 때, 마지막 <strong><code>30번</code></strong> 학생이 배정받는 사물함 번호는?</li>
+</ul>
+<p>① <code>1개</code>, <code>3번</code><br>② <code>2개</code>, <code>3번</code><br>③ <code>2개</code>, <code>5번</code><br>④ <code>3개</code>, <code>4번</code><br>⑤ <code>3개</code>, <code>5번</code>  </p>
+<hr>
+<p><strong>28.</strong> 숫자를 저장하는 트리(Tree) 구조에서 새로운 숫자를 추가하거나 찾을 때 다음 규칙을 따른다.</p>
+<blockquote>
+<p><strong>[규칙]</strong>: 맨 위 루트 노드에서 시작하여, 현재 노드의 숫자보다 <strong>작은 숫자는 왼쪽(<code>↙</code>) 자식</strong>으로 보내고, <strong>큰 숫자는 오른쪽(<code>↘</code>) 자식</strong>으로 보낸다. 이동한 자리가 비어 있으면 그 위치에 새 노드를 저장하고, 이미 다른 노드가 있으면 그 노드와 다시 크기를 비교하여 같은 규칙으로 내려간다.</p>
+</blockquote>
+<p>처음에 비어 있는 트리에 첫 번째 숫자 <strong><code>50</code></strong>을 루트 노드로 넣은 뒤, 이어서 <strong><code>30 → 70 → 20 → 40 → 35</code></strong> 순서로 숫자를 차례대로 추가하여 트리를 완성하였다. 완성된 트리에서 숫자 <strong><code>35</code></strong>를 찾기 위해 루트 노드(<code>50</code>)부터 <code>35</code>까지 내려가는 <strong>방문 경로</strong>와, 완성된 트리에서 자식 노드가 하나도 없는 <strong>단말 노드(맨 끝 노드)를 모두 고른 것</strong>은?</p>
+<p>① 경로: <code>50 → 30 → 20 → 35</code> / 단말 노드: <code>35, 40, 70</code><br>② 경로: <code>50 → 30 → 40 → 35</code> / 단말 노드: <code>20, 35, 40, 70</code><br>③ 경로: <code>50 → 70 → 40 → 35</code> / 단말 노드: <code>20, 35, 70</code><br>④ 경로: <code>50 → 30 → 40 → 35</code> / 단말 노드: <code>20, 35, 70</code><br>⑤ 경로: <code>50 → 30 → 40 → 35</code> / 단말 노드: <code>20, 35</code>  </p>
+<hr>
+<p><strong>29.</strong> 보안 구역의 자동문이 현재 상태(<code>S0, S1, S2, S3</code>)와 입력 버튼(<code>A</code> 또는 <code>B</code>)에 따라 아래 표의 규칙대로 상태를 바꾼다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">현재 상태</th>
+<th align="center">버튼 <code>A</code>를 눌렀을 때 바뀌는 상태</th>
+<th align="center">버튼 <code>B</code>를 눌렀을 때 바뀌는 상태</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><code>S0</code> (잠김)</strong></td>
+<td align="center"><code>S1</code></td>
+<td align="center"><code>S0</code></td>
+</tr>
+<tr>
+<td align="center"><strong><code>S1</code> (대기)</strong></td>
+<td align="center"><code>S2</code></td>
+<td align="center"><code>S0</code></td>
+</tr>
+<tr>
+<td align="center"><strong><code>S2</code> (인증)</strong></td>
+<td align="center"><code>S2</code></td>
+<td align="center"><code>S3</code></td>
+</tr>
+<tr>
+<td align="center"><strong><code>S3</code> (열림)</strong></td>
+<td align="center"><code>S1</code></td>
+<td align="center"><code>S0</code></td>
+</tr>
+</tbody></table>
+<p>처음에 <strong><code>S0</code> (잠김)</strong> 상태에서 시작하여 버튼을 <strong><code>A → A → A → B → A → A → B</code></strong> 순서로 총 7번 눌렀을 때, 버튼을 누른 직후의 상태가 <strong><code>S2</code> (인증) 상태가 된 총 횟수</strong>와 <strong>7번째 버튼을 누른 직후의 최종 상태</strong>를 바르게 짝지은 것은?</p>
+<p>① <code>2회</code>, <code>S0</code><br>② <code>2회</code>, <code>S3</code><br>③ <code>3회</code>, <code>S0</code><br>④ <code>3회</code>, <code>S2</code><br>⑤ <code>3회</code>, <code>S3</code>  </p>
+<hr>
+<p><strong>30.</strong> 6개의 거점 서버 <strong><code>A, B, C, D, E, F</code></strong>가 통신망으로 연결되어 있으며, 두 서버를 직접 잇는 구간을 통과하는 데 걸리는 전송 지연 시간(ms)이 아래 표와 같다. (표에 없는 서버 쌍은 직접 연결되어 있지 않다.)</p>
+<table>
+<thead>
+<tr>
+<th align="center">연결 구간</th>
+<th align="center">지연 시간 (<code>ms</code>)</th>
+<th align="center">연결 구간</th>
+<th align="center">지연 시간 (<code>ms</code>)</th>
+<th align="center">연결 구간</th>
+<th align="center">지연 시간 (<code>ms</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong><code>A — B</code></strong></td>
+<td align="center"><code>4 ms</code></td>
+<td align="center"><strong><code>B — D</code></strong></td>
+<td align="center"><code>7 ms</code></td>
+<td align="center"><strong><code>D — E</code></strong></td>
+<td align="center"><code>2 ms</code></td>
+</tr>
+<tr>
+<td align="center"><strong><code>A — C</code></strong></td>
+<td align="center"><code>2 ms</code></td>
+<td align="center"><strong><code>B — E</code></strong></td>
+<td align="center"><code>4 ms</code></td>
+<td align="center"><strong><code>D — F</code></strong></td>
+<td align="center"><code>3 ms</code></td>
+</tr>
+<tr>
+<td align="center"><strong><code>B — C</code></strong></td>
+<td align="center"><code>1 ms</code></td>
+<td align="center"><strong><code>C — E</code></strong></td>
+<td align="center"><code>8 ms</code></td>
+<td align="center"><strong><code>E — F</code></strong></td>
+<td align="center"><code>6 ms</code></td>
+</tr>
+</tbody></table>
+<p>출발 서버 <strong><code>A</code></strong>에서 도착 서버 <strong><code>F</code></strong>까지 데이터를 전송할 때 걸리는 <strong>최소 지연 시간(최단 시간)</strong>과 그때 거쳐 가는 <strong>최단 경로</strong>를 바르게 짝지은 것은?</p>
+<p>① <code>12 ms</code> (<code>A → C → B → E → D → F</code>)<br>② <code>13 ms</code> (<code>A → C → B → D → F</code>)<br>③ <code>13 ms</code> (<code>A → C → B → E → F</code>)<br>④ <code>13 ms</code> (<code>A → B → E → D → F</code>)<br>⑤ <code>14 ms</code> (<code>A → B → D → F</code>)  </p>
+
+</body>
+</html>

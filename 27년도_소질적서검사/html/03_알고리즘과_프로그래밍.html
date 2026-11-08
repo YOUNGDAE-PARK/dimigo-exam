@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ⅲ. 알고리즘과 프로그래밍 (디미고 소질·적성검사 핵심 요약)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 13mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #111111;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10pt;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 8mm 10mm;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        max-width: none;
+      }
+
+      h2,
+      h3,
+      .diagram-box,
+      table,
+      blockquote {
+        page-break-inside: avoid;
+      }
+    }
+
+    h1 {
+      font-size: 16pt;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #111111;
+      letter-spacing: -0.3px;
+    }
+
+    h2 {
+      font-size: 12.5pt;
+      font-weight: 700;
+      margin: 16px 0 8px 0;
+      padding: 3px 0 3px 8px;
+      border-left: 4px solid #111111;
+      border-bottom: 1px solid #666666;
+    }
+
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin: 10px 0 6px 0;
+      color: #111111;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    ul,
+    ol {
+      margin: 4px 0 8px 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 3px 0;
+    }
+
+    blockquote {
+      margin: 6px 0 12px 0;
+      padding: 5px 10px;
+      border-left: 2.5px solid #222222;
+      background: transparent;
+      font-size: 9.8pt;
+    }
+
+    strong {
+      font-weight: 700;
+      color: #000000;
+    }
+
+    mark {
+      background-color: #fff3a8;
+      color: #000000;
+      font-weight: 700;
+      padding: 0 3px;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 9pt;
+      padding: 0 3px;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      background: transparent;
+      color: #000000;
+    }
+
+    .diagram-box {
+      border: 1px solid #333333;
+      padding: 8px 12px;
+      margin: 6px 0 10px 0;
+      background: transparent;
+    }
+
+    .flow-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .node {
+      border: 1.5px solid #111111;
+      padding: 6px 10px;
+      text-align: center;
+      background: transparent;
+      flex: 1;
+    }
+
+    .node-title {
+      font-weight: 700;
+      font-size: 9.8pt;
+      border-bottom: 1px dashed #777777;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+    }
+
+    .node-desc {
+      font-size: 8.8pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .arrow-label {
+      display: flex;
+      align-items: center;
+      font-size: 9pt;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 10px 0;
+      font-size: 9.4pt;
+      background: transparent;
+    }
+
+    th,
+    td {
+      border: 1px solid #444444;
+      padding: 5px 8px;
+      vertical-align: middle;
+      background: transparent;
+      text-align: center;
+    }
+
+    th {
+      font-weight: 700;
+      border-bottom: 1.8px solid #111111;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Ⅲ. 알고리즘과 프로그래밍 (디미고 소질·적성검사 핵심 요약)</h1>
+
+  <blockquote>
+    <strong>디미고 실전 출제 유형 4가지</strong>:<br>
+    ① <strong>순서도(Flowchart) 반복 루프 변수 값 손추적 및 빈칸 조건 채우기</strong><br>
+    ② <strong>두 변수의 값 교환(SWAP) 3단계 순서 배열</strong><br>
+    ③ <strong>나머지 연산(배수·짝홀수 판별) 및 논리 연산(<code>AND</code>, <code>OR</code>, <code>NOT</code>) 진리값 판별</strong><br>
+    ④ <strong>리스트(배열) 인덱스 값 참조 및 문법 오류 vs 논리 오류 구분</strong>
+  </blockquote>
+
+  <h2>1. 문제 추상화와 알고리즘의 성질</h2>
+
+  <h3>1.1 문제 상태 정의와 추상화</h3>
+  <div class="diagram-box">
+    <div class="flow-row">
+      <div class="node">
+        <div class="node-title">1. 문제 상태 정의 (구조화)</div>
+        <div class="node-desc">
+          • <strong>초기 상태</strong>: 출발점 / 주어진 조건<br>
+          • <strong>현재 상태</strong>: 규칙 적용 중인 상태<br>
+          • <strong>목표 상태</strong>: 최종 도달할 정답 상태
+        </div>
+      </div>
+      <div class="arrow-label">──▶</div>
+      <div class="node">
+        <div class="node-title">2. 문제 분해 및 <mark>추상화 (Abstraction)</mark></div>
+        <div class="node-desc">
+          • <strong>문제 분해</strong>: 큰 문제를 작은 하위 문제로 나누기<br>
+          • <mark>추상화</mark>: <strong>불필요한 세부사항은 제거</strong>하고 문제 해결에 필요한 <strong>핵심 요소만 추출</strong>하는 과정
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul>
+    <li><strong>★ 추상화 실전 예시</strong>: 지하철 환승 앱을 만들 때 <strong>'역 이름, 노선 연결, 소요 시간'</strong>만 남기고(핵심 요소 추출), <strong>'실제
+        철길의 구부러진 모양, 역 주변 건물, 열차 색깔'</strong>을 지우는 것(불필요한 세부사항 제거)이 바로 <mark>추상화</mark>입니다.</li>
+    <li><strong>알고리즘 3대 필수 조건</strong>: <mark>명확성</mark>(모호한 표현 금지) · <mark>유한성</mark>(언젠가 반드시 종료, 무한 루프 불가) ·
+      <strong>수행 가능성</strong>(실제 처리 가능)</li>
+    <li><strong>3대 표현 방법</strong>: <strong>자연어</strong>(일상 언어, 모호해지기 쉬움) / <strong>의사코드</strong>(프로그래밍 구조와 유사한 가짜 코드) /
+      <strong>순서도</strong>(도형과 화살표로 시각화)</li>
+  </ul>
+
+  <h2>2. 순서도(Flowchart)와 반복 루프 손추적 공식</h2>
+
+  <h3>2.1 순서도 표준 기호와 3대 제어 구조</h3>
+  <div class="diagram-box">
+    <div
+      style="text-align: center; font-size: 9.2pt; margin-bottom: 6px; padding-bottom: 5px; border-bottom: 1px dashed #888888;">
+      <strong>[순서도 4대 기호]</strong> &nbsp;
+      <code>( 시작/종료 )</code>: 타원 &nbsp;|&nbsp;
+      <code>/ 입출력 /</code>: 평행사변형 &nbsp;|&nbsp;
+      <code>[ 처리/연산 ]</code>: 직사각형 &nbsp;|&nbsp;
+      <mark>&lt; 조건판단 &gt;: 마름모 (참/거짓 분기)</mark>
+    </div>
+    <div class="flow-row">
+      <div class="node">
+        <div class="node-title">① 순차 구조 (차례대로)</div>
+        <div class="node-desc" style="text-align: center;">
+          <code>[ 처리 A ]</code><br>
+          <code>&nbsp;&nbsp;&nbsp;&nbsp;▼</code><br>
+          <code>[ 처리 B ]</code>
+        </div>
+      </div>
+      <div class="node">
+        <div class="node-title">② 선택 구조 (<code>IF-ELSE</code>)</div>
+        <div class="node-desc" style="text-align: center;">
+          <code>&lt; 조건식? &gt;</code><br>
+          <code>├── 참(Yes) ──▶ [실행 A]</code><br>
+          <code>└── 거짓(No) ─▶ [실행 B]</code>
+        </div>
+      </div>
+      <div class="node">
+        <div class="node-title">③ 반복 구조 (<code>Loop</code>)</div>
+        <div class="node-desc" style="text-align: center;">
+          <code>&lt; 반복 조건? &gt; ─(거짓)─▶ 종료</code><br>
+          <code>&nbsp;&nbsp;│ (참)</code><br>
+          <code>[ 반복 실행문 ] ──(위로 회전)─┘</code>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>2.2 ★ 시험 1순위: 반복문 누적 합계(<code>S ← S + i</code>) 변수 추적표 작성법</h3>
+  <p>순서도에서 <mark>S ← S + i</mark>는 "기존 <code>S</code> 값에 <code>i</code>를 더해서 다시 <code>S</code>에 덮어씌우라(누적)"는 뜻입니다. 시험지
+    여백에 아래 표를 그려 추적합니다.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 16%;">회전 차수</th>
+        <th style="width: 24%;">반복 조건 (<code>i ≤ 4</code> 인가?)</th>
+        <th style="width: 32%;">누적 합산 (<code>S ← S + i</code>)</th>
+        <th style="width: 28%;">카운트 증가 (<code>i ← i + 1</code>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>초기값</strong></td>
+        <td>-</td>
+        <td><code>S = 0</code></td>
+        <td><code>i = 1</code></td>
+      </tr>
+      <tr>
+        <td><strong>1회전</strong></td>
+        <td><code>1 ≤ 4</code> (참)</td>
+        <td><code>S = 0 + 1 = 1</code></td>
+        <td><code>i = 2</code></td>
+      </tr>
+      <tr>
+        <td><strong>2회전</strong></td>
+        <td><code>2 ≤ 4</code> (참)</td>
+        <td><code>S = 1 + 2 = 3</code></td>
+        <td><code>i = 3</code></td>
+      </tr>
+      <tr>
+        <td><strong>3회전</strong></td>
+        <td><code>3 ≤ 4</code> (참)</td>
+        <td><code>S = 3 + 3 = 6</code></td>
+        <td><code>i = 4</code></td>
+      </tr>
+      <tr>
+        <td><strong>4회전</strong></td>
+        <td><code>4 ≤ 4</code> (참)</td>
+        <td><code>S = 6 + 4 = 10</code></td>
+        <td><mark>i = 5</mark></td>
+      </tr>
+      <tr>
+        <td><strong>종료</strong></td>
+        <td><mark>5 ≤ 4 (거짓 → 탈출!)</mark></td>
+        <td>최종 <code>S = 10</code></td>
+        <td>최종 <code>i = 5</code> (※ 4가 아님 주의!)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. 변수 교환(SWAP) · 리스트 · 연산자 · 디버깅</h2>
+
+  <h3>3.1 두 변수의 값 교환 (SWAP 3단계 꼬리물기 공식)</h3>
+  <div class="diagram-box">
+    <strong>[초기 상태: <code>A = 10</code>, <code>B = 20</code>]</strong> — 값을 잃어버리지 않으려면 반드시 <mark>임시 변수(TEMP)</mark>가
+    필요합니다.<br>
+    • <strong>1단계: <code>TEMP ← A</code></strong> &nbsp;(A의 값 10이 지워지기 전에 TEMP에 대피) ──▶
+    <code>[TEMP: 10, A: 10, B: 20]</code><br>
+    • <strong>2단계: <mark>A ← B</mark></strong> &nbsp;&nbsp;&nbsp;&nbsp;(B의 값 20을 A에 덮어씌움)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;──▶
+    <code>[TEMP: 10, A: 20, B: 20]</code><br>
+    • <strong>3단계: <mark>B ← TEMP</mark></strong> &nbsp;(대피시켜 둔 TEMP의 값 10을 B에 저장)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;──▶ <code>[TEMP: 10, A: 20, B: 10]</code>
+  </div>
+
+  <h3>3.2 리스트(배열)와 나머지·논리 연산자</h3>
+  <ul>
+    <li><strong>리스트 (List / Array)</strong>: 여러 데이터를 연속된 공간에 저장하고 <strong>위치 번호(인덱스, Index)</strong>로 접근하는 구조
+      <ul>
+        <li><strong>★ 인덱스 시작 번호 주의</strong>: 지문 조건에서 첫 번째 칸을 <mark>0번(A[0])</mark>으로 정의하는지, <mark>1번(A[1])</mark>으로
+          정의하는지 먼저 확인합니다.</li>
+      </ul>
+    </li>
+    <li><strong>나머지 연산 (<code>MOD</code> 또는 <code>%</code>) 조건 판별 공식</strong>:
+      <ul>
+        <li><mark>N을 2로 나눈 나머지 == 0</mark> ──▶ <strong>짝수 판별</strong> (나머지가 <code>1</code>이면 <strong>홀수</strong>)</li>
+        <li><mark>N을 K로 나눈 나머지 == 0</mark> ──▶ <strong><code>K</code>의 배수(약수) 판별</strong></li>
+      </ul>
+    </li>
+  </ul>
+
+  <table>
+    <thead>
+      <tr>
+        <th>조건 P</th>
+        <th>조건 Q</th>
+        <th><mark>P AND Q</mark> (둘 다 참일 때만 참)</th>
+        <th><mark>P OR Q</mark> (하나라도 참이면 참)</th>
+        <th><mark>NOT P</mark> (참↔거짓 반전)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>참(T)</strong></td>
+        <td><strong>참(T)</strong></td>
+        <td><strong>참 (T)</strong></td>
+        <td><strong>참 (T)</strong></td>
+        <td>거짓 (F)</td>
+      </tr>
+      <tr>
+        <td><strong>참(T)</strong></td>
+        <td>거짓(F)</td>
+        <td>거짓 (F)</td>
+        <td><strong>참 (T)</strong></td>
+        <td>거짓 (F)</td>
+      </tr>
+      <tr>
+        <td>거짓(F)</td>
+        <td><strong>참(T)</strong></td>
+        <td>거짓 (F)</td>
+        <td><strong>참 (T)</strong></td>
+        <td><strong>참 (T)</strong></td>
+      </tr>
+      <tr>
+        <td>거짓(F)</td>
+        <td>거짓(F)</td>
+        <td>거짓 (F)</td>
+        <td>거짓 (F)</td>
+        <td><strong>참 (T)</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>3.3 함수(Function)와 오류(디버깅) 구분</h3>
+  <ul>
+    <li><strong>함수 (Function)</strong>: 반복되는 코드를 하나로 묶어 재사용하는 모듈 (<code>입력: 매개변수/인자</code> → <code>함수 처리</code> →
+      <code>출력: 반환값 Return</code>)</li>
+    <li><strong>오류(Bug)의 2가지 유형 비교</strong>:
+      <ul>
+        <li><mark>문법 오류 (Syntax Error)</mark>: 철자 오타, 괄호 누락 등 문법 규칙 위반으로 <strong>프로그램 실행 자체가 안 되는 오류</strong></li>
+        <li><mark>논리 오류 (Logical Error)</mark>: 실행은 정상적으로 되지만, <strong>알고리즘/수식을 잘못 설계하여 엉뚱한 결과값이 나오는 오류</strong> (예: 평균을
+          구할 때 괄호를 빠뜨려 <code>국어 + 수학 ÷ 2</code>로 계산한 경우)</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+
+</html>

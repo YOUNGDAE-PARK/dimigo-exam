@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ⅴ. 디지털 문화 (디미고 소질·적성검사 핵심 요약)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 13mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #111111;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10pt;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 8mm 10mm;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        max-width: none;
+      }
+
+      h2,
+      h3,
+      .diagram-box,
+      table,
+      blockquote {
+        page-break-inside: avoid;
+      }
+    }
+
+    h1 {
+      font-size: 16pt;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #111111;
+      letter-spacing: -0.3px;
+    }
+
+    h2 {
+      font-size: 12.5pt;
+      font-weight: 700;
+      margin: 16px 0 8px 0;
+      padding: 3px 0 3px 8px;
+      border-left: 4px solid #111111;
+      border-bottom: 1px solid #666666;
+    }
+
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin: 10px 0 6px 0;
+      color: #111111;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    ul,
+    ol {
+      margin: 4px 0 8px 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 3px 0;
+    }
+
+    blockquote {
+      margin: 6px 0 12px 0;
+      padding: 5px 10px;
+      border-left: 2.5px solid #222222;
+      background: transparent;
+      font-size: 9.8pt;
+    }
+
+    strong {
+      font-weight: 700;
+      color: #000000;
+    }
+
+    mark {
+      background-color: #fff3a8;
+      color: #000000;
+      font-weight: 700;
+      padding: 0 3px;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 9pt;
+      padding: 0 3px;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      background: transparent;
+      color: #000000;
+    }
+
+    .diagram-box {
+      border: 1px solid #333333;
+      padding: 8px 12px;
+      margin: 6px 0 10px 0;
+      background: transparent;
+    }
+
+    .flow-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .node {
+      border: 1.5px solid #111111;
+      padding: 6px 10px;
+      text-align: center;
+      background: transparent;
+      flex: 1;
+    }
+
+    .node-title {
+      font-weight: 700;
+      font-size: 9.8pt;
+      border-bottom: 1px dashed #777777;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+    }
+
+    .node-desc {
+      font-size: 8.8pt;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 10px 0;
+      font-size: 9.4pt;
+      background: transparent;
+    }
+
+    th,
+    td {
+      border: 1px solid #444444;
+      padding: 5px 8px;
+      vertical-align: middle;
+      background: transparent;
+    }
+
+    th {
+      font-weight: 700;
+      border-bottom: 1.8px solid #111111;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Ⅴ. 디지털 문화 (디미고 소질·적성검사 핵심 요약)</h1>
+
+  <blockquote>
+    <strong>디미고 실전 출제 유형 4가지</strong>:<br>
+    ① <strong>보안 사고 사례를 보고 침해된 정보 보안 3요소(기밀성·무결성·가용성) 찾기</strong><br>
+    ② <strong>사이버 범죄 수법(랜섬웨어·피싱·파밍·스미싱·DDoS) 구분하기</strong><br>
+    ③ <strong>대칭키 vs 공개키 암호화 특징 비교 및 개인정보 해당 여부 판별</strong><br>
+    ④ <strong>저작권 CCL 기호 조합 해석 및 동시 사용 불가(<code>ND</code>+<code>SA</code>) 함정 찾기</strong>
+  </blockquote>
+
+  <h2>1. 디지털 사회의 핵심 기술 (e-비즈니스·융합 빈출)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 24%;">핵심 디지털 기술</th>
+        <th>작동 원리 및 디미고 시험 출제 포인트</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>사물인터넷 (IoT)</mark></td>
+        <td>일상 속 사물에 <strong>센서와 통신 기능</strong>을 내장하여, 사람의 개입 없이 <strong>사물끼리 인터넷으로 데이터를 주고받으며 자동 제어</strong>하는 기술
+          (스마트홈, 웨어러블 기기)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>클라우드 컴퓨팅</mark><br>(Cloud Computing)</td>
+        <td>내 컴퓨터에 직접 저장·설치하지 않고, <strong>인터넷을 통해 중앙 서버의 저장공간·SW·연산 자원을 언제 어디서나 빌려 쓰는</strong> 기술 (구글 드라이브, 웹 오피스)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;">핀테크 (FinTech)</td>
+        <td><strong>금융(Finance) + 기술(Technology)</strong>의 합성어로, 모바일 간편결제·송금·인터넷 전문은행 등 IT 기술을 결합한 디지털 금융 서비스</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. 개인정보 보호와 정보 보안 3대 요소</h2>
+
+  <h3>2.1 개인정보 판별 기준 (★선지 함정 주의)</h3>
+  <ul>
+    <li><strong>개인정보</strong>: 살아 있는 개인에 관한 정보로서 성명, 주민등록번호, 영상 등을 통해 개인을 알아볼 수 있는 정보</li>
+    <li><strong>★ 결합 식별 원칙</strong>: 그 정보 <mark>하나만으로는 특정 개인을 알아볼 수 없더라도, 다른 정보와 쉽게 결합하여 개인을 알아볼 수 있는 정보</mark>(예: 학교명 +
+      학년·반 + 생일 조합)도 <strong>개인정보에 해당</strong>합니다.</li>
+  </ul>
+
+  <h3>2.2 정보 보안의 3대 핵심 목표 (CIA Triad, ★출제 1순위)</h3>
+  <div class="diagram-box">
+    <div class="flow-row">
+      <div class="node">
+        <div class="node-title"><mark>1. 기밀성 (Confidentiality)</mark></div>
+        <div class="node-desc">
+          • <strong>허가된 사람만 열람 가능</strong><br>
+          • 키워드: <strong>'유출·도청 방지'</strong><br>
+          • 침해: 고객 명단 유출, 도청<br>
+          • 대책: 암호화, 비밀번호 설정
+        </div>
+      </div>
+      <div class="node">
+        <div class="node-title"><mark>2. 무결성 (Integrity)</mark></div>
+        <div class="node-desc">
+          • <strong>허가 없이 위조·변조되지 않음</strong><br>
+          • 키워드: <strong>'조작·변조 방지'</strong><br>
+          • 침해: 성적 조작, 송금액 변조<br>
+          • 대책: 접근 통제, 해시 검증
+        </div>
+      </div>
+      <div class="node">
+        <div class="node-title"><mark>3. 가용성 (Availability)</mark></div>
+        <div class="node-desc">
+          • <strong>원할 때 언제든 정상 이용 가능</strong><br>
+          • 키워드: <strong>'서비스 중단 방지'</strong><br>
+          • 침해: <mark>DDoS 서버 마비</mark>, 랜섬웨어로 파일 열람 불가
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>2.3 암호화(Encryption)의 두 가지 방식 비교</h3>
+  <div class="diagram-box">
+    • <strong>① <mark>대칭키(비밀키) 암호화</mark></strong> : <code>암호화 열쇠(A) ══(동일)══ 복호화 열쇠(A)</code><br>
+    &nbsp;&nbsp;─ 속도는 빠르지만, 상대방에게 열쇠(A)를 전달할 때 해커에게 열쇠가 탈취될 위험이 있음<br>
+    • <strong>② <mark>공개키(비대칭키) 암호화</mark></strong> : <code>암호화 열쇠(공개키: 모두에게 공개) ≠ 복호화 열쇠(개인키: 나만 보관)</code><br>
+    &nbsp;&nbsp;─ 잠그는 열쇠와 여는 열쇠가 서로 달라 열쇠 전달 위험이 없고 보안성이 매우 높음
+  </div>
+
+  <h2>3. 주요 사이버 범죄 및 보안 위협 1초 구분표</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">위협 명칭</th>
+        <th style="width: 18%;">핵심 수단</th>
+        <th>1초 구분 핵심 키워드</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>랜섬웨어</mark><br>(Ransomware)</td>
+        <td style="text-align: center;">파일 암호화</td>
+        <td>컴퓨터의 문서·파일을 <mark>강제로 암호화(인질)</mark>한 뒤, 풀어주는 대가로 <mark>금전(몸값, Ransom)을 요구</mark></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>피싱 (Phishing)</mark></td>
+        <td style="text-align: center;">이메일·메신저</td>
+        <td>금융기관·지인을 사칭한 <strong>이메일·메신저</strong>로 속여 계좌번호·비밀번호 등 <strong>개인정보 탈취</strong></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>파밍 (Pharming)</mark></td>
+        <td style="text-align: center;">가짜 웹사이트</td>
+        <td>정상 홈페이지 주소를 입력해도 악성코드/DNS 조작으로 <mark>가짜 사이트로 몰래 이동시켜</mark> 정보 탈취</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>스미싱 (Smishing)</mark></td>
+        <td style="text-align: center;">문자(SMS) 링크</td>
+        <td><mark>문자 메시지(SMS)</mark> 속 인터넷 주소(URL) 클릭을 유도해 악성 앱 설치 및 소액결제·정보 탈취</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>DDoS 공격</mark><br>(분산 서비스 거부)</td>
+        <td style="text-align: center;">좀비 PC 트래픽</td>
+        <td>감염된 수많은 좀비 PC에서 특정 서버로 <mark>동시에 과도한 접속 트래픽을 보내 서버 마비</mark></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. 저작권(CCL) 조합 규칙과 소프트웨어 라이선스</h2>
+
+  <h3>4.1 저작물 이용 허락 표시 (CCL) 4대 조건</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">저작자 표시 (<code>BY</code>)</th>
+        <th style="width: 25%;">비영리 (<code>NC</code>)</th>
+        <th style="width: 25%;">변경 금지 (<code>ND</code>)</th>
+        <th style="width: 25%;">동일조건변경허락 (<code>SA</code>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="text-align: center;">
+        <td>출처(창작자 이름)를<br>반드시 밝혀야 함</td>
+        <td>돈을 버는 상업적 목적으로<br>사용할 수 없음</td>
+        <td>원본을 수정·편집하지 않고<br>그대로만 사용해야 함</td>
+        <td>수정한 2차 창작물도 원본과<br>같은 CCL로 공유해야 함</td>
+      </tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><strong>★ 시험 1순위 함정 (동시 사용 불가 조합)</strong>: 원본 수정을 금지하는 <mark>ND(변경 금지)</mark>와 수정 후 동일 조건 공유를 뜻하는
+      <mark>SA(동일조건변경허락)</mark>는 서로 모순되므로 <strong>절대 함께 쓰일 수 없습니다!</strong> (보기에 <code>CC BY-ND-SA</code>가 나오면 무조건 틀린
+      선지!)
+      <ul>
+        <li><em>실전 해석</em>: 사진에 <strong><code>[CC BY-NC]</code></strong>가 붙어 있다면? → "출처를 밝히고(<code>BY</code>), 비영리
+          목적(<code>NC</code>)이라면, <mark>사진을 자르거나 수정해서(ND가 없으므로 변경 가능!)</mark> 사용할 수 있다."</li>
+      </ul>
+    </li>
+    <li><strong>소프트웨어 라이선스 구분</strong>:
+      <ul>
+        <li><strong>상용 소프트웨어</strong>: 비용을 지불하고 정품을 구매해야 사용할 수 있는 소프트웨어</li>
+        <li><strong>프리웨어 (Freeware)</strong>: 무료로 사용 가능하지만, <strong>소스 코드(설계도)는 비공개</strong>여서 수정 불가</li>
+        <li><mark>오픈소스 소프트웨어 (Open Source SW)</mark>: <strong>소스 코드까지 전면 공개</strong>하여 누구나 자유롭게
+          <strong>열람·수정·재배포</strong> 가능 (예: Linux, Android, Python)</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+
+</html>

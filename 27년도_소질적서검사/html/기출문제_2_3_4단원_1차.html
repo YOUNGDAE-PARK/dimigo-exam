@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2027학년도 디미고 일반전형 소질·적성검사 실전 모의평가 (제1차: 2·3·4단원 통합)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 13mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #111111;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10pt;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 8mm 10mm;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        max-width: none;
+      }
+
+      .question-block,
+      .explain-block,
+      table,
+      blockquote,
+      .diagram-box {
+        page-break-inside: avoid;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+    }
+
+    h1 {
+      font-size: 15.5pt;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #111111;
+      letter-spacing: -0.3px;
+    }
+
+    h2 {
+      font-size: 12pt;
+      font-weight: 700;
+      margin: 16px 0 10px 0;
+      padding: 3px 0 3px 8px;
+      border-left: 4px solid #111111;
+      border-bottom: 1px solid #666666;
+    }
+
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin: 12px 0 6px 0;
+      color: #111111;
+    }
+
+    p {
+      margin: 4px 0;
+    }
+
+    ul,
+    ol {
+      margin: 4px 0 6px 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 2px 0;
+    }
+
+    blockquote {
+      margin: 6px 0;
+      padding: 6px 10px;
+      border: 1px solid #888888;
+      border-left: 3px solid #111111;
+      background: transparent;
+      font-size: 9.5pt;
+    }
+
+    .question-block {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dotted #cccccc;
+    }
+
+    .q-title {
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    .q-num {
+      font-weight: 800;
+      font-size: 10.5pt;
+      margin-right: 4px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px 8px;
+      margin-top: 6px;
+      font-size: 9.5pt;
+    }
+
+    .options-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px 12px;
+      margin-top: 6px;
+      font-size: 9.5pt;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 6px;
+      font-size: 9.5pt;
+    }
+
+    code {
+      font-family: "Consolas", "D2Coding", "Malgun Gothic", monospace;
+      font-size: 9.5pt;
+      padding: 0 3px;
+      border: 1px solid #cccccc;
+      border-radius: 2px;
+      background: transparent;
+      font-weight: 600;
+    }
+
+    .hl {
+      background-color: #fff3b0;
+      padding: 0 2px;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0;
+      font-size: 9.2pt;
+      background: transparent;
+    }
+
+    th,
+    td {
+      border: 1px solid #444444;
+      padding: 4px 7px;
+      text-align: center;
+      vertical-align: middle;
+      background: transparent;
+    }
+
+    th {
+      font-weight: 700;
+      border-bottom: 1.5px solid #111111;
+    }
+
+    .diagram-box {
+      border: 1px solid #555555;
+      padding: 8px 10px;
+      margin: 6px 0;
+      background: transparent;
+    }
+
+    .explain-block {
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px dotted #dddddd;
+      font-size: 9.4pt;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>2027학년도 디미고 일반전형 소질·적성검사 실전 모의평가 (제1차: 2·3·4단원 통합)</h1>
+
+  <blockquote>
+    <p><strong>[응시 안내 및 실전 수칙]</strong></p>
+    <ul>
+      <li><strong>출제 범위</strong>: 제2단원(수리추론 영역) · 제3단원(논리·추리 퍼즐 및 교과융합 독해 영역) · 제4단원(알고리즘적 문제해결력 영역)</li>
+      <li><strong>문항 수 및 제한 시간</strong>: <span class="hl">총 30문항 (4지선다 객관식) / 50분</span> (문항당 평균 1분 30초)</li>
+      <li><strong>실전 팁</strong>: 암산으로 풀지 말고 시험지 여백에 <strong>변수 추적표, <code>O/X</code> 소거표, 자리 배치 슬롯</strong>을 직접 그려가며
+        푸세요. 1분 30초 이상 막히는 문항은 별표(<code>★</code>) 표시 후 아는 문제부터 먼저 푸는 것이 고득점의 핵심입니다.</li>
+    </ul>
+  </blockquote>
+
+  <!-- ==================== PART 1 ==================== -->
+  <h2>Part 1. 제2단원: 수리추론 영역 (1번 ~ 10번)</h2>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">1.</span> 스마트 스쿨 시스템에서 학생 개인 사물함 <strong>150개</strong>에 각각 <code>0</code>과
+      <code>1</code>로만 이루어진 동일한 길이의 2진수 식별 코드를 부여하려고 한다. 150개의 사물함을 모두 서로 다르게 구별하기 위해 필요한 <strong>최소 비트(Bit)
+        수</strong>는?
+    </p>
+    <div class="options-grid">
+      <div>① 6비트</div>
+      <div>② 7비트</div>
+      <div>③ 8비트</div>
+      <div>④ 9비트</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">2.</span> 두 개의 5자리 2진수 <code>11010₂</code>과 <code>10111₂</code>의 각 자리를 왼쪽부터
+      같은 위치끼리 비교하여, <strong>두 숫자가 서로 다를 때만 <code>1</code>이 되고 같으면 <code>0</code>이 되는 연산(<code>XOR</code>)</strong>을
+      수행하였다. 그 결과로 만들어진 2진수를 <strong>10진수</strong>로 변환한 값은?</p>
+    <div class="options-grid">
+      <div>① 11</div>
+      <div>② 13</div>
+      <div>③ 19</div>
+      <div>④ 21</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">3.</span> 영문 알파벳을 순서대로 <strong>오른쪽(뒤)으로 4칸씩 이동</strong>시켜 암호문을 만드는 시저(카이사르)
+      암호 규칙(예: <code>A → E</code>, <code>B → F</code>, ..., <code>W → A</code>)으로 암호화된 문자열
+      <strong><code>HEXE</code></strong>를 원래의 평문(단어)으로 해독한 결과와, 새로운 연산 기호
+      <strong><code>A ★ B = (A × B) - (A + B) + 2</code></strong>에 따라 <strong><code>(3 ★ 4) ★ 5</code></strong>를 계산한 값을
+      차례대로 바르게 짝지은 것은?
+    </p>
+    <div class="options-grid">
+      <div>① <code>DATA</code>, <code>19</code></div>
+      <div>② <code>CODE</code>, <code>25</code></div>
+      <div>③ <code>DATA</code>, <code>25</code></div>
+      <div>④ <code>BYTE</code>, <code>28</code></div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">4.</span> 어떤 행사장 안내 책자를 인쇄하는 데 고성능 프린터 <strong><code>A</code></strong> 혼자서
+      작업하면 <strong>10시간</strong>이 걸리고, 일반 프린터 <strong><code>B</code></strong> 혼자서 작업하면 <strong>15시간</strong>이 걸린다. 처음에
+      프린터 <strong><code>A</code>와 <code>B</code>를 동시에 가동하여 4시간 동안 함께 인쇄</strong>한 후, <code>A</code> 프린터의 토너가 떨어져 남은 분량을
+      <strong><code>B</code> 프린터 혼자서 마저 인쇄</strong>하여 끝냈다. <code>B</code> 프린터가 <strong>혼자서 추가로 작업한 시간</strong>은?
+    </p>
+    <div class="options-grid">
+      <div>① 3시간</div>
+      <div>② 4시간</div>
+      <div>③ 5시간</div>
+      <div>④ 6시간</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">5.</span> 다음 수열은 홀수 번째 항과 짝수 번째 항이 서로 다른 규칙에 따라 배열되어 있다. 빈칸
+      <strong><code>(가)</code></strong>와 <strong><code>(나)</code></strong>에 들어갈 두 수의 합
+      <strong><code>(가) + (나)</code></strong>의 값은?
+    </p>
+    <blockquote>
+      <code>3, &nbsp; 20, &nbsp; 6, &nbsp; 17, &nbsp; 12, &nbsp; 14, &nbsp; ( 가 ), &nbsp; ( 나 ), &nbsp; 48, &nbsp; 8</code>
+    </blockquote>
+    <div class="options-grid">
+      <div>① 31</div>
+      <div>② 33</div>
+      <div>③ 35</div>
+      <div>④ 37</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">6.</span> 성냥개비를 이용하여 아래 규칙과 같이 정육각형 모양을 가로로 이어 붙이려고 한다.</p>
+    <ul>
+      <li><strong>[1단계]</strong>: 정육각형 1개를 만드는 데 성냥개비 <strong>6개</strong>가 사용된다.</li>
+      <li><strong>[2단계]</strong>: 정육각형 2개를 나란히 이어 붙이면 맞닿은 변 1개를 공유하므로 총 <strong>11개</strong>의 성냥개비가 사용된다.</li>
+      <li><strong>[3단계]</strong>: 정육각형 3개를 나란히 이어 붙이면 총 <strong>16개</strong>의 성냥개비가 사용된다.</li>
+    </ul>
+    <p>이와 같은 규칙으로 <strong>[15단계]</strong>에서 정육각형 15개를 일렬로 이어 붙일 때 필요한 성냥개비의 총개수는?</p>
+    <div class="options-grid">
+      <div>① 71개</div>
+      <div>② 76개</div>
+      <div>③ 81개</div>
+      <div>④ 86개</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">7.</span> 디미고 신입생 오리엔테이션에서 참가 학생들에게 기숙사 방을 배정하려고 한다. 한 방에
+      <strong>4명씩</strong> 배정하면 방을 배정받지 못하는 학생 <strong>10명</strong>이 남고, 한 방에 <strong>6명씩</strong> 배정하면 마지막 방에는
+      <strong>2명</strong>만 들어가고 아무도 배정되지 않은 <strong>빈방이 2개</strong> 남는다. 이때 기숙사 <strong>방의 총개수</strong>와 <strong>전체 학생
+        수</strong>를 차례대로 바르게 짝지은 것은?
+    </p>
+    <div class="options-grid-2">
+      <div>① 방 11개, 학생 54명</div>
+      <div>② 방 12개, 학생 58명</div>
+      <div>③ 방 13개, 학생 62명</div>
+      <div>④ 방 14개, 학생 66명</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">8.</span> 숫자 카드 <strong><code>0, 1, 2, 3, 4, 5</code></strong> 총 6장 중에서 서로 다른
+      3장을 뽑아 일렬로 나열하여 <strong>세 자리 자연수</strong>로 된 비밀번호를 만들려고 한다. 이때 만들어지는 세 자리 자연수가 <strong>짝수</strong>인 경우의 수는 모두 몇
+      가지인가? (단, 맨 앞자리인 백의 자리에는 <code>0</code>이 올 수 없다.)</p>
+    <div class="options-grid">
+      <div>① 48가지</div>
+      <div>② 52가지</div>
+      <div>③ 60가지</div>
+      <div>④ 64가지</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">9.</span> 불투명한 주머니 속에 <strong>빨간 구슬 7개, 파란 구슬 6개, 노란 구슬 5개, 초록 구슬
+        2개</strong>가 들어 있다. 주머니 안을 보지 않고 구슬을 한 개씩 꺼낼 때, 색깔에 상관없이 <strong>반드시 같은 색깔의 구슬 4개</strong>를 확보하려면 최소 몇 개의 구슬을
+      꺼내야 하는가?</p>
+    <div class="options-grid">
+      <div>① 10개</div>
+      <div>② 11개</div>
+      <div>③ 12개</div>
+      <div>④ 13개</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">10.</span> 아래 그림과 표는 가로 3칸, 세로 3칸으로 이루어진 격자 도로망의 교차점 위치를 나타낸다. 출발점
+      <strong><code>A(0행 0열)</code></strong>에서 도착점 <strong><code>B(3행 3열)</code></strong>까지 <strong>오른쪽(<code>→</code>)
+        또는 위쪽(<code>↑</code>)으로만</strong> 최단 거리로 이동하려고 한다. 단, 공사 구간인 <strong><code>[✕]</code>(1행 1열)</strong> 교차점은 지나갈 수
+      없을 때, <code>A</code>에서 <code>B</code>까지 이동 가능한 <strong>최단 경로의 가짓수</strong>는?
+    </p>
+    <div style="display:flex; align-items:center; gap:16px; margin:6px 0;">
+      <svg width="170" height="145" viewBox="0 0 170 145" style="flex-shrink:0; border:1px solid #cccccc; padding:4px;">
+        <!-- Horizontal lines -->
+        <line x1="25" y1="20" x2="145" y2="20" stroke="#222" stroke-width="1.5" />
+        <line x1="25" y1="55" x2="145" y2="55" stroke="#222" stroke-width="1.5" />
+        <line x1="25" y1="90" x2="48" y2="90" stroke="#222" stroke-width="1.5" stroke-dasharray="3,2" />
+        <line x1="82" y1="90" x2="145" y2="90" stroke="#222" stroke-width="1.5" />
+        <line x1="25" y1="125" x2="145" y2="125" stroke="#222" stroke-width="1.5" />
+        <!-- Vertical lines -->
+        <line x1="25" y1="20" x2="25" y2="125" stroke="#222" stroke-width="1.5" />
+        <line x1="65" y1="20" x2="65" y2="73" stroke="#222" stroke-width="1.5" />
+        <line x1="65" y1="107" x2="65" y2="125" stroke="#222" stroke-width="1.5" stroke-dasharray="3,2" />
+        <line x1="105" y1="20" x2="105" y2="125" stroke="#222" stroke-width="1.5" />
+        <line x1="145" y1="20" x2="145" y2="125" stroke="#222" stroke-width="1.5" />
+        <!-- Points -->
+        <circle cx="25" cy="125" r="4" fill="#111" />
+        <text x="12" y="139" font-size="9.5" font-weight="bold">A(출발)</text>
+        <circle cx="145" cy="20" r="4" fill="#111" />
+        <text x="118" y="13" font-size="9.5" font-weight="bold">B(도착)</text>
+        <!-- Obstacle at (1,1) -->
+        <rect x="53" y="78" width="24" height="24" fill="#fff" stroke="#111" stroke-width="1.5" />
+        <line x1="56" y1="81" x2="74" y2="99" stroke="#111" stroke-width="2" />
+        <line x1="74" y1="81" x2="56" y2="99" stroke="#111" stroke-width="2" />
+      </svg>
+      <table style="margin:0;">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>0열</th>
+            <th>1열</th>
+            <th>2열</th>
+            <th>3열</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>3행</strong></td>
+            <td>·</td>
+            <td>·</td>
+            <td>·</td>
+            <td><strong><code>B (도착)</code></strong></td>
+          </tr>
+          <tr>
+            <td><strong>2행</strong></td>
+            <td>·</td>
+            <td>·</td>
+            <td>·</td>
+            <td>·</td>
+          </tr>
+          <tr>
+            <td><strong>1행</strong></td>
+            <td>·</td>
+            <td><strong><code>[✕ 공사중]</code></strong></td>
+            <td>·</td>
+            <td>·</td>
+          </tr>
+          <tr>
+            <td><strong>0행</strong></td>
+            <td><strong><code>A (출발)</code></strong></td>
+            <td>·</td>
+            <td>·</td>
+            <td>·</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="options-grid">
+      <div>① 8가지</div>
+      <div>② 10가지</div>
+      <div>③ 11가지</div>
+      <div>④ 12가지</div>
+    </div>
+  </div>
+
+  <!-- ==================== PART 2 ==================== -->
+  <h2>Part 2. 제3단원: 논리·추리 퍼즐 및 교과융합 독해 영역 (11번 ~ 20번)</h2>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">11.</span> 디미고 교내 동아리 선발 및 대회 참가에 관한 다음 세 가지 조건이 모두 참(True)이라고 할 때, 논리적으로
+      <strong>반드시 참</strong>인 문장은?
+    </p>
+    <ul>
+      <li><strong>(가)</strong> 정보보안 동아리에 합격한 학생은 모두 리눅스(Linux)를 다룰 줄 안다.</li>
+      <li><strong>(나)</strong> 파이썬(Python)을 배우지 않은 학생은 알고리즘 대회에 참가할 수 없다.</li>
+      <li><strong>(다)</strong> 리눅스(Linux)를 다룰 줄 아는 학생은 모두 알고리즘 대회에 참가한다.</li>
+    </ul>
+    <div class="options-list">
+      <div>① 파이썬을 배운 학생은 모두 알고리즘 대회에 참가한다.</div>
+      <div>② 알고리즘 대회에 참가한 학생은 모두 정보보안 동아리에 합격했다.</div>
+      <div>③ 리눅스를 다룰 줄 모르는 학생은 파이썬을 배우지 않았다.</div>
+      <div>④ 파이썬을 배우지 않은 학생은 정보보안 동아리에 합격하지 못했다.</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">12.</span> 어느 청소년 IT 해커톤 대회의 참가 자격 규정은 다음과 같다.</p>
+    <blockquote>
+      <strong>[참가 자격]</strong>: 지원자는 반드시 <strong>중학생</strong>이어야 하며, <strong>코딩 교육 이수 시간이 20시간 이상이거나(또는) 인공지능 프로젝트 수행
+        경험</strong>이 있어야 한다.
+    </blockquote>
+    <p>다음 4명의 학생 중 위 참가 자격을 만족하지 못하여 <strong>대회에 참가할 수 없는 학생</strong>을 모두 고른 것은?</p>
+    <ul>
+      <li><strong>갑</strong>: 중학생 / 코딩 교육 15시간 이수 / 인공지능 프로젝트 경험 있음</li>
+      <li><strong>을</strong>: 중학생 / 코딩 교육 25시간 이수 / 인공지능 프로젝트 경험 없음</li>
+      <li><strong>병</strong>: 고등학생 / 코딩 교육 30시간 이수 / 인공지능 프로젝트 경험 있음</li>
+      <li><strong>정</strong>: 중학생 / 코딩 교육 12시간 이수 / 인공지능 프로젝트 경험 없음</li>
+    </ul>
+    <div class="options-grid">
+      <div>① 갑, 정</div>
+      <div>② 을, 병</div>
+      <div>③ 병, 정</div>
+      <div>④ 갑, 병, 정</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">13.</span> 한쪽 면에는 도형(<strong>동그라미</strong> 또는 <strong>세모</strong>), 다른 쪽 면에는
+      색깔(<strong>파란색</strong> 또는 <strong>노란색</strong>)이 칠해진 4장의 카드가 책상 위에 놓여 있다. 현재 위를 향하고 있는 면은 다음과 같다.</p>
+    <blockquote>
+      <code>[ 동그라미 ]</code> &nbsp;&nbsp;&nbsp; <code>[ 세모 ]</code> &nbsp;&nbsp;&nbsp; <code>[ 파란색 ]</code>
+      &nbsp;&nbsp;&nbsp; <code>[ 노란색 ]</code>
+    </blockquote>
+    <p><strong>"도형 면이 동그라미인 카드의 반대쪽 면은 반드시 파란색이다"</strong>라는 규칙이 4장의 카드 모두에서 지켜졌는지 확인하기 위해 <strong>반드시 뒤집어 봐야 하는 최소한의
+        카드</strong>만을 바르게 고른 것은?</p>
+    <div class="options-grid-2">
+      <div>① <code>[ 동그라미 ]</code>, <code>[ 파란색 ]</code></div>
+      <div>② <code>[ 동그라미 ]</code>, <code>[ 노란색 ]</code></div>
+      <div>③ <code>[ 세모 ]</code>, <code>[ 노란색 ]</code></div>
+      <div>④ <code>[ 동그라미 ]</code>, <code>[ 세모 ]</code>, <code>[ 노란색 ]</code></div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">14.</span> 실습실의 노트북 충전기를 빌려 간 학생은 <strong><code>A, B, C, D</code></strong> 네
+      명 중 정확히 <strong>1명</strong>이다. 네 학생이 다음과 같이 진술했을 때, 네 명 중 <strong>오직 1명만 참말</strong>을 하고 나머지 3명은 거짓말을 했다면 실제로 충전기를
+      빌려 간 학생은 누구인가?</p>
+    <ul>
+      <li><strong>A</strong>: "충전기는 D가 빌려 갔어."</li>
+      <li><strong>B</strong>: "나는 충전기를 빌려 가지 않았어."</li>
+      <li><strong>C</strong>: "충전기는 A가 빌려 갔어."</li>
+      <li><strong>D</strong>: "A의 말은 거짓말이야."</li>
+    </ul>
+    <div class="options-grid">
+      <div>① A</div>
+      <div>② B</div>
+      <div>③ C</div>
+      <div>④ D</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">15.</span> 항상 참말만 하는 <strong>'기사'</strong>와 항상 거짓말만 하는 <strong>'건달'</strong>만
+      사는 섬에서 세 주민 <strong><code>P, Q, R</code></strong>을 만났다. <code>P</code>와 <code>Q</code>가 다음과 같이 말했을 때,
+      <code>P, Q, R</code>의 정체를 차례대로 바르게 짝지은 것은?
+    </p>
+    <ul>
+      <li><strong>P</strong>: "우리 세 사람은 모두 건달입니다."</li>
+      <li><strong>Q</strong>: "우리 세 사람 중 기사는 정확히 1명뿐입니다."</li>
+    </ul>
+    <div class="options-grid-2">
+      <div>① P: 기사, Q: 건달, R: 건달</div>
+      <div>② P: 건달, Q: 기사, R: 기사</div>
+      <div>③ P: 건달, Q: 기사, R: 건달</div>
+      <div>④ P: 건달, Q: 건달, R: 기사</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">16.</span> 지민, 현우, 서연, 민재 4명의 학생이 각각 서로 다른 프로그래밍 언어(<strong>C언어, 파이썬, 자바,
+        코틀린</strong>) 중 하나씩을 맡아 발표를 준비하고 있다. 다음 단서를 모두 만족할 때, <strong>서연</strong>과 <strong>민재</strong>가 맡은 언어를 차례대로 바르게
+      짝지은 것은?</p>
+    <ul>
+      <li><strong>[단서 1]</strong> 지민이는 C언어와 파이썬을 맡지 않았다.</li>
+      <li><strong>[단서 2]</strong> 자바를 맡은 학생은 현우, 민재와 같은 반 친구이다.</li>
+      <li><strong>[단서 3]</strong> 서연이는 파이썬과 자바를 맡지 않았다.</li>
+      <li><strong>[단서 4]</strong> 현우는 C언어와 코틀린을 맡지 않았다.</li>
+      <li><strong>[단서 5]</strong> 민재는 C언어를 맡지 않았다.</li>
+    </ul>
+    <div class="options-grid-2">
+      <div>① 서연: C언어, 민재: 코틀린</div>
+      <div>② 서연: 코틀린, 민재: C언어</div>
+      <div>③ 서연: C언어, 민재: 파이썬</div>
+      <div>④ 서연: 자바, 민재: 코틀린</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">17.</span> 1층부터 5층까지 있는 동아리 회관의 각 층에
+      <strong><code>A, B, C, D, E</code></strong> 다섯 개의 동아리실이 한 층에 하나씩 배정되어 있다. 다음 조건을 모두 만족할 때, <strong>2층</strong>과
+      <strong>3층</strong>에 배정된 동아리실을 차례대로 바르게 짝지은 것은?
+    </p>
+    <ul>
+      <li><strong>(가)</strong> <code>B</code> 동아리실은 <code>A</code> 동아리실 바로 위층에 있다.</li>
+      <li><strong>(나)</strong> <code>C</code> 동아리실은 가장 꼭대기 층(5층)에 있다.</li>
+      <li><strong>(다)</strong> <code>E</code> 동아리실과 <code>B</code> 동아리실 사이에는 정확히 2개의 층이 있다.</li>
+    </ul>
+    <div class="options-grid-2">
+      <div>① 2층: A, 3층: B</div>
+      <div>② 2층: D, 3층: A</div>
+      <div>③ 2층: E, 3층: D</div>
+      <div>④ 2층: D, 3층: B</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">18.</span> 탁자 위에 바둑돌 <strong>26개</strong>가 놓여 있다. 두 사람 <code>갑</code>과
+      <code>을</code>이 번갈아 가며 한 번에 <strong>최소 1개부터 최대 4개까지</strong> 바둑돌을 가져갈 수 있고, <strong>가장 마지막 바둑돌을 가져가는 사람이
+        승리</strong>하는 게임을 한다. <code>갑</code>이 먼저 시작할 때, <code>을</code>이 어떤 전략을 쓰더라도 <code>갑</code>이 무조건 승리하기 위해
+      <strong>맨 첫 차례에 가져가야 하는 바둑돌의 개수</strong>는?
+    </p>
+    <div class="options-grid">
+      <div>① 1개</div>
+      <div>② 2개</div>
+      <div>③ 3개</div>
+      <div>④ 4개</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">19.</span> 다음은 디미고 AI 미래박람회 입장권 요금 및 할인 규정이다. 규정에 따라 <strong>중학생인 민수(15세)가
+        어머니(43세), 초등학생 동생(11세)과 함께 총 3명</strong>이 <strong>토요일 오전 10시</strong>에 입장권을 구매할 때 지불해야 하는 <strong>최종 결제
+        금액</strong>은? (단, 적용 가능한 모든 할인 혜택을 적용한다.)</p>
+    <blockquote>
+      <p><strong>[기본 입장료 기준]</strong></p>
+      <ul>
+        <li>성인 (20세 이상): <code>12,000원</code> / 청소년 (14세 이상 ~ 19세 이하): <code>8,000원</code> / 어린이 (13세 이하):
+          <code>5,000원</code>
+        </li>
+      </ul>
+      <p><strong>[할인 및 추가 규정]</strong></p>
+      <ol>
+        <li><strong>조조 할인</strong>: 오전 10시 30분 이전에 입장하는 경우, 전체 기본 입장료 합계에서 <strong><code>20%</code></strong>를 할인한다.</li>
+        <li><strong>가족 묶음 할인</strong>: 3인 이상 가족이 함께 방문하면 결제 금액에서 <strong><code>3,000원</code></strong>을 차감한다. <em>(단, 평일
+            방문객에게만 적용되며 주말 및 공휴일에는 적용되지 않는다.)</em></li>
+        <li><strong>청소년 동반 혜택</strong>: 청소년이 1명 이상 포함된 경우 결제 금액에서 <strong><code>1,000원</code></strong>을 차감한다. <em>(단, 조조
+            할인과 중복 적용이 가능하며, 비율(<code>%</code>) 할인을 먼저 계산한 뒤 정액 차감을 적용한다.)</em></li>
+      </ol>
+    </blockquote>
+    <div class="options-grid">
+      <div>① 16,000원</div>
+      <div>② 19,000원</div>
+      <div>③ 20,000원</div>
+      <div>④ 21,000원</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">20.</span> 다음 영문 설명 <strong>(A)</strong>와 <strong>(B)</strong>가 가리키는 정보보안 및
+      네트워크 기술 용어를 바르게 짝지은 것은?</p>
+    <blockquote>
+      <ul>
+        <li><strong>(A)</strong>: <em>"It is a network security system that monitors incoming and outgoing network
+            traffic and decides whether to allow or block specific traffic based on security rules."</em></li>
+        <li><strong>(B)</strong>: <em>"It is a type of malicious software designed to block access to a computer system
+            or encrypt the victim's files until a sum of money is paid."</em></li>
+      </ul>
+    </blockquote>
+    <div class="options-grid-2">
+      <div>① (A) Router - (B) Phishing</div>
+      <div>② (A) Switch - (B) Spyware</div>
+      <div>③ (A) Firewall - (B) Ransomware</div>
+      <div>④ (A) Firewall - (B) Smishing</div>
+    </div>
+  </div>
+
+  <!-- ==================== PART 3 ==================== -->
+  <h2>Part 3. 제4단원: 알고리즘적 문제해결력 영역 (21번 ~ 30번)</h2>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">21.</span> 다음과 같은 절차(알고리즘)를 순서대로 실행했을 때, 반복이 모두 끝난 후 최종적으로 출력되는
+      <strong><code>S</code></strong>의 값은?
+    </p>
+    <ul>
+      <li><strong>[1단계]</strong> 변수 <code>N = 1</code>, <code>S = 0</code>으로 시작한다.</li>
+      <li><strong>[2단계]</strong> <code>N ≤ 6</code>인지 판단하여, <strong>거짓(아니오)</strong>이면 <strong>[5단계]</strong>로 이동한다.
+      </li>
+      <li><strong>[3단계]</strong> 만약 <code>N</code>을 <code>2</code>로 나눈 나머지가 <code>1</code>이면(홀수이면)
+        <strong><code>S ← S + N</code></strong>을 수행하고, 그렇지 않으면(짝수이면) <strong><code>S ← S - 1</code></strong>을 수행한다.
+      </li>
+      <li><strong>[4단계]</strong> <strong><code>N ← N + 1</code></strong>을 수행한 뒤 다시 <strong>[2단계]</strong>로 돌아간다.</li>
+      <li><strong>[5단계]</strong> 최종 <code>S</code>의 값을 출력하고 종료한다.</li>
+    </ul>
+    <div class="options-grid">
+      <div>① 4</div>
+      <div>② 6</div>
+      <div>③ 8</div>
+      <div>④ 9</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">22.</span> 처음에 변수 <strong><code>A = 2</code></strong>,
+      <strong><code>B = 26</code></strong>, <strong><code>CNT = 0</code></strong>으로 시작한다. <strong><code>A &lt; B</code>인
+        조건을 만족하는 동안</strong> 아래의 세 가지 연산을 묶어서 반복 수행한다.
+    </p>
+    <blockquote>
+      <code>A ← A + 4</code>, &nbsp;&nbsp;&nbsp; <code>B ← B - 2</code>, &nbsp;&nbsp;&nbsp; <code>CNT ← CNT + 1</code>
+    </blockquote>
+    <p>조건(<code>A &lt; B</code>)이 거짓이 되어 반복이 종료된 직후의 <strong><code>CNT</code> 값</strong>과 <strong><code>A</code>의
+        값</strong>을 차례대로 바르게 짝지은 것은?</p>
+    <div class="options-grid-2">
+      <div>① <code>CNT = 3</code>, <code>A = 14</code></div>
+      <div>② <code>CNT = 4</code>, <code>A = 16</code></div>
+      <div>③ <code>CNT = 4</code>, <code>A = 18</code></div>
+      <div>④ <code>CNT = 5</code>, <code>A = 22</code></div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">23.</span> 다음과 같은 2중 반복 절차를 실행한 후 최종적으로 출력되는
+      <strong><code>TOTAL</code></strong>의 값은?
+    </p>
+    <ul>
+      <li><strong>[1단계]</strong> <code>TOTAL = 0</code>으로 시작한다.</li>
+      <li><strong>[2단계]</strong> 바깥 반복 변수 <code>i</code>가 <code>1</code>부터 <code>3</code>까지 <code>1</code>씩 증가할 때마다 다음을
+        수행한다:
+        <ul>
+          <li>안쪽 반복 변수 <code>j</code>가 <strong><code>1</code>부터 현재의 <code>i</code>까지</strong> <code>1</code>씩 증가하며
+            <strong><code>TOTAL ← TOTAL + (i + j)</code></strong>를 반복 수행한다.
+          </li>
+        </ul>
+      </li>
+      <li><strong>[3단계]</strong> 반복이 모두 끝나면 <code>TOTAL</code>의 값을 출력한다.</li>
+    </ul>
+    <div class="options-grid">
+      <div>① 18</div>
+      <div>② 20</div>
+      <div>③ 22</div>
+      <div>④ 24</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">24.</span> 자연수 <code>n</code>에 대하여 값 <code>f(n)</code>을 계산하는 규칙이 다음과 같이 자기
+      자신을 다시 호출하는 형태로 정의되어 있다.</p>
+    <ul>
+      <li><strong>[규칙 1]</strong> <code>f(1) = 2</code>이다.</li>
+      <li><strong>[규칙 2]</strong> <code>n</code>이 2 이상의 <strong>짝수</strong>이면
+        <strong><code>f(n) = f(n ÷ 2) + 3</code></strong>이다.
+      </li>
+      <li><strong>[규칙 3]</strong> <code>n</code>이 3 이상의 <strong>홀수</strong>이면
+        <strong><code>f(n) = f(n - 1) × 2 - 1</code></strong>이다.
+      </li>
+    </ul>
+    <p>이 규칙에 따라 <strong><code>f(12)</code></strong>를 계산한 값은?</p>
+    <div class="options-grid">
+      <div>① 15</div>
+      <div>② 17</div>
+      <div>③ 19</div>
+      <div>④ 21</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">25.</span> 입구와 출구가 하나뿐이어서 <strong>가장 나중에 들어간 차량이 가장 먼저 나올 수밖에 없는 막다른 골목
+        주차장(후입선출 구조)</strong>이 있다. <strong><code>1번, 2번, 3번, 4번</code></strong> 차량이 번호 순서대로 이 주차장에 들어갔다 나올 때(단, 차량이 들어가는
+      도중 언제든지 안에 있는 맨 앞 차량을 밖으로 뺄 수 있음), 주차장 밖으로 나오는 차량 번호의 순서로 <strong>절대 불가능한</strong> 것은?</p>
+    <div class="options-grid-2">
+      <div>① <code>1 → 2 → 3 → 4</code></div>
+      <div>② <code>2 → 3 → 1 → 4</code></div>
+      <div>③ <code>3 → 2 → 4 → 1</code></div>
+      <div>④ <code>4 → 1 → 3 → 2</code></div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">26.</span> 일렬로 놓인 5장의 숫자 카드 <strong><code>[ 6, 4, 5, 2, 3 ]</code></strong>을
+      작은 수부터 큰 수 순서(오름차순)로 정렬하기 위해 다음과 같은 규칙을 반복 적용한다.</p>
+    <blockquote>
+      <strong>[정렬 규칙]</strong>: 맨 왼쪽 첫 번째 자리부터 시작하여 <strong>이웃한 두 카드를 차례대로 비교</strong>한다. 만약 왼쪽 카드가 오른쪽 카드보다 크면 두 카드의
+      자리를 즉시 맞바꾸며 맨 오른쪽 끝까지 이동하는 과정을 <strong>'1단계(1회전)'</strong>라고 한다.
+    </blockquote>
+    <p>이 규칙에 따라 <strong>2단계(2회전)까지 모두 마친 직후</strong>의 숫자 카드 배열 상태는?</p>
+    <div class="options-grid-2">
+      <div>① <code>[ 2, 3, 4, 5, 6 ]</code></div>
+      <div>② <code>[ 4, 2, 3, 5, 6 ]</code></div>
+      <div>③ <code>[ 2, 4, 5, 6, 3 ]</code></div>
+      <div>④ <code>[ 4, 5, 6, 2, 3 ]</code></div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">27.</span> 크기순으로 정렬된 9장의 숫자 카드
+      <strong><code>[ 12, 18, 25, 31, 40, 47, 53, 62, 75 ]</code></strong> 중에서 특정 숫자를 찾기 위해 다음 규칙(이진 탐색)을 사용한다.
+    </p>
+    <blockquote>
+      <strong>[탐색 규칙]</strong>: 매 단계마다 <strong>남은 카드들의 정가운데 있는 카드</strong>를 확인한다. (단, 남은 카드가 짝수 장일 때는 가운데 두 장 중 왼쪽 카드를
+      확인한다.) 확인한 숫자가 찾는 숫자보다 작으면 그 카드와 왼쪽 카드들을 모두 버리고, 찾는 숫자보다 크면 그 카드와 오른쪽 카드들을 모두 버린다.
+    </blockquote>
+    <p>이 규칙으로 숫자 <strong><code>47</code></strong>을 찾을 때까지 <strong>순서대로 확인하게 되는 카드의 숫자들</strong>을 바르게 나열한 것은?</p>
+    <div class="options-grid-2">
+      <div>① <code>40 → 47</code></div>
+      <div>② <code>40 → 62 → 47</code></div>
+      <div>③ <code>40 → 53 → 47</code></div>
+      <div>④ <code>31 → 53 → 47</code></div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">28.</span> 세 개의 입력 신호 <code>A, B, C</code>가 다음과 같은 논리 연산 상자들을 통과하여 최종 출력
+      <code>OUT</code>을 만든다.
+    </p>
+    <ul>
+      <li><strong>[1단계]</strong> 입력 <code>A</code>와 <code>B</code>를 <strong><code>XOR</code> 상자</strong>(두 입력이 서로 다를 때만
+        <code>1</code>, 같으면 <code>0</code> 출력)에 넣어 중간 신호 <strong><code>X</code></strong>를 만든다.
+      </li>
+      <li><strong>[2단계]</strong> 입력 <code>B</code>와 <code>C</code>를 <strong><code>OR</code> 상자</strong>(두 입력 중 하나라도
+        <code>1</code>이면 <code>1</code>, 둘 다 <code>0</code>이면 <code>0</code> 출력)에 넣은 뒤, 그 결과를 <strong><code>NOT</code>
+          상자</strong>(<code>0</code>과 <code>1</code>을 반대로 뒤집기)에 통과시켜 중간 신호 <strong><code>Y</code></strong>를 만든다.
+      </li>
+      <li><strong>[3단계]</strong> 중간 신호 <code>X</code>와 <code>Y</code>를 <strong><code>AND</code> 상자</strong>(두 입력이 모두
+        <code>1</code>일 때만 <code>1</code> 출력)에 넣어 최종 출력 <strong><code>OUT</code></strong>을 만든다.
+      </li>
+    </ul>
+    <p>만약 입력 신호가 <strong><code>A = 1, B = 0, C = 0</code></strong>일 때, 중간 신호 <strong><code>X</code></strong>,
+      <strong><code>Y</code></strong>와 최종 출력 <strong><code>OUT</code></strong>의 값을 차례대로 바르게 짝지은 것은?
+    </p>
+    <div class="options-grid-2">
+      <div>① <code>X = 1, Y = 0, OUT = 0</code></div>
+      <div>② <code>X = 0, Y = 1, OUT = 0</code></div>
+      <div>③ <code>X = 1, Y = 1, OUT = 0</code></div>
+      <div>④ <code>X = 1, Y = 1, OUT = 1</code></div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">29.</span> 좌표평면 위의 원점 <strong><code>(0, 0)</code></strong>에 로봇이
+      <strong>북쪽(<code>y</code>축 양의 방향, 위쪽 <code>▲</code>)</strong>을 바라보며 서 있다. 로봇은 다음 세 가지 명령어에 따라 움직인다.
+    </p>
+    <ul>
+      <li><strong><code>F</code></strong>: 현재 바라보는 방향으로 <code>1칸</code> 전진한다.</li>
+      <li><strong><code>R</code></strong>: 칸을 이동하지 않고 제자리에서 오른쪽(시계 방향)으로 <code>90도</code> 회전한다.</li>
+      <li><strong><code>L</code></strong>: 칸을 이동하지 않고 제자리에서 왼쪽(반시계 방향)으로 <code>90도</code> 회전한다.</li>
+    </ul>
+    <p>로봇에게 <strong><code>F → F → R → F → R → F → L → F</code></strong> 순서로 명령어를 입력했을 때, 모든 명령을 수행한 직후 로봇의 <strong>최종 도착
+        좌표</strong>와 <strong>바라보는 방향</strong>은?</p>
+    <div class="options-grid-2">
+      <div>① <code>(2, 1)</code>, 동쪽(<code>▶</code>)</div>
+      <div>② <code>(2, 1)</code>, 남쪽(<code>▼</code>)</div>
+      <div>③ <code>(1, 1)</code>, 동쪽(<code>▶</code>)</div>
+      <div>④ <code>(1, 2)</code>, 북쪽(<code>▲</code>)</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="q-title"><span class="q-num">30.</span> 학교 코딩 페스티벌에서 한 명의 학생이 아래 표에 제시된 6개의 특강(<code>A ~ F</code>) 중
+      <strong>시간이 조금이라도 겹치지 않게 가장 많은 개수의 특강</strong>에 참여하려고 한다. (단, 앞 특강이 끝나는 시각과 다음 특강이 시작하는 시각이 정확히 일치하는 경우에는 이어서 참여할
+      수 있다.) 참여할 수 있는 <strong>최대 특강 개수</strong>와 그때 선택해야 하는 <strong>특강 조합</strong>으로 옳은 것은?
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>특강 기호</th>
+          <th>시작 시각 ~ 종료 시각</th>
+          <th>특강 기호</th>
+          <th>시작 시각 ~ 종료 시각</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>A</strong></td>
+          <td><code>09:00 ~ 11:00</code></td>
+          <td><strong>D</strong></td>
+          <td><code>11:00 ~ 12:30</code></td>
+        </tr>
+        <tr>
+          <td><strong>B</strong></td>
+          <td><code>09:30 ~ 10:30</code></td>
+          <td><strong>E</strong></td>
+          <td><code>11:30 ~ 12:30</code></td>
+        </tr>
+        <tr>
+          <td><strong>C</strong></td>
+          <td><code>10:30 ~ 11:30</code></td>
+          <td><strong>F</strong></td>
+          <td><code>12:30 ~ 14:00</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="options-grid-2">
+      <div>① 최대 3개 (<code>A → D → F</code>)</div>
+      <div>② 최대 3개 (<code>B → C → F</code>)</div>
+      <div>③ 최대 4개 (<code>A → C → E → F</code>)</div>
+      <div>④ 최대 4개 (<code>B → C → E → F</code>)</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

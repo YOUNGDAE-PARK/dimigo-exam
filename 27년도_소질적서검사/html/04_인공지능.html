@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ⅳ. 인공지능 (디미고 소질·적성검사 핵심 요약)</title>
+  <style>
+    @page { size: A4; margin: 13mm 15mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #111111;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10pt;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 8mm 10mm;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    @media print {
+      body { padding: 0; max-width: none; }
+      h2, h3, .diagram-box, table, blockquote { page-break-inside: avoid; }
+    }
+    h1 {
+      font-size: 16pt;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #111111;
+      letter-spacing: -0.3px;
+    }
+    h2 {
+      font-size: 12.5pt;
+      font-weight: 700;
+      margin: 16px 0 8px 0;
+      padding: 3px 0 3px 8px;
+      border-left: 4px solid #111111;
+      border-bottom: 1px solid #666666;
+    }
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin: 10px 0 6px 0;
+      color: #111111;
+    }
+    p { margin: 5px 0; }
+    ul, ol { margin: 4px 0 8px 0; padding-left: 18px; }
+    li { margin: 3px 0; }
+    blockquote {
+      margin: 6px 0 12px 0;
+      padding: 5px 10px;
+      border-left: 2.5px solid #222222;
+      background: transparent;
+      font-size: 9.8pt;
+    }
+    strong { font-weight: 700; color: #000000; }
+    mark {
+      background-color: #fff3a8;
+      color: #000000;
+      font-weight: 700;
+      padding: 0 3px;
+    }
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 9pt;
+      padding: 0 3px;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      background: transparent;
+      color: #000000;
+    }
+    .diagram-box {
+      border: 1px solid #333333;
+      padding: 8px 12px;
+      margin: 6px 0 10px 0;
+      background: transparent;
+    }
+    .nested-box {
+      border: 1.5px solid #111111;
+      padding: 6px 10px;
+      margin-top: 5px;
+      background: transparent;
+    }
+    .flow-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .node {
+      border: 1.5px solid #111111;
+      padding: 6px 8px;
+      text-align: center;
+      background: transparent;
+      flex: 1;
+    }
+    .node-title {
+      font-weight: 700;
+      font-size: 9.6pt;
+      border-bottom: 1px dashed #777777;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+    }
+    .node-desc { font-size: 8.8pt; line-height: 1.4; text-align: left; }
+    .arrow-label {
+      display: flex;
+      align-items: center;
+      font-size: 9pt;
+      font-weight: 700;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 10px 0;
+      font-size: 9.4pt;
+      background: transparent;
+    }
+    th, td {
+      border: 1px solid #444444;
+      padding: 5px 8px;
+      vertical-align: middle;
+      background: transparent;
+    }
+    th {
+      font-weight: 700;
+      border-bottom: 1.8px solid #111111;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ⅳ. 인공지능 (디미고 소질·적성검사 핵심 요약)</h1>
+
+  <blockquote>
+    <strong>디미고 실전 출제 유형 4가지</strong>:<br>
+    ① <strong>전통적 프로그래밍(규칙 기반) vs 기계학습(데이터 기반) 입출력 빈칸 추론</strong><br>
+    ② <strong>기계학습 3대 유형(지도[분류/회귀] · 비지도[군집] · 강화학습) 사례 매칭</strong><br>
+    ③ <strong>의사결정나무(Decision Tree) 조건 분기 추적 및 훈련/테스트 데이터 분리 원칙</strong><br>
+    ④ <strong>AI 윤리 쟁점(데이터 편향성, 생성형 AI 환각 현상) 판별</strong>
+  </blockquote>
+
+  <h2>1. 인공지능(AI)의 개념과 학습 원리</h2>
+
+  <h3>1.1 인공지능 · 기계학습 · 딥러닝 포함 관계와 지능 에이전트</h3>
+  <div class="diagram-box">
+    <strong>인공지능 (AI: 인간의 인식·학습·추론 능력을 컴퓨터로 구현한 기술)</strong>
+    <div class="nested-box">
+      <strong><mark>기계학습 (Machine Learning)</mark></strong>: 컴퓨터가 데이터로부터 스스로 패턴과 규칙을 찾아 학습하는 기술
+      <div class="nested-box">
+        <strong><mark>딥러닝 (Deep Learning)</mark></strong>: 인간 뇌 신경망을 모방한 <strong>'인공신경망'</strong>으로 대규모 데이터를 심층 학습하는 기술
+      </div>
+    </div>
+  </div>
+  <ul>
+    <li><strong>지능 에이전트 (Intelligent Agent)</strong>: 목표 달성을 위해 주변 환경을 <mark>인식(센서) → 학습·추론(판단) → 자율적으로 행동(액추에이터)</mark>하는 시스템</li>
+    <li><strong>일반 자동화 SW vs 인공지능 SW 구별</strong>: 사람이 정해준 고정 조건(<code>온도 ≥ 28도면 에어컨 켜기</code>)만 그대로 수행하면 일반 프로그램이고, <strong>축적된 데이터를 통해 스스로 규칙을 개선·학습하면</strong> 인공지능입니다.</li>
+  </ul>
+
+  <h3>1.2 전통적 프로그래밍 vs 기계학습 구조 비교 (★출제 1순위)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 24%;">구분</th>
+        <th style="width: 44%;">컴퓨터에 넣어주는 입력 (Input)</th>
+        <th style="width: 32%;">컴퓨터가 만들어내는 출력 (Output)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center; font-weight: 700;">① 전통적 프로그래밍<br>(규칙 기반)</td>
+        <td><code>[ 데이터 ]</code> + <mark>[ 사람이 직접 만든 규칙 ]</mark></td>
+        <td><strong>[ 결과 (정답) ]</strong></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;">② 기계학습<br>(데이터 기반 학습)</td>
+        <td><mark>[ 대량의 데이터 (및 결과값) ]</mark></td>
+        <td><mark>[ 학습된 규칙 (AI 모델) ]</mark></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. 기계학습(Machine Learning) 3대 유형과 의사결정나무</h2>
+
+  <h3>2.1 기계학습 3대 유형 1초 판별표</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 18%;">학습 유형</th>
+        <th style="width: 32%;">핵심 구분 기준 (1초 키워드)</th>
+        <th>세부 방법 및 시험 빈출 사례</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>지도학습</mark><br>(Supervised)</td>
+        <td><strong>문제(데이터) + <mark>정답(Label)</mark></strong>을 함께 주고 학습시킴</td>
+        <td>
+          • <mark>분류 (Classification)</mark>: 딱 떨어지는 종류/집단 구분 (스팸 메일 판별, 개/고양이 사진 구분, 손글씨 숫자 인식)<br>
+          • <mark>회귀 (Regression)</mark>: 연속적인 숫자/수치 예측 (내일 기온 예측, 집값·전력 소비량 예측)
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>비지도학습</mark><br>(Unsupervised)</td>
+        <td><strong><mark>정답(Label) 없이</mark></strong> 데이터만 주고 비슷한 특징끼리 스스로 묶게 함</td>
+        <td>
+          • <mark>군집 (Clustering)</mark>: 마트 고객을 구매 성향이 유사한 그룹으로 묶기, 비슷한 주제의 뉴스 기사끼리 자동 그룹화
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: 700;"><mark>강화학습</mark><br>(Reinforcement)</td>
+        <td>정답 없이 <strong><mark>시행착오</mark></strong>를 겪으며 <strong><mark>보상(Reward)</mark></strong>을 최대화하는 행동 학습</td>
+        <td>
+          • 바둑 AI(알파고), 자율주행차 주행 제어, 이족보행 로봇 걸음마 학습, 게임 클리어 AI
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>2.2 ★ 실전 추론 유형: 의사결정나무 (Decision Tree) 분류 추적</h3>
+  <div class="diagram-box" style="text-align: center; font-size: 9.3pt;">
+    <strong>[ 질문 1: 날개가 있는가? ]</strong><br>
+    ├── <strong>예(Yes)</strong> ──▶ <strong>[ 질문 2: 하늘을 나는가? ]</strong> ──▶ (예: <strong>참새</strong> / 아니오: <strong>펭귄</strong>)<br>
+    └── <strong>아니오(No)</strong> ──▶ <strong>[ 결과: 포유류 (강아지) ]</strong><br>
+    <span style="font-size: 8.8pt;">※ 표로 주어진 대상의 속성값을 보고 위에서부터 <code>예/아니오</code> 화살표를 정확히 따라가며 분류 결과를 찾습니다.</span>
+  </div>
+
+  <h2>3. 인공지능 문제 해결 4단계와 AI 윤리</h2>
+
+  <h3>3.1 인공지능 문제 해결 순서와 데이터 분리 원칙</h3>
+  <div class="diagram-box">
+    <div class="flow-row">
+      <div class="node">
+        <div class="node-title">1. 문제 정의</div>
+        <div class="node-desc">해결할 문제와 AI 목표 설정</div>
+      </div>
+      <div class="arrow-label">▶</div>
+      <div class="node">
+        <div class="node-title">2. 데이터 수집·전처리</div>
+        <div class="node-desc">결측치·이상치 제거, 편향 없는 데이터 확보</div>
+      </div>
+      <div class="arrow-label">▶</div>
+      <div class="node">
+        <div class="node-title">3. 모델 학습 (훈련)</div>
+        <div class="node-desc"><mark>훈련 데이터</mark>를 넣어 패턴과 규칙 학습</div>
+      </div>
+      <div class="arrow-label">▶</div>
+      <div class="node">
+        <div class="node-title">4. 모델 평가 및 적용</div>
+        <div class="node-desc">학습에 쓰지 않은 <mark>테스트 데이터</mark>로 평가</div>
+      </div>
+    </div>
+  </div>
+  <ul>
+    <li><strong>★ 시험 필수 함정 (훈련 데이터 vs 테스트 데이터)</strong>:
+      <ul>
+        <li>"모델의 정확도를 평가할 때 학습에 사용했던 훈련 데이터를 그대로 사용한다." → <strong>❌ 거짓!</strong> 반드시 학습에 사용하지 않은 <mark>새로운 데이터(테스트 데이터)로 분리하여 평가</mark>해야 합니다.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>3.2 인공지능의 한계와 윤리적 쟁점</h3>
+  <ol>
+    <li><strong><mark>데이터 편향성 (Algorithmic Bias)</mark></strong>: 특정 성별·인종·연령에 치우친 데이터를 학습하면 AI도 차별적·불공정한 결과를 내놓습니다.</li>
+    <li><strong><mark>환각 현상 (Hallucination)</mark></strong>: 생성형 AI가 사실이 아닌 <strong>거짓 정보를 마치 사실인 것처럼 그럴듯하게 지어내어 답변</strong>하는 현상입니다.</li>
+    <li><strong>개인정보·저작권 침해 및 책임 소재</strong>: 학습 데이터 무단 수집, 딥페이크(Deepfake) 악용, 자율주행 사고 시 책임 주체 문제가 발생합니다.</li>
+  </ol>
+
+</body>
+</html>
+

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제2단원: 수리추론 및 이산수학 (디미고 소질·적성검사 실전 해법)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 13mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: #111111;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 10pt;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 8mm 10mm;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        max-width: none;
+      }
+
+      h2,
+      h3,
+      h4,
+      .diagram-box,
+      table,
+      blockquote {
+        page-break-inside: avoid;
+      }
+    }
+
+    h1 {
+      font-size: 16pt;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #111111;
+      letter-spacing: -0.3px;
+    }
+
+    h2 {
+      font-size: 12.5pt;
+      font-weight: 700;
+      margin: 16px 0 8px 0;
+      padding: 3px 0 3px 8px;
+      border-left: 4px solid #111111;
+      border-bottom: 1px solid #666666;
+    }
+
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin: 10px 0 6px 0;
+      color: #111111;
+    }
+
+    h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      margin: 10px 0 4px 0;
+      color: #111111;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    ul,
+    ol {
+      margin: 4px 0 8px 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 3px 0;
+    }
+
+    blockquote {
+      margin: 6px 0 10px 0;
+      padding: 5px 10px;
+      border-left: 2.5px solid #222222;
+      background: transparent;
+      font-size: 9.8pt;
+    }
+
+    strong {
+      font-weight: 700;
+      color: #000000;
+    }
+
+    mark {
+      background-color: #fff3a8;
+      color: #000000;
+      font-weight: 700;
+      padding: 0 3px;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 9pt;
+      padding: 0 3px;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      background: transparent;
+      color: #000000;
+    }
+
+    .diagram-box {
+      border: 1px solid #333333;
+      padding: 10px 12px;
+      margin: 6px 0 10px 0;
+      background: transparent;
+    }
+
+    .flow-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .node {
+      border: 1.5px solid #111111;
+      padding: 8px 10px;
+      text-align: center;
+      background: transparent;
+      flex: 1;
+    }
+
+    .node-title {
+      font-weight: 700;
+      font-size: 9.8pt;
+      border-bottom: 1px dashed #777777;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+    }
+
+    .node-desc {
+      font-size: 9pt;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    .example-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .example-svg-wrap {
+      flex: 0 0 auto;
+      text-align: center;
+    }
+
+    .example-explain {
+      flex: 1;
+      font-size: 9.3pt;
+      line-height: 1.55;
+      border-left: 1px dashed #777777;
+      padding-left: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 10px 0;
+      font-size: 9.5pt;
+    }
+
+    th,
+    td {
+      border: 1px solid #333333;
+      padding: 5px 8px;
+      vertical-align: middle;
+      background: transparent;
+    }
+
+    th {
+      font-weight: 700;
+      text-align: center;
+      border-bottom: 1.5px solid #111111;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>제2단원: 수리추론 및 이산수학 (디미고 소질·적성검사 실전 해법)</h1>
+
+  <blockquote>
+    <strong>디미고 출제 포인트</strong>: 고등학교 선행 수학 공식이 아니라, 중학교 수학 기본기를 바탕으로 <strong>① 진법 변환과 비트·규칙 연산</strong>, <strong>② 수열·도형·함수의 규칙성 추론</strong>, <strong>③ 경우의 수·집합·비둘기집 원리(최악의 경우)</strong>, <strong>④ 격자 최단 경로와 그래프(한붓그리기·트리)</strong>를 1분 30초 안에 빠르게 계산하는 능력을 평가합니다.
+  </blockquote>
+
+  <h2>1. 진법 변환 심화와 비트 · 규칙 연산 · 암호 해독</h2>
+
+  <h3>1.1 비트 가짓수(<code>2ⁿ</code>)와 2진수 · 10진수 · 16진수 초고속 변환</h3>
+  <div class="diagram-box">
+    • <strong>n비트로 표현 가능한 최대 가짓수 = <mark>2ⁿ개</mark></strong> &nbsp;(<code>2⁴=16</code>, <code>2⁵=32</code>, <code>2⁶=64</code>, <code>2⁷=128</code>, <code>2⁸=256</code>, <code>2¹⁰=1,024</code>)<br>
+    • <strong>"N개의 대상을 구별하려면 최소 몇 비트?"</strong> ──▶ <mark>2ⁿ ≥ N</mark>을 만족하는 가장 작은 자연수 <code>n</code> 선택!<br>
+    <div style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed #888888; font-size: 9.3pt;">
+      <strong>[2진수 ↔ 10진수 ↔ 16진수 5초 변환 예시: <code>11010110₂</code>]</strong><br>
+      • <strong>10진수 변환 (자리값 합산)</strong>: <code>128 + 64 + 0 + 16 + 0 + 4 + 2 + 0</code> = <strong><code>214</code></strong><br>
+      • <strong>16진수 변환 (<mark>4비트씩 분할</mark>)</strong>: <code>[ 1 1 0 1 ]</code> (<code>8+4+0+1 = 13 = D</code>) &nbsp;|&nbsp; <code>[ 0 1 1 0 ]</code> (<code>0+4+2+0 = 6</code>) ──▶ <strong><code>D6₁₆</code></strong> &nbsp;<em>(※ 10=A, 11=B, 12=C, 13=D, 14=E, 15=F)</em>
+    </div>
+  </div>
+
+  <h3>1.2 비트 논리 연산 · 시프트 연산(<code>&lt;&lt;</code>, <code>&gt;&gt;</code>) · 2의 보수(음수)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 22%;">연산 종류</th>
+        <th style="width: 43%;">핵심 규칙 및 계산법</th>
+        <th style="width: 35%;">실전 예시</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong>비트 논리 연산</strong><br>(<code>AND</code>, <code>OR</code>, <code>XOR</code>)</td>
+        <td>두 2진수의 <strong>같은 자리끼리</strong> 세로로 줄을 맞춰 각각 논리 연산 수행</td>
+        <td>• <code>1011₂ AND 1101₂</code> ➔ 둘 다 1인 자리만 1: <strong><code>1001₂</code></strong><br>• <code>1011₂ XOR 1101₂</code> ➔ 서로 다른 자리만 1: <strong><code>0110₂</code></strong></td>
+      </tr>
+      <tr>
+        <td class="center"><strong>비트 시프트</strong><br>(<code>&lt;&lt;</code>, <code>&gt;&gt;</code>)</td>
+        <td>• <strong><code>X &lt;&lt; n</code> (왼쪽 <code>n</code>칸 밀기)</strong>: 값이 <mark><code>× 2ⁿ</code>배 증가</mark><br>• <strong><code>X &gt;&gt; n</code> (오른쪽 <code>n</code>칸 밀기)</strong>: 값이 <mark><code>÷ 2ⁿ</code> 감소(몫)</mark></td>
+        <td>• <code>0011₂(3) &lt;&lt; 2</code> ➔ <code>1100₂</code> (<code>3 × 2² = 12</code>)<br>• <code>1101₂(13) &gt;&gt; 1</code> ➔ <code>0110₂</code> (<code>13 ÷ 2의 몫 = 6</code>)</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>2의 보수</strong><br>(컴퓨터 음수 표현)</td>
+        <td><mark><strong>1의 보수(모든 비트 0↔1 반전) + 1</strong></mark><br><em>(맨 앞 부호 비트 MSB가 <code>0</code>이면 양수, <code>1</code>이면 음수)</em></td>
+        <td>8비트 <strong><code>-6</code></strong> 구하기:<br><code>+6</code>(<code>0000 0110</code>) ➔ 반전(<code>1111 1001</code>) ➔ <code>+1</code> = <strong><code>1111 1010₂</code></strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>1.3 새롭게 정의된 연산 기호 &amp; 규칙 암호 해독</h3>
+  <ul>
+    <li><strong>신규 연산 기호(<code>A ★ B</code>) &amp; 블랙박스 함수(<code>f(x)</code>) 추론</strong>:
+      <ul>
+        <li>식이 주어지면 그대로 대입하고, 입출력 표만 주어지면 <strong><code>변화량(기울기) × 입력값 + 보정 상수</code></strong> 형태로 규칙을 찾습니다.</li>
+        <li><em>예</em>: <code>f(2)=7, f(3)=10, f(5)=16</code> ➔ 입력이 <code>1</code> 커질 때 출력이 <code>3</code>씩 증가하므로 <code>3x</code>를 기준으로 잡고 <strong><code>f(x) = 3x + 1</code></strong> 도출!</li>
+      </ul>
+    </li>
+    <li><strong>카이사르(시저) 암호 &amp; 치환 암호 해독</strong>:
+      <ul>
+        <li>시험지 여백에 <strong><code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code></strong>(26자)를 적어놓고 화살표로 칸수를 세어 풉니다 (<code>Z → A</code> 순환 구간 실수 방지).</li>
+        <li><strong>★ 주의</strong>: 암호화 규칙이 <strong><code>오른쪽으로 3칸(+3)</code></strong>일 때, 암호문을 원래 평문으로 <mark>해독(복호화)하려면 반대로 <strong><code>왼쪽으로 3칸(-3)</code></strong></mark> 되돌려야 합니다! (암호문 <code>FRGH</code> 해독 ➔ <code>-3칸</code> 이동 ➔ 평문 <code>CODE</code>)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>2. 수열 · 도형 · 바둑돌 규칙성 추론</h2>
+
+  <h3>2.1 디미고 빈출 5대 수열 패턴</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">수열 유형</th>
+        <th style="width: 35%;">규칙 특징</th>
+        <th style="width: 45%;">실전 예제 및 빈칸 추론법</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong>등차 / 등비수열</strong></td>
+        <td>일정한 수를 <strong>더하거나(<code>+d</code>) 곱함(<code>×r</code>)</strong></td>
+        <td>• <code>3, 7, 11, 15, [ 19 ]</code> (<code>+4</code>씩 증가)<br>• <code>2, 6, 18, 54, [ 162 ]</code> (<code>×3</code>씩 증가)</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>계차수열</strong><br>(★단골)</td>
+        <td>이웃한 두 항의 <mark><strong>차이(간격)가 규칙적으로 변함</strong></mark></td>
+        <td>• <code>1, 2, 4, 7, 11, 16, [ 22 ]</code><br>&nbsp;&nbsp;(항 사이의 차이가 <code>+1, +2, +3, +4, +5, +6</code>으로 커짐)</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>피보나치 수열</strong><br>(★단골)</td>
+        <td><mark><strong>바로 앞의 두 수를 더해서</strong></mark> 다음 수를 만듦 (<code>Aₙ = Aₙ₋₁ + Aₙ₋₂</code>)</td>
+        <td>• <code>1, 1, 2, 3, 5, 8, 13, 21, [ 34 ]</code> (<code>13 + 21 = 34</code>)<br>• <strong>계단 오르기 문제</strong>(한 번에 1칸 또는 2칸 이동)의 경우의 수와 동일!</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>징검다리 수열</strong><br>(홀/짝 분리형)</td>
+        <td>숫자가 커졌다 작아졌다 출렁이면 <mark><strong>홀수 번째와 짝수 번째를 따로 분리!</strong></mark></td>
+        <td>• <code>2, 10, 4, 9, 8, 8, 16, [ 7 ]</code><br>&nbsp;&nbsp;- 홀수 번째: <code>2 → 4 → 8 → 16</code> (<code>×2</code> 규칙)<br>&nbsp;&nbsp;- 짝수 번째: <code>10 → 9 → 8 → [ 7 ]</code> (<code>-1</code> 규칙)</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>군수열 / 주기</strong></td>
+        <td>일정한 묶음(그룹)이나 주기가 반복됨</td>
+        <td>• <code>(1), (1, 2), (1, 2, 3), (1, 2, 3, 4)...</code> ➔ 묶음별 개수(<code>1개, 2개, 3개...</code>)로 합산</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>2.2 도형 · 성냥개비 N단계 공식화 &amp; 격자 도형 변환</h3>
+  <ul>
+    <li><strong>N단계 개수 공식 세우기</strong>: 무작정 10단계까지 그리지 말고 <strong>초기값(1단계)과 단계당 증가량(<code>+d</code>)</strong>을 찾아 일차식을 세웁니다.
+      <ul>
+        <li><em>예</em>: 정사각형 1개에 성냥개비 <code>4개</code>, 2개 이어 붙이면 <code>7개</code>, 3개 이어 붙이면 <code>10개</code>...<br>
+          <code>1단계(4) → 2단계(4+3=7) → 3단계(4+3×2=10)</code> ──▶ <mark><strong><code>N단계 개수 = 3N + 1</code></strong></mark> (10단계는 <code>3×10 + 1 = 31개</code>)</li>
+      </ul>
+    </li>
+    <li><strong>격자 도형(<code>□</code>/<code>■</code>) 변환 퍼즐</strong>: 도형 전체를 한 번에 보지 말고 <strong>① 흑백 색상 반전(<code>□ ↔ ■</code>, NOT)</strong>, <strong>② 시계/반시계 방향 90도·180도 회전</strong>, <strong>③ 상하/좌우 대칭 이동</strong>, <strong>④ 두 도형 겹치기(같으면 <code>□</code>, 다르면 <code>■</code> 등 XOR)</strong> 중 어느 규칙인지 귀퉁이 1칸(예: 왼쪽 위 칸)의 위치 변화를 추적해 판별합니다.</li>
+  </ul>
+
+  <h2>3. 집합 · 경우의 수 · 비둘기집 원리 (최악의 시나리오)</h2>
+
+  <h3>3.1 집합의 원소 개수 (포함·배제의 원리)</h3>
+  <ul>
+    <li><strong>기본 공식</strong>: <mark><strong><code>n(A ∪ B) = n(A) + n(B) - n(A ∩ B)</code></strong></mark> &nbsp;(<code>합집합 = A개수 + B개수 - 둘 다 속하는 교집합</code>)</li>
+    <li><strong>전체 집합(<code>U</code>)이 주어질 때</strong>: <code>전체 인원 - (둘 다 안 한 인원) = n(A ∪ B)</code>를 먼저 구한 뒤 위 공식에 대입합니다.
+      <ul>
+        <li><em>예</em>: 전체 40명 중 코딩 신청 25명, AI 신청 20명, 둘 다 안 한 학생이 5명일 때 <strong>둘 다 신청한 학생(<code>n(A ∩ B)</code>)</strong>은?<br>
+          <code>n(A ∪ B) = 40 - 5 = 35명</code> ──▶ <code>35 = 25 + 20 - n(A ∩ B)</code> ──▶ <strong><code>n(A ∩ B) = 10명</code></strong>!</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>3.2 합의 법칙 vs 곱의 법칙 및 빈출 경우의 수 공식</h3>
+  <div class="diagram-box">
+    • <strong>합의 법칙 (또는 / OR)</strong> : 두 사건이 '동시에 일어나지 않을 때' ──▶ 경우의 수를 <strong>더한다 (<code>A + B</code>)</strong><br>
+    • <strong>곱의 법칙 (그리고 / AND)</strong>: 두 사건이 '연속해서(동시에) 일어날 때' ──▶ 경우의 수를 <strong>곱한다 (<code>A × B</code>)</strong>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 34%;">문제 유형</th>
+        <th style="width: 66%;">시험장 10초 해결 공식</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center"><strong>순서 있게 줄 세우기 (순열)</strong></td>
+        <td><code>N</code>명 중 2명을 뽑아 반장·부반장 임명 = <strong><code>N × (N - 1)</code></strong></td>
+      </tr>
+      <tr>
+        <td class="center"><strong>순서 없는 대표 뽑기 / 악수 / 리그전 (조합)</strong></td>
+        <td><code>N</code>명이 서로 한 번씩 악수(풀리그 시합)하는 횟수 = <mark><strong><code>N × (N - 1) ÷ 2</code></strong></mark> (<code>÷2</code>로 순서 중복 제거!)</td>
+      </tr>
+      <tr>
+        <td class="center"><strong>토너먼트(진출전) 총 경기 수</strong></td>
+        <td>부전승 유무와 무관하게 <code>N</code>개 팀 중 우승 1팀을 가리는 총 경기 수 = 무조건 <mark><strong><code>N - 1</code> 경기</strong></mark></td>
+      </tr>
+      <tr>
+        <td class="center"><strong>0이 포함된 자연수 / 비밀번호 만들기</strong></td>
+        <td>• <strong>맨 앞자리에는 <code>0</code>이 올 수 없음</strong>을 먼저 반영!<br>• <strong>짝수 조건</strong>이 붙으면 <strong><code>① 끝자리가 0인 경우</code> + <code>② 끝자리가 2, 4, 6, 8인 경우</code></strong>로 나누어 더함</td>
+      </tr>
+      <tr>
+        <td class="center"><strong><code>'적어도 ~'</code> 조건 (여사건)</strong></td>
+        <td><strong><code>전체 경우의 수 - (모두 반대인 경우의 수)</code></strong>를 빼는 것이 훨씬 빠름!</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>3.3 ★ 비둘기집 원리 ("최소 몇 개를 뽑아야 반드시 ~하는가?")</h3>
+  <p><strong>"반드시(확실하게) 조건을 만족하려면 최소 몇 개를 꺼내야 하는가?"</strong> 문제는 운이 가장 나쁜 <mark><strong>최악의 경우(목표 달성 직전 상태)</strong>를 모두 합한 뒤 마지막에 <strong><code>+ 1</code></strong></mark>을 더합니다.</p>
+  <div class="diagram-box">
+    <strong>[실전 예제]</strong> 주머니에 빨간 공 5개, 파란 공 4개, 노란 공 3개가 있다. 눈을 감고 꺼낼 때 <strong>'같은 색 공 3개'</strong>를 반드시 얻으려면 최소 몇 개를 꺼내야 하는가?<br>
+    • <strong>1단계 (최악의 상황 가정)</strong>: 모든 색깔이 3개가 되기 직전인 <strong>'2개씩'</strong>만 골고루 나오는 가장 불운한 상황!<br>
+    &nbsp;&nbsp;──▶ <code>빨강 2개 + 파랑 2개 + 노랑 2개 = 6개</code> (아직 어떤 색도 3개가 안 됨)<br>
+    • <strong>2단계 (결정타 +1)</strong>: 여기서 공을 <strong>'딱 1개만 더'</strong> 꺼내면 무슨 색이 나오든 무조건 한 색깔은 3개가 완성됨! ──▶ 정답: <code>6 + 1</code> = <mark><strong>최소 7개!</strong></mark>
+  </div>
+  <blockquote>
+    <strong>⚠️ [오답 함정 주의] 특정 색깔의 공이 목표 개수보다 적을 때!</strong><br>
+    만약 주머니에 <code>빨강 5개, 파랑 4개, 초록 1개</code>가 있는데 <code>'같은 색 3개'</code>를 뽑아야 한다면? 초록색은 아무리 뽑아도 최대 <code>1개</code>밖에 없으므로 최악의 경우에 <strong><code>빨강 2개 + 파랑 2개 + 초록 1개 = 5개</code></strong>가 뽑히고, 여기에 <code>+ 1</code>을 더해 <strong>최소 <code>6개</code></strong>가 정답이 됩니다!
+  </blockquote>
+
+  <h2>4. 격자 도로망 최단 경로와 그래프 · 한붓그리기</h2>
+
+  <h3>4.1 격자 도로망 최단 경로 숫자 누적법 (3대 유형별 실전 예제)</h3>
+  <p>출발점 <code>A</code>에서 도착점 <code>B</code>까지 최단 거리(오른쪽 <code>→</code>, 위쪽 <code>↑</code>)로 가는 가짓수는 <mark><strong>교차점마다 <code>왼쪽 숫자 + 아래쪽 숫자</code>를 더해 적으면</strong></mark> 어떤 변형 문제도 30초 안에 풀립니다.</p>
+
+  <h4>① [예제 1] 장애물(공사 구간 <code>X</code>) 회피형</h4>
+  <div class="diagram-box">
+    <div class="example-flex">
+      <div class="example-svg-wrap">
+        <svg width="310" height="190" viewBox="0 0 310 190" xmlns="http://www.w3.org/2000/svg">
+          <!-- 가로 도로 선 -->
+          <line x1="45" y1="28" x2="255" y2="28" stroke="#111" stroke-width="2" />
+          <line x1="45" y1="76" x2="255" y2="76" stroke="#111" stroke-width="2" />
+          <line x1="45" y1="124" x2="115" y2="124" stroke="#111" stroke-width="2" />
+          <line x1="115" y1="124" x2="255" y2="124" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4" />
+          <line x1="45" y1="172" x2="255" y2="172" stroke="#111" stroke-width="2" />
+          <!-- 세로 도로 선 -->
+          <line x1="45" y1="28" x2="45" y2="172" stroke="#111" stroke-width="2" />
+          <line x1="115" y1="28" x2="115" y2="172" stroke="#111" stroke-width="2" />
+          <line x1="185" y1="28" x2="185" y2="76" stroke="#111" stroke-width="2" />
+          <line x1="185" y1="76" x2="185" y2="172" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4" />
+          <line x1="255" y1="28" x2="255" y2="172" stroke="#111" stroke-width="2" />
+
+          <!-- 맨 아랫줄 (y=172) -->
+          <circle cx="45" cy="172" r="13" fill="#fff" stroke="#111" stroke-width="2" />
+          <text x="45" y="176" text-anchor="middle" font-size="11" font-weight="700">1</text>
+          <text x="16" y="176" text-anchor="middle" font-size="11" font-weight="800">[A]</text>
+
+          <circle cx="115" cy="172" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="115" y="176" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <circle cx="185" cy="172" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="185" y="176" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <circle cx="255" cy="172" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="255" y="176" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <!-- 둘째 줄 (y=124) -->
+          <circle cx="45" cy="124" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="45" y="128" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <circle cx="115" cy="124" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="115" y="128" text-anchor="middle" font-size="11" font-weight="700">2</text>
+
+          <!-- 장애물 X (185, 124) -->
+          <rect x="169" y="108" width="32" height="32" rx="4" fill="#fff" stroke="#111" stroke-width="2.2" />
+          <text x="185" y="128" text-anchor="middle" font-size="11" font-weight="800">✕(0)</text>
+
+          <circle cx="255" cy="124" r="12" fill="#fff" stroke="#111" stroke-width="1.8" />
+          <text x="255" y="128" text-anchor="middle" font-size="11" font-weight="800">1</text>
+
+          <!-- 셋째 줄 (y=76) -->
+          <circle cx="45" cy="76" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="45" y="80" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <circle cx="115" cy="76" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="115" y="80" text-anchor="middle" font-size="11" font-weight="700">3</text>
+
+          <circle cx="185" cy="76" r="12" fill="#fff" stroke="#111" stroke-width="1.8" />
+          <text x="185" y="80" text-anchor="middle" font-size="11" font-weight="800">3</text>
+
+          <circle cx="255" cy="76" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="255" y="80" text-anchor="middle" font-size="11" font-weight="700">4</text>
+
+          <!-- 맨 윗줄 (y=28) -->
+          <circle cx="45" cy="28" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="45" y="32" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <circle cx="115" cy="28" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="115" y="32" text-anchor="middle" font-size="11" font-weight="700">4</text>
+
+          <circle cx="185" cy="28" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="185" y="32" text-anchor="middle" font-size="11" font-weight="700">7</text>
+
+          <circle cx="255" cy="28" r="14" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="255" y="32" text-anchor="middle" font-size="12" font-weight="800">11</text>
+          <text x="287" y="32" text-anchor="middle" font-size="11" font-weight="800">[B]</text>
+        </svg>
+      </div>
+      <div class="example-explain">
+        <strong>[문제]</strong> 가로 3칸 × 세로 3칸 도로망에서 공사 구간 <code>✕</code>를 피해 <code>A ➔ B</code>로 가는 최단 경로의 수는?<br>
+        • <strong>1단계</strong>: 출발점 <code>A</code>의 아랫줄과 왼쪽 줄 테두리에 모두 <strong><code>1</code></strong>을 적습니다.<br>
+        • <strong>2단계</strong>: 공사 구간 <strong><code>✕</code>는 지나갈 수 없으므로 <code>0</code></strong>으로 취급합니다.<br>
+        &nbsp;&nbsp;- <code>✕</code> 바로 오른쪽 칸 = <code>왼쪽(0) + 아래(1)</code> = <strong><code>1</code></strong><br>
+        &nbsp;&nbsp;- <code>✕</code> 바로 위쪽 칸 = <code>왼쪽(3) + 아래(0)</code> = <strong><code>3</code></strong><br>
+        • <strong>3단계</strong>: 도착점 <code>B</code> = <code>왼쪽(7) + 아래(4)</code> = <mark><strong>최종 11가지!</strong></mark>
+      </div>
+    </div>
+  </div>
+
+  <h4>② [예제 2] 필수 경유지(<code>P</code>) 통과형 (<code>A → P → B</code>)</h4>
+  <div class="diagram-box">
+    <div class="example-flex">
+      <div class="example-svg-wrap">
+        <svg width="310" height="165" viewBox="0 0 310 165" xmlns="http://www.w3.org/2000/svg">
+          <!-- 비활성 배경 격자 (점선) -->
+          <line x1="40" y1="30" x2="160" y2="30" stroke="#bbb" stroke-width="1" stroke-dasharray="3,3" />
+          <line x1="40" y1="30" x2="40" y2="85" stroke="#bbb" stroke-width="1" stroke-dasharray="3,3" />
+          <line x1="100" y1="30" x2="100" y2="85" stroke="#bbb" stroke-width="1" stroke-dasharray="3,3" />
+          <line x1="160" y1="140" x2="280" y2="140" stroke="#bbb" stroke-width="1" stroke-dasharray="3,3" />
+          <line x1="220" y1="85" x2="220" y2="140" stroke="#bbb" stroke-width="1" stroke-dasharray="3,3" />
+          <line x1="280" y1="85" x2="280" y2="140" stroke="#bbb" stroke-width="1" stroke-dasharray="3,3" />
+
+          <!-- A -> P 구간 격자 (실선) -->
+          <line x1="40" y1="85" x2="160" y2="85" stroke="#111" stroke-width="2" />
+          <line x1="40" y1="140" x2="160" y2="140" stroke="#111" stroke-width="2" />
+          <line x1="40" y1="85" x2="40" y2="140" stroke="#111" stroke-width="2" />
+          <line x1="100" y1="85" x2="100" y2="140" stroke="#111" stroke-width="2" />
+          <line x1="160" y1="85" x2="160" y2="140" stroke="#111" stroke-width="2" />
+
+          <!-- P -> B 구간 격자 (실선) -->
+          <line x1="160" y1="30" x2="280" y2="30" stroke="#111" stroke-width="2" />
+          <line x1="160" y1="85" x2="280" y2="85" stroke="#111" stroke-width="2" />
+          <line x1="160" y1="30" x2="160" y2="85" stroke="#111" stroke-width="2" />
+          <line x1="220" y1="30" x2="220" y2="85" stroke="#111" stroke-width="2" />
+          <line x1="280" y1="30" x2="280" y2="85" stroke="#111" stroke-width="2" />
+
+          <!-- A -> P 노드 -->
+          <circle cx="40" cy="140" r="12" fill="#fff" stroke="#111" stroke-width="2" />
+          <text x="40" y="144" text-anchor="middle" font-size="10.5" font-weight="700">1</text>
+          <text x="15" y="144" text-anchor="middle" font-size="10.5" font-weight="800">[A]</text>
+
+          <circle cx="100" cy="140" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="100" y="144" text-anchor="middle" font-size="10.5" font-weight="700">1</text>
+
+          <circle cx="160" cy="140" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="160" y="144" text-anchor="middle" font-size="10.5" font-weight="700">1</text>
+
+          <circle cx="40" cy="85" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="40" y="89" text-anchor="middle" font-size="10.5" font-weight="700">1</text>
+
+          <circle cx="100" cy="85" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="100" y="89" text-anchor="middle" font-size="10.5" font-weight="700">2</text>
+
+          <!-- 경유지 P (160, 85) -->
+          <circle cx="160" cy="85" r="14" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="160" y="89" text-anchor="middle" font-size="10.5" font-weight="800">P(3)</text>
+
+          <!-- P -> B 노드 -->
+          <circle cx="220" cy="85" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="220" y="89" text-anchor="middle" font-size="10.5" font-weight="700">3</text>
+
+          <circle cx="280" cy="85" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="280" y="89" text-anchor="middle" font-size="10.5" font-weight="700">3</text>
+
+          <circle cx="160" cy="30" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="160" y="34" text-anchor="middle" font-size="10.5" font-weight="700">3</text>
+
+          <circle cx="220" cy="30" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="220" y="34" text-anchor="middle" font-size="10.5" font-weight="700">6</text>
+
+          <circle cx="280" cy="30" r="13" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="280" y="34" text-anchor="middle" font-size="11.5" font-weight="800">9</text>
+          <text x="280" y="11" text-anchor="middle" font-size="10.5" font-weight="800">[B 도착]</text>
+        </svg>
+      </div>
+      <div class="example-explain">
+        <strong>[문제]</strong> <code>A</code>에서 출발해 반드시 거점 <code>P</code>를 거쳐 <code>B</code>까지 가는 최단 경로의 수는?<br>
+        • <strong>핵심 원리</strong>: <code>P</code>를 지나지 않는 영역(점선)은 갈 수 없으므로 지우고, 두 구간으로 쪼개어 <mark><strong>곱의 법칙</strong></mark>을 적용합니다.<br>
+        • <strong>1구간 (<code>A ➔ P</code>)</strong>: 가로 2칸 × 세로 1칸 = <strong><code>3가지</code></strong><br>
+        • <strong>2구간 (<code>P ➔ B</code>)</strong>: 가로 2칸 × 세로 1칸 = <strong><code>3가지</code></strong><br>
+        • <strong>정답</strong>: <code>3가지 × 3가지</code> = <mark><strong>총 9가지!</strong></mark>
+      </div>
+    </div>
+  </div>
+
+  <h4>③ [예제 3] 대각선 지름길(<code>↗</code>) 포함형</h4>
+  <div class="diagram-box">
+    <div class="example-flex">
+      <div class="example-svg-wrap">
+        <svg width="260" height="165" viewBox="0 0 260 165" xmlns="http://www.w3.org/2000/svg">
+          <!-- 가로/세로 격자 선 -->
+          <line x1="45" y1="25" x2="205" y2="25" stroke="#111" stroke-width="2" />
+          <line x1="45" y1="82" x2="205" y2="82" stroke="#111" stroke-width="2" />
+          <line x1="45" y1="140" x2="205" y2="140" stroke="#111" stroke-width="2" />
+
+          <line x1="45" y1="25" x2="45" y2="140" stroke="#111" stroke-width="2" />
+          <line x1="125" y1="25" x2="125" y2="140" stroke="#111" stroke-width="2" />
+          <line x1="205" y1="25" x2="205" y2="140" stroke="#111" stroke-width="2" />
+
+          <!-- 대각선 지름길 (45,140) -> (125,82) -->
+          <line x1="45" y1="140" x2="125" y2="82" stroke="#111" stroke-width="2.5" stroke-dasharray="5,3" />
+          <text x="80" y="104" text-anchor="middle" font-size="9.5" font-weight="800">↗지름길</text>
+
+          <!-- 아랫줄 (y=140) -->
+          <circle cx="45" cy="140" r="12" fill="#fff" stroke="#111" stroke-width="2" />
+          <text x="45" y="144" text-anchor="middle" font-size="11" font-weight="700">1</text>
+          <text x="18" y="144" text-anchor="middle" font-size="11" font-weight="800">[A]</text>
+
+          <circle cx="125" cy="140" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="125" y="144" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <circle cx="205" cy="140" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="205" y="144" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <!-- 중간줄 (y=82) -->
+          <circle cx="45" cy="82" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="45" y="86" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <!-- 대각선 도착 교차점 (125, 82) -->
+          <circle cx="125" cy="82" r="14" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="125" y="86" text-anchor="middle" font-size="11.5" font-weight="800">3★</text>
+
+          <circle cx="205" cy="82" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="205" y="86" text-anchor="middle" font-size="11" font-weight="700">4</text>
+
+          <!-- 윗줄 (y=25) -->
+          <circle cx="45" cy="25" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="45" y="29" text-anchor="middle" font-size="11" font-weight="700">1</text>
+
+          <circle cx="125" cy="25" r="12" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="125" y="29" text-anchor="middle" font-size="11" font-weight="700">4</text>
+
+          <circle cx="205" cy="25" r="14" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="205" y="29" text-anchor="middle" font-size="12" font-weight="800">8</text>
+          <text x="235" y="29" text-anchor="middle" font-size="11" font-weight="800">[B]</text>
+        </svg>
+      </div>
+      <div class="example-explain">
+        <strong>[문제]</strong> 가로 2칸 × 세로 2칸 도로망에서 첫 칸에 대각선 지름길(<code>↗</code>) 1개가 있을 때 <code>A ➔ B</code> 최단 경로의 수는?<br>
+        • <strong>핵심 공식</strong>: 대각선이 도착하는 정가운데 교차점(<code>★</code>)에서는 <mark><strong><code>왼쪽(1) + 아래쪽(1) + 대각선 출발점(1) = 3</code></strong></mark>으로 3방향을 모두 더합니다!<br>
+        • 이후 인접 칸은 똑같이 <code>1+3=4</code>, 도착점 <code>B</code>는 <code>4+4</code> = <mark><strong>최종 8가지!</strong></mark>
+      </div>
+    </div>
+  </div>
+
+  <h3>4.2 그래프(정점·간선) 공식과 한붓그리기 (실전 도형 예제)</h3>
+
+  <h4>① 한붓그리기 가능 판별 3초 공식 (홀수점 개수 세기)</h4>
+  <p>연필을 떼지 않고 모든 선을 단 한 번씩만 지나 그릴 수 있는지 묻는 문제는 <strong>직접 그려보지 말고 각 꼭짓점에 연결된 선의 개수(차수)를 적은 뒤, 홀수인 점(<mark>'홀수점'</mark>)이 몇 개인지</strong>만 셉니다!</p>
+
+  <div class="diagram-box">
+    <div style="margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px dashed #777777; font-size: 9.5pt;">
+      <strong>★ [한붓그리기(오일러 경로) 가능 판별 공식]</strong><br>
+      • 홀수점의 개수가 <mark><strong>0개</strong></mark> 인 도형 ──▶ <strong>⭕ 가능!</strong> (어느 점에서 출발해도 다시 출발점으로 돌아옴)<br>
+      • 홀수점의 개수가 <mark><strong>2개</strong></mark> 인 도형 ──▶ <strong>⭕ 가능!</strong> (반드시 <strong>한 홀수점에서 출발</strong>하여 <strong>다른 홀수점에서 종료</strong>됨)<br>
+      • 그 외의 모든 경우 (<strong>4개 이상</strong> 등) ──▶ <strong>❌ 절대 불가능!</strong>
+    </div>
+
+    <div class="flow-row">
+      <!-- 도형 예제 1 -->
+      <div class="node">
+        <div class="node-title">[예제 1] 일반 사각형 (홀수점 0개)</div>
+        <svg width="160" height="110" viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="20" width="80" height="70" fill="none" stroke="#111" stroke-width="2" />
+          <circle cx="40" cy="20" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="40" y="24" text-anchor="middle" font-size="10.5" font-weight="700">2</text>
+          <circle cx="120" cy="20" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="120" y="24" text-anchor="middle" font-size="10.5" font-weight="700">2</text>
+          <circle cx="40" cy="90" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="40" y="94" text-anchor="middle" font-size="10.5" font-weight="700">2</text>
+          <circle cx="120" cy="90" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="120" y="94" text-anchor="middle" font-size="10.5" font-weight="700">2</text>
+        </svg>
+        <div class="node-desc">
+          • 꼭짓점 선 개수: <code>2, 2, 2, 2</code><br>
+          • <strong>홀수점 개수 = <mark>0개</mark></strong><br>
+          • 판정: <strong>⭕ 한붓그리기 가능!</strong><br>
+          &nbsp;&nbsp;(출발점과 도착점이 동일)
+        </div>
+      </div>
+
+      <!-- 도형 예제 2 -->
+      <div class="node">
+        <div class="node-title">[예제 2] 대각선 1개 사각형 (홀수점 2개)</div>
+        <svg width="160" height="110" viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="20" width="80" height="70" fill="none" stroke="#111" stroke-width="2" />
+          <line x1="40" y1="90" x2="120" y2="20" stroke="#111" stroke-width="2" />
+          <circle cx="40" cy="20" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="40" y="24" text-anchor="middle" font-size="10.5" font-weight="700">2</text>
+          <circle cx="120" cy="20" r="12" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="120" y="24" text-anchor="middle" font-size="10.5" font-weight="800">3★</text>
+          <circle cx="40" cy="90" r="12" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="40" y="94" text-anchor="middle" font-size="10.5" font-weight="800">3★</text>
+          <circle cx="120" cy="90" r="11" fill="#fff" stroke="#111" stroke-width="1.5" />
+          <text x="120" y="94" text-anchor="middle" font-size="10.5" font-weight="700">2</text>
+        </svg>
+        <div class="node-desc">
+          • 꼭짓점 선 개수: <code>3★, 3★, 2, 2</code><br>
+          • <strong>홀수점(3) 개수 = <mark>딱 2개</mark></strong><br>
+          • 판정: <strong>⭕ 한붓그리기 가능!</strong><br>
+          &nbsp;&nbsp;(홀수점 출발 ➔ 다른 홀수점 도착)
+        </div>
+      </div>
+
+      <!-- 도형 예제 3 -->
+      <div class="node">
+        <div class="node-title">[예제 3] 대각선 2개 사각형 (홀수점 4개)</div>
+        <svg width="160" height="110" viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="20" width="80" height="70" fill="none" stroke="#111" stroke-width="2" />
+          <line x1="40" y1="90" x2="120" y2="20" stroke="#111" stroke-width="2" />
+          <line x1="40" y1="20" x2="120" y2="90" stroke="#111" stroke-width="2" />
+          <circle cx="40" cy="20" r="12" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="40" y="24" text-anchor="middle" font-size="10.5" font-weight="800">3★</text>
+          <circle cx="120" cy="20" r="12" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="120" y="24" text-anchor="middle" font-size="10.5" font-weight="800">3★</text>
+          <circle cx="40" cy="90" r="12" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="40" y="94" text-anchor="middle" font-size="10.5" font-weight="800">3★</text>
+          <circle cx="120" cy="90" r="12" fill="#fff3a8" stroke="#111" stroke-width="2.2" />
+          <text x="120" y="94" text-anchor="middle" font-size="10.5" font-weight="800">3★</text>
+        </svg>
+        <div class="node-desc">
+          • 꼭짓점 선 개수: <code>3★, 3★, 3★, 3★</code><br>
+          • <strong>홀수점(3) 개수 = <mark>4개</mark></strong><br>
+          • 판정: <strong>❌ 한붓그리기 절대 불가능!</strong><br>
+          &nbsp;&nbsp;(가운데 교차점이 정점이 아닐 때)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4>② 악수 정리(차수의 합) &amp; 트리(Tree) 간선 수 실전 예제</h4>
+  <ul>
+    <li><strong>악수 정리 공식</strong>: <mark><strong><code>모든 정점의 차수(연결된 선 개수)의 총합 = 전체 간선(선) 개수 × 2</code></strong></mark>
+      <ul>
+        <li><em>(중요 성질: 홀수점의 개수는 항상 <code>0개, 2개, 4개...</code>처럼 <strong>짝수 개</strong>만 존재하며, 홀수점이 <code>1개</code>나 <code>3개</code>인 도형은 아예 존재할 수 없습니다!)</em></li>
+        <li><strong>[실전 예제]</strong>: <code>"5개의 정점으로 이루어진 그래프에서 각 정점에 연결된 선의 개수가 각각 3, 3, 2, 2, 2개일 때, 이 그래프의 전체 선(간선)은 몇 개인가?"</code><br>
+          ➔ <strong>풀이</strong>: 차수의 총합 = <code>3 + 3 + 2 + 2 + 2 = 12</code> ──▶ 양끝에서 두 번씩 세었으므로 <strong><code>12 ÷ 2 = 6개</code></strong>!</li>
+      </ul>
+    </li>
+    <li><strong>트리(Tree)의 간선 개수 공식</strong>: 사이클(순환 고리) 없이 <strong><code>N</code>개의 정점(컴퓨터)</strong>을 모두 하나로 연결하는 데 필요한 <mark><strong>최소 선(케이블)의 개수 = <code>N - 1</code>개</strong></mark>
+      <ul>
+        <li><strong>[실전 예제]</strong>: <code>"컴퓨터 10대를 순환 고리 없이 모두 네트워크로 연결하려면 최소 몇 개의 랜선(간선)이 필요한가?"</code><br>
+          ➔ <strong>풀이</strong>: <code>10 - 1</code> = <strong><code>9개</code></strong>!</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+
+</html>
