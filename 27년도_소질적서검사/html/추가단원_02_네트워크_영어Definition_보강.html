@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>추가단원 02. 네트워크 영어 Definition 보강</title>
+<style>
+@page { size: A4; margin: 13mm 15mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  color: #111111;
+  background: #ffffff;
+  line-height: 1.55;
+  font-size: 10pt;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 8mm 10mm;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media print {
+  body { padding: 0; max-width: none; }
+  table, blockquote { page-break-inside: avoid; }
+  p strong:first-child { break-after: avoid; }
+}
+h1 {
+  font-size: 15.5pt;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #111111;
+  letter-spacing: -0.3px;
+}
+h2 {
+  font-size: 12pt;
+  font-weight: 700;
+  margin: 14px 0 8px 0;
+  padding: 3px 0 3px 8px;
+  border-left: 4px solid #111111;
+  border-bottom: 1px solid #666666;
+}
+h3 {
+  font-size: 11pt;
+  margin: 12px 0 6px 0;
+}
+p, li { margin: 3px 0; }
+ul { margin: 3px 0; padding-left: 20px; }
+blockquote {
+  margin: 6px 0;
+  padding: 4px 10px;
+  border-left: 3px solid #666666;
+  background: transparent;
+}
+blockquote p { margin: 2px 0; }
+code {
+  font-family: Consolas, "D2Coding", monospace;
+  font-size: 9.3pt;
+  border: 1px solid #cccccc;
+  padding: 0 3px;
+  border-radius: 2px;
+  background: transparent;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0;
+  font-size: 9.5pt;
+}
+th, td {
+  border: 1px solid #333333;
+  padding: 4px 8px;
+  text-align: left;
+}
+th {
+  font-weight: 700;
+  background-color: transparent;
+}
+hr {
+  border: 0;
+  border-top: 1px dashed #999999;
+  margin: 8px 0;
+}
+</style>
+</head>
+<body>
+<h1>추가단원 02. 네트워크 영어 Definition 보강</h1>
+<blockquote>
+<p><strong>이 단원의 목적</strong>: 영어 지문 문제에서 네트워크 관련 용어가 나왔을 때 당황하지 않도록, 기존 영어 Definition 통합본에 없는 <strong>네트워크 필수 용어</strong>를 보강합니다. 영어 지문에는 대개 용어 설명이 함께 나오므로, 아래 <strong>핵심 동사(밑줄 친 의미)</strong> 만 알아도 정답을 찾을 수 있습니다.</p>
+</blockquote>
+<hr>
+<h2>1. 네트워크 장비 영어 Definition</h2>
+<table>
+<thead>
+<tr>
+<th align="left">용어</th>
+<th align="left">영어 정의</th>
+<th align="left">핵심 뜻 (한 줄 요약)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Switch</strong><br>(스위치)</td>
+<td align="left">A networking device that <strong>connects devices within the same network (LAN)</strong> and forwards data <strong>only to the intended device</strong> by using MAC addresses.</td>
+<td align="left">같은 네트워크(LAN) 안의 기기를 연결하고, 데이터를 <strong>목적지 기기에만</strong> 전달</td>
+</tr>
+<tr>
+<td align="left"><strong>Hub</strong><br>(허브)</td>
+<td align="left">A simple networking device that <strong>sends incoming data to all connected devices</strong>, without checking the destination.</td>
+<td align="left">받은 데이터를 <strong>연결된 모든 기기에 뿌림</strong> (스위치보다 비효율적)</td>
+</tr>
+<tr>
+<td align="left"><strong>Router</strong><br>(라우터)</td>
+<td align="left">A device that <strong>forwards data packets between different networks</strong> by choosing the best path using IP addresses.</td>
+<td align="left"><strong>서로 다른 네트워크 사이</strong>에서 IP 주소를 보고 <strong>최적 경로</strong> 선택</td>
+</tr>
+<tr>
+<td align="left"><strong>Access Point (AP)</strong><br>(무선 공유기)</td>
+<td align="left">A device that <strong>lets wireless devices connect to a wired network</strong> using Wi-Fi.</td>
+<td align="left">무선(Wi-Fi) 기기를 유선 네트워크에 연결</td>
+</tr>
+<tr>
+<td align="left"><strong>Firewall</strong><br>(방화벽)</td>
+<td align="left">A security system that <strong>monitors and controls incoming and outgoing network traffic</strong> based on security rules.</td>
+<td align="left">정해진 보안 규칙에 따라 <strong>들어오고 나가는 통신을 감시·차단</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Proxy Server</strong><br>(프록시 서버)</td>
+<td align="left">A server that <strong>acts as an intermediary</strong> between a user and the Internet.</td>
+<td align="left">사용자와 인터넷 사이에서 <strong>대신 요청을 전달(중간 다리)</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Modem</strong><br>(모뎀)</td>
+<td align="left">A device that <strong>converts digital signals into signals for transmission lines</strong> (and back).</td>
+<td align="left">디지털 신호 ↔ 통신선 신호 <strong>변환</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>2. 주소 · 통신 개념 영어 Definition</h2>
+<table>
+<thead>
+<tr>
+<th align="left">용어</th>
+<th align="left">영어 정의</th>
+<th align="left">핵심 뜻 (한 줄 요약)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>IP Address</strong><br>(IP 주소)</td>
+<td align="left">A <strong>unique numerical address</strong> that identifies a device on a network.</td>
+<td align="left">네트워크에서 기기를 식별하는 <strong>고유 숫자 주소</strong> (논리적 주소)</td>
+</tr>
+<tr>
+<td align="left"><strong>MAC Address</strong><br>(맥 주소)</td>
+<td align="left">A <strong>unique hardware address</strong> assigned to a network device by its manufacturer.</td>
+<td align="left">제조 시 부여되는 <strong>기기 고유의 하드웨어 주소</strong> (물리적 주소)</td>
+</tr>
+<tr>
+<td align="left"><strong>Packet</strong><br>(패킷)</td>
+<td align="left">A <strong>small unit of data</strong> into which a message is divided for transmission over a network.</td>
+<td align="left">전송을 위해 메시지를 <strong>잘게 쪼갠 데이터 조각</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Protocol</strong><br>(프로토콜)</td>
+<td align="left">A <strong>set of rules</strong> that defines how data is exchanged between devices.</td>
+<td align="left">기기끼리 데이터를 주고받는 <strong>약속(규칙)</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Server / Client</strong><br>(서버 / 클라이언트)</td>
+<td align="left">A <strong>server provides</strong> services or data, and a <strong>client requests</strong> them.</td>
+<td align="left">서버는 <strong>제공</strong>하고, 클라이언트는 <strong>요청</strong>함</td>
+</tr>
+<tr>
+<td align="left"><strong>Bandwidth</strong><br>(대역폭)</td>
+<td align="left">The <strong>maximum amount of data</strong> that can be transmitted over a connection in a given time.</td>
+<td align="left">일정 시간 동안 전송할 수 있는 <strong>최대 데이터량</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Latency</strong><br>(지연 시간)</td>
+<td align="left">The <strong>time delay</strong> between sending a request and receiving a response.</td>
+<td align="left">요청을 보내고 응답을 받기까지 <strong>걸리는 시간</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Wi-Fi</strong><br>(와이파이)</td>
+<td align="left">A <strong>wireless networking technology</strong> that connects devices to the Internet using radio waves.</td>
+<td align="left">전파를 이용한 <strong>무선 네트워크 기술</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>3. 혼동하기 쉬운 짝 비교</h2>
+<table>
+<thead>
+<tr>
+<th align="left">비교</th>
+<th align="left">차이점</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>IP Address vs MAC Address</strong></td>
+<td align="left">IP 주소는 <strong>네트워크 위치에 따라 바뀔 수 있는 논리적 주소</strong>이고, MAC 주소는 <strong>기기에 고정된 물리적 주소</strong>입니다. (IP = 주소 변경 가능한 &#39;현재 주소&#39;, MAC = 변하지 않는 &#39;주민등록번호&#39;)</td>
+</tr>
+<tr>
+<td align="left"><strong>Hub vs Switch</strong></td>
+<td align="left">허브는 <strong>모든 기기에 전달</strong>하고, 스위치는 <strong>목적지 기기에만 전달</strong>합니다.</td>
+</tr>
+<tr>
+<td align="left"><strong>Switch vs Router</strong></td>
+<td align="left">스위치는 <strong>같은 네트워크(LAN) 안</strong>을 연결하고, 라우터는 <strong>서로 다른 네트워크 사이</strong>를 연결합니다.</td>
+</tr>
+<tr>
+<td align="left"><strong>DNS vs IP Address</strong></td>
+<td align="left">DNS는 <strong>도메인 이름을 IP 주소로 바꿔 주는 시스템</strong>이고, IP 주소는 그 결과로 얻는 <strong>숫자 주소</strong>입니다.</td>
+</tr>
+<tr>
+<td align="left"><strong>Bandwidth vs Latency</strong></td>
+<td align="left">대역폭은 <strong>한 번에 보낼 수 있는 양</strong>(도로 폭), 지연 시간은 <strong>도착까지 걸리는 시간</strong>(도로 길이)입니다.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>4. 영어 지문 해석 팁</h2>
+<ul>
+<li><strong>동사에 주목하세요.</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">영어 동사</th>
+<th align="left">의미</th>
+<th align="left">연결되는 용어</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>translate</code></td>
+<td align="left">변환하다</td>
+<td align="left">DNS</td>
+</tr>
+<tr>
+<td align="left"><code>forward</code></td>
+<td align="left">전달하다</td>
+<td align="left">Router, Switch</td>
+</tr>
+<tr>
+<td align="left"><code>monitor / control</code></td>
+<td align="left">감시·통제하다</td>
+<td align="left">Firewall</td>
+</tr>
+<tr>
+<td align="left"><code>act as an intermediary</code></td>
+<td align="left">중간 다리 역할을 하다</td>
+<td align="left">Proxy Server</td>
+</tr>
+<tr>
+<td align="left"><code>identify</code></td>
+<td align="left">식별하다</td>
+<td align="left">IP Address, MAC Address</td>
+</tr>
+<tr>
+<td align="left"><code>divide into</code></td>
+<td align="left">~로 나누다</td>
+<td align="left">Packet</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>모르는 단어가 있어도 괜찮습니다.</strong> 영어 지문은 용어를 직접 설명해 주는 경우가 많으므로, 위 핵심 동사와 <code>within the same network</code> / <code>between different networks</code> / <code>all devices</code> / <code>intended device</code> 같은 <strong>구분 표현</strong>만 찾으면 정답이 보입니다.</li>
+</ul>
+<hr>
+<h2>5. 확인 문제</h2>
+<p><strong>[문제 1]</strong> 다음 영문 설명이 가리키는 장비로 알맞은 것은?</p>
+<blockquote>
+<p><em>&quot;This device connects computers within the same network and sends data only to the intended device by using MAC addresses.&quot;</em></p>
+</blockquote>
+<p>① Hub  ② Switch  ③ Router  ④ Firewall  ⑤ Modem</p>
+<p><strong>[정답] ②</strong> <strong>[해설]</strong> <code>within the same network</code>(같은 네트워크 안)와 <code>only to the intended device</code>(목적지 기기에만)가 핵심 단서이므로 스위치입니다. 허브는 모든 기기에 전달합니다.</p>
+<p><strong>[문제 2]</strong> <code>MAC Address</code>와 <code>IP Address</code>에 대한 설명으로 <strong>옳은</strong> 것은?</p>
+<p>① MAC 주소는 접속하는 네트워크에 따라 계속 바뀐다.<br>② IP 주소는 제조사가 기기에 고정해서 부여한다.<br>③ MAC 주소는 기기에 고정된 하드웨어 고유 주소이다.<br>④ 두 주소는 이름만 다를 뿐 완전히 같은 개념이다.<br>⑤ IP 주소는 도메인 이름을 영어 문장으로 바꾼 것이다.</p>
+<p><strong>[정답] ③</strong> <strong>[해설]</strong> MAC 주소는 제조 시 부여되는 물리적 고유 주소이고, IP 주소는 네트워크 위치에 따라 달라질 수 있는 논리적 주소입니다.</p>
+<p><strong>[문제 3]</strong> 다음 설명에 해당하는 용어를 차례대로 짝지은 것은?</p>
+<blockquote>
+<p><em>(A) The time delay between sending a request and receiving a response.</em><br><em>(B) A security system that monitors and controls network traffic based on rules.</em></p>
+</blockquote>
+<p>① (A) Bandwidth - (B) Proxy<br>② (A) Latency - (B) Firewall<br>③ (A) Latency - (B) Router<br>④ (A) Protocol - (B) Firewall<br>⑤ (A) Bandwidth - (B) Router</p>
+<p><strong>[정답] ②</strong> <strong>[해설]</strong> (A) <code>time delay</code>는 지연 시간(Latency), (B) <code>monitors and controls ... traffic</code>은 방화벽(Firewall)입니다.</p>
+
+</body>
+</html>
