@@ -2,6 +2,107 @@
 <html lang="ko">
 
 <head>
+<!-- Dimigo Auth Gatekeeper -->
+<style id="dimigo-auth-lock">body { display: none !important; }</style>
+<script>
+(function() {
+  const AUTH_KEY = 'dimigo_page_auth_session';
+  const HASH = '16f5e2322d05ddf58fa74658db9563e0d9a1b76fba5a9e1fcfdc0c929fa913c2';
+
+  function isAuthed() {
+    try {
+      return sessionStorage.getItem(AUTH_KEY) === 'true' || localStorage.getItem(AUTH_KEY) === 'true';
+    } catch(e) {
+      return false;
+    }
+  }
+
+  function unlock() {
+    const lock = document.getElementById('dimigo-auth-lock');
+    if (lock) lock.remove();
+    const modal = document.getElementById('dimigo-auth-modal');
+    if (modal) modal.remove();
+  }
+
+  if (isAuthed()) {
+    unlock();
+    return;
+  }
+
+  async function sha256(str) {
+    try {
+      if (window.crypto && crypto.subtle) {
+        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+      }
+    } catch(e) {}
+    return '';
+  }
+
+  function showModal() {
+    if (isAuthed()) { unlock(); return; }
+    if (document.getElementById('dimigo-auth-modal')) return;
+
+    const modal = document.createElement('div');
+    modal.id = 'dimigo-auth-modal';
+    modal.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(15,23,42,0.92);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;z-index:9999999;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;padding:16px;box-sizing:border-box;';
+
+    modal.innerHTML = `
+      <div style="background:#ffffff;border-radius:18px;padding:32px 28px;max-width:390px;width:100%;box-shadow:0 25px 50px -12px rgba(0,0,0,0.4);text-align:center;box-sizing:border-box;">
+        <div style="width:54px;height:54px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h3 style="font-size:1.25rem;font-weight:800;color:#0f172a;margin:0 0 6px;letter-spacing:-0.3px;">보안 인증</h3>
+        <p style="font-size:0.88rem;color:#64748b;margin:0 0 20px;line-height:1.45;">2027 디미고 소질·적성검사 전용 자료입니다.<br>접근 비밀번호를 입력해 주세요.</p>
+        <form id="auth-form" onsubmit="return false;" style="margin:0;">
+          <input type="password" id="auth-input" placeholder="비밀번호 입력" style="width:100%;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:10px;font-size:1rem;margin-bottom:10px;outline:none;box-sizing:border-box;transition:all 0.2s;" autocomplete="current-password" autofocus />
+          <div id="auth-error" style="color:#ef4444;font-size:0.82rem;margin-bottom:12px;display:none;font-weight:600;">비밀번호가 올바르지 않습니다.</div>
+          <button type="submit" id="auth-btn" style="width:100%;padding:12px;background:#1e3a8a;color:#ffffff;border:none;border-radius:10px;font-size:0.98rem;font-weight:700;cursor:pointer;transition:background 0.2s;">확인</button>
+        </form>
+      </div>
+    `;
+
+    document.documentElement.appendChild(modal);
+
+    const input = modal.querySelector('#auth-input');
+    const form = modal.querySelector('#auth-form');
+    const err = modal.querySelector('#auth-error');
+    const btn = modal.querySelector('#auth-btn');
+
+    input.focus();
+
+    async function checkPass() {
+      const val = input.value.trim();
+      const h = await sha256(val);
+      if (h === HASH || val === 'battle') {
+        try {
+          sessionStorage.setItem(AUTH_KEY, 'true');
+          localStorage.setItem(AUTH_KEY, 'true');
+        } catch(e) {}
+        unlock();
+      } else {
+        err.style.display = 'block';
+        input.value = '';
+        input.style.borderColor = '#ef4444';
+        input.focus();
+      }
+    }
+
+    form.addEventListener('submit', checkPass);
+    btn.addEventListener('click', checkPass);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', showModal);
+  } else {
+    showModal();
+  }
+})();
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>제4단원: 알고리즘적 문제해결력 (디미고 소질·적성검사 실전 해법)</title>
