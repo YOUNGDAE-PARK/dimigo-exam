@@ -2,23 +2,7 @@
 <html lang="ko">
 <head>
 <!-- Dimigo Auth Gatekeeper -->
-<style id="dimigo-auth-lock">body { display: none !important; }
-pre {
-  font-family: Consolas, "D2Coding", monospace;
-  font-size: 9pt;
-  line-height: 1.4;
-  border: 1px solid #888888;
-  padding: 8px 12px;
-  margin: 6px 0;
-  background: transparent;
-  white-space: pre;
-  overflow-x: auto;
-  page-break-inside: avoid;
-}
-pre code { border: none; padding: 0; font-size: inherit; }
-svg { display: block; max-width: 100%; height: auto; page-break-inside: avoid; }
-hr { border: none; border-top: 1px dashed #cccccc; margin: 10px 0; }
-</style>
+<style id="dimigo-auth-lock">body { display: none !important; }</style>
 <script>
 (function() {
   const AUTH_KEY = 'dimigo_page_auth_session';
@@ -120,7 +104,7 @@ hr { border: none; border-top: 1px dashed #cccccc; margin: 10px 0; }
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>추가단원 03. 오답노트 기반 유사·변형 정답 및 해설지 (42문항)</title>
+<title>디미고 소질·적성검사 오답노트 기반 유사·변형 정답 및 해설지</title>
 <style>
 @page { size: A4; margin: 13mm 15mm; }
 * { box-sizing: border-box; }
@@ -199,9 +183,9 @@ hr {
   margin: 8px 0;
 }
 </style>
-
 </head>
 <body>
+<div id="protected-content">
 <h1>2027학년도 디미고 소질·적성검사 오답노트 기반 유사·변형 정답 및 해설지 (42문항)</h1>
 <hr>
 <h2>빠른 정답표</h2>
@@ -604,15 +588,14 @@ hr {
 <h2>Part 4. 논리 회로 · 알고리즘 · 순서도 · 스케줄링 (25번 ~ 33번)</h2>
 <p><strong>25. [정답] ②</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 직·병렬 스위치 회로의 논리식 및 경우의 수</li>
+<li><strong>핵심 개념</strong>: 두 병렬 구간의 직렬 연결 논리식 및 여사건(불이 꺼진 경우) 계산</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>위쪽 가지 <code>A</code>와 아래쪽 가지(<code>B</code>와 <code>C</code>의 직렬 = <code>B AND C</code>)가 병렬로 연결되어 있으므로 <code>(A OR (B AND C))</code>가 됩니다.</li>
-<li>이 병렬 묶음 전체가 스위치 <code>D</code>와 직렬로 연결되므로 최종 논리식은 <code>(A OR (B AND C)) AND D</code>입니다.</li>
-<li><strong>불이 켜지는 경우의 수</strong>:<ul>
-<li>반드시 <code>D = 1</code>이어야 합니다. (1가지)</li>
-<li><code>A = 1</code>이면 <code>B, C</code> 값에 관계없이 불이 켜집니다. → <code>(B, C)</code> 조합 <code>2 × 2 = 4가지</code></li>
-<li><code>A = 0</code>이면 <code>B = 1</code>이고 <code>C = 1</code>이어야만 불이 켜집니다. → <code>1가지</code></li>
-<li>따라서 총 경우의 수는 <code>4 + 1 = 5가지</code>입니다.</li>
+<li>첫 번째 병렬 구간은 스위치 <code>A</code>와 <code>B</code>가 나란히 연결되어 있으므로 둘 중 하나만 닫혀도 전류가 흐릅니다. 따라서 논리식은 <code>(A OR B)</code>입니다.</li>
+<li>두 번째 병렬 구간은 스위치 <code>C</code>와 <code>D</code>가 나란히 연결되어 있으므로 논리식은 <code>(C OR D)</code>입니다.</li>
+<li>이 두 병렬 구간이 직렬로 이어져 있으므로, 두 구간을 모두 통과해야 전구에 불이 들어옵니다. 따라서 최종 점등 논리식은 <code>(A OR B) AND (C OR D)</code>입니다.</li>
+<li><strong>불이 꺼져 있는 경우의 수</strong>:<ul>
+<li>먼저 불이 켜지는 경우를 구하면, <code>(A, B)</code>가 모두 <code>0</code>인 경우를 제외한 <code>4 - 1 = 3가지</code>와 <code>(C, D)</code>가 모두 <code>0</code>인 경우를 제외한 <code>4 - 1 = 3가지</code>가 동시에 성립해야 하므로 <code>3 × 3 = 9가지</code>입니다.</li>
+<li>문제는 <strong>불이 꺼져 있는 경우의 수</strong>를 묻고 있으므로, 전체 <code>2⁴ = 16가지</code>에서 켜지는 경우 <code>9가지</code>를 빼면 <code>16 - 9 = 7가지</code>가 됩니다. (또는 <code>A=0, B=0</code>인 4가지와 <code>C=0, D=0</code>인 4가지에서 중복 <code>(0,0,0,0)</code> 1가지를 뺀 <code>4 + 4 - 1 = 7가지</code>)</li>
 </ul>
 </li>
 </ul>
@@ -843,5 +826,6 @@ hr {
 </li>
 </ul>
 
+</div>
 </body>
 </html>
