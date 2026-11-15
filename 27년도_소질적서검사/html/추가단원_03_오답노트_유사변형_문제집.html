@@ -259,11 +259,11 @@ hr {
 </blockquote>
 <p>① <code>X</code>의 각 자리 숫자 합: 21 / <code>Y</code>: <code>D76(16)</code><br>② <code>X</code>의 각 자리 숫자 합: 23 / <code>Y</code>: <code>C76(16)</code><br>③ <code>X</code>의 각 자리 숫자 합: 23 / <code>Y</code>: <code>D76(16)</code><br>④ <code>X</code>의 각 자리 숫자 합: 24 / <code>Y</code>: <code>D66(16)</code><br>⑤ <code>X</code>의 각 자리 숫자 합: 23 / <code>Y</code>: <code>D7E(16)</code>  </p>
 <hr>
-<p><strong>3.</strong> 어떤 디지털 타이머는 남은 시간을 <strong>초 단위의 16진수</strong>로 화면에 표시한다. 타이머 화면에 <code>2B7</code>이 표시되어 있을 때, 남은 시간은 몇 분 몇 초인가? (단, 16진수에서 <code>A=10, B=11, ..., F=15</code>이다.) [3점]</p>
-<p>① 11분 15초<br>② 11분 25초<br>③ 11분 35초<br>④ 12분 15초<br>⑤ 12분 35초  </p>
+<p><strong>3.</strong> 어떤 디지털 타이머는 남은 시간을 <strong>초 단위의 16진수</strong>로 화면에 표시한다. 현재 남은 시간이 <strong>9분 17초</strong>일 때, 이 타이머 화면에 표시될 16진수 코드로 옳은 것은? (단, 16진수에서 <code>A=10, B=11, ..., F=15</code>이다.) [3점]</p>
+<p>① <code>21D</code><br>② <code>22B</code><br>③ <code>22D</code><br>④ <code>23D</code><br>⑤ <code>32D</code>  </p>
 <hr>
-<p><strong>4.</strong> 웹 디자인에서 빛의 삼원색인 빨강(R), 초록(G), 파랑(B)의 세기(<code>0~255</code>)를 각각 두 자리 16진수로 바꾸어 <code>#RRGGBB</code> 형태로 나타낸다. 두 색 <code>#2864C0</code>과 <code>#48A4E0</code>을 섞어 R, G, B 각 채널이 두 색 값의 <strong>평균</strong>이 되는 새로운 색을 만들었을 때, 완성된 색의 16진수 색상 코드는? [3점]</p>
-<p>① <code>#3884D0</code><br>② <code>#3882D0</code><br>③ <code>#3484D0</code><br>④ <code>#3884C8</code><br>⑤ <code>#3684E0</code>  </p>
+<p><strong>4.</strong> 웹 디자인에서 빛의 삼원색인 빨강(R), 초록(G), 파랑(B)의 세기(<code>0~255</code>)를 각각 두 자리 16진수로 바꾸어 <code>#RRGGBB</code> 형태로 나타낸다. 두 색 <code>A</code>와 <code>B</code>를 섞어 R, G, B 각 채널이 두 색 값의 <strong>산술 평균</strong>이 되는 새로운 색 <code>#5078B0</code>을 만들었다. 색 <code>A</code>의 색상 코드가 <code>#204080</code>일 때, 섞은 다른 한쪽 색 <code>B</code>의 16진수 색상 코드는? [3점]</p>
+<p>① <code>#80B0E0</code><br>② <code>#70B0E0</code><br>③ <code>#80A0E0</code><br>④ <code>#80B0D0</code><br>⑤ <code>#90B0E0</code>  </p>
 <hr>
 <p><strong>5.</strong> 디지털 이미지에서 화소 하나의 색을 나타내는 비트 수(색 깊이)와 이미지 용량에 대한 설명으로 <code>&lt;보기&gt;</code>에서 옳은 것만을 있는 대로 고른 것은? (단, 이미지는 압축하지 않는다.) [3점]</p>
 <blockquote>
@@ -277,57 +277,39 @@ hr {
 </blockquote>
 <p>① ㄱ, ㄷ<br>② ㄴ, ㄹ<br>③ ㄱ, ㄷ, ㄹ<br>④ ㄱ, ㄴ, ㄷ<br>⑤ ㄱ, ㄴ, ㄷ, ㄹ  </p>
 <hr>
-<p><strong>6.</strong> 문서에서 자주 나오는 글자에는 짧은 이진 부호를, 드물게 나오는 글자에는 긴 이진 부호를 붙이면 전체 데이터 용량을 줄일 수 있다(허프만 부호화). 네 글자 <code>A, B, C, D</code>를 아래 표와 같은 가변 길이 부호로 나타낼 때, <strong>(가) 10글자 문자열 <code>ABAACABADA</code>를 이 표의 부호로 변환했을 때의 전체 비트 수</strong>와, <strong>(나) 같은 문자열을 모든 글자 2비트 고정 방식으로 나타냈을 때와 비교하여 절약된 비트 수</strong>를 바르게 짝지은 것은? [3점]</p>
-<table>
-<thead>
-<tr>
-<th align="center">글자</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>가변 길이 이진 부호</strong></td>
-<td align="center"><code>0</code> (1비트)</td>
-<td align="center"><code>10</code> (2비트)</td>
-<td align="center"><code>110</code> (3비트)</td>
-<td align="center"><code>111</code> (3비트)</td>
-</tr>
-</tbody></table>
+<p><strong>6.</strong> 4종류의 문자 <code>A, B, C, D</code>로만 이루어진 <strong>20글자</strong> 문서에서 각 문자의 출현 횟수가 <code>A: 10회, B: 5회, C: 3회, D: 2회</code>이다. 자주 나오는 문자에는 짧은 이진 부호를, 드물게 나오는 문자에는 긴 이진 부호를 배정하는 <strong>허프만 부호화(접두어가 겹치지 않는 가변 길이 부호)</strong> 원리로 이 문서를 압축했을 때의 <strong>최소 전체 비트 수</strong>와, 모든 글자를 <strong>2비트 고정 길이</strong>로 저장할 때와 비교하여 <strong>절약되는 비트 수</strong>를 바르게 짝지은 것은? [4점]</p>
 <table>
 <thead>
 <tr>
 <th align="center">번호</th>
-<th align="center">(가) 변환한 전체 비트 수</th>
-<th align="center">(나) 2비트 고정 방식 대비 절약된 비트 수</th>
+<th align="center">최소 전체 비트 수</th>
+<th align="center">2비트 고정 방식 대비 절약된 비트 수</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">①</td>
-<td align="center">15비트</td>
-<td align="center">5비트</td>
-</tr>
-<tr>
-<td align="center">②</td>
-<td align="center">16비트</td>
-<td align="center">4비트</td>
-</tr>
-<tr>
-<td align="center">③</td>
-<td align="center">16비트</td>
+<td align="center">34비트</td>
 <td align="center">6비트</td>
 </tr>
 <tr>
+<td align="center">②</td>
+<td align="center">35비트</td>
+<td align="center">5비트</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="center">36비트</td>
+<td align="center">4비트</td>
+</tr>
+<tr>
 <td align="center">④</td>
-<td align="center">17비트</td>
-<td align="center">3비트</td>
+<td align="center">38비트</td>
+<td align="center">2비트</td>
 </tr>
 <tr>
 <td align="center">⑤</td>
-<td align="center">18비트</td>
-<td align="center">2비트</td>
+<td align="center">35비트</td>
+<td align="center">15비트</td>
 </tr>
 </tbody></table>
 <hr>
@@ -362,33 +344,60 @@ hr {
   <text x="40" y="189" font-size="14" font-weight="bold" text-anchor="middle">D</text>
 </svg><p>① 10비트 / 복호화: <code>CABD</code><br>② 10비트 / 복호화: <code>CBAD</code><br>③ 11비트 / 복호화: <code>CABD</code><br>④ 11비트 / 복호화: <code>DCBA</code><br>⑤ 9비트 / 복호화: <code>ACBD</code>  </p>
 <hr>
-<p><strong>8.</strong> 연속해서 반복되는 문자를 <code>문자(8비트) + 반복 횟수(4비트)</code>의 <strong>12비트 묶음</strong>으로 줄여 저장하는 <strong>런-길이 압축(RLE)</strong> 방식을 사용한다. 예를 들어 <code>AAAA</code>는 <code>A4</code>라는 1개의 묶음(12비트)으로 압축된다. 한 글자당 8비트씩 차지하는 아래 14글자 원본 문자열(총 112비트)을 이 방식으로 압축했을 때, <strong>원본 대비 절약(감소)되는 총 비트 수</strong>는? [3점]</p>
-<blockquote>
-<p><strong>&lt;원본 문자열 (14글자)&gt;</strong><br><code>AAAAABBBBCCCCC</code></p>
-</blockquote>
-<p>① 64비트<br>② 72비트<br>③ 76비트<br>④ 80비트<br>⑤ 88비트  </p>
+<p><strong>8.</strong> 연속해서 반복되는 문자를 <code>문자(8비트) + 반복 횟수(4비트)</code>의 <strong>12비트 묶음</strong>으로 줄여 저장하는 <strong>런-길이 압축(RLE)</strong> 방식을 사용한다. 한 글자당 8비트를 차지하는 어떤 원본 문자열을 이 방식으로 압축했더니 <code>A6 B3 C1 D5</code>라는 4개의 묶음(총 48비트)이 되었다. 이 <strong>원본 문자열의 압축 전 크기</strong>와, 만약 8글자 문자열 <code>ABCDEFGH</code>를 같은 RLE 방식으로 압축했을 때의 <strong>용량 변화</strong>를 바르게 짝지은 것은? [4점]</p>
+<p>① 원본 크기: 112비트 / <code>ABCDEFGH</code> 압축 시: 32비트 절약<br>② 원본 크기: 120비트 / <code>ABCDEFGH</code> 압축 시: 32비트 절약<br>③ 원본 크기: 120비트 / <code>ABCDEFGH</code> 압축 시: 32비트 증가<br>④ 원본 크기: 120비트 / <code>ABCDEFGH</code> 압축 시: 16비트 증가<br>⑤ 원본 크기: 128비트 / <code>ABCDEFGH</code> 압축 시: 32비트 증가  </p>
 <hr>
-<p><strong>9.</strong> 네트워크의 데이터 전송 속도는 1초 동안 전송할 수 있는 비트(<code>bit</code>)의 수인 <code>bps(bit per second)</code> 단위로 나타내며, <code>8비트 = 1바이트(Byte)</code>이다(단, <code>1MB = 1,000KB</code>, <code>1Gbps = 1,000Mbps</code>). 초당 <strong>200메가비트(<code>200Mbps</code>)</strong> 를 일정하게 전송하는 네트워크 회선을 이용하여 용량이 <strong>300메가바이트(<code>300MB</code>)</strong> 인 동영상 파일을 내려받을 때 걸리는 시간은? [3점]</p>
-<p>① 1.5초<br>② 6초<br>③ 12초<br>④ 15초<br>⑤ 24초  </p>
+<p><strong>9.</strong> 네트워크의 데이터 전송 속도는 1초 동안 전송할 수 있는 비트(<code>bit</code>)의 수인 <code>bps</code> 단위로 나타내며, <code>8비트 = 1바이트(Byte)</code>이다(단, <code>1GB = 1,000MB</code>, <code>1MB = 1,000KB</code>, <code>1Mbps = 1,000kbps</code>). 용량이 <strong>1.5기가바이트</strong>(<code>1.5GB</code>)인 고화질 영상을 네트워크로 내려받는 데 정확히 <strong>1분(60초)</strong> 이 걸렸다면, 이 네트워크 회선의 평균 전송 속도는? [3점]</p>
+<p>① 25Mbps<br>② 100Mbps<br>③ 200Mbps<br>④ 250Mbps<br>⑤ 1,200Mbps  </p>
 <hr>
 <p><strong>10.</strong> 1비트 두 수 <code>A</code>, <code>B</code>와 아래 자리에서 올라온 자리올림수 <code>Cin</code>까지 총 세 비트를 더해 합(<code>S</code>)과 다음 자리로의 자리올림수(<code>Cout</code>)를 출력하는 <strong>전가산기(Full Adder)</strong> 에 <strong><code>A = 1</code>, <code>B = 1</code>, <code>Cin = 1</code></strong> 을 입력했을 때, 출력 <code>S</code>와 <code>Cout</code>의 값으로 옳은 것은? [3점]</p>
 <p>① <code>S = 0, Cout = 0</code><br>② <code>S = 0, Cout = 1</code><br>③ <code>S = 1, Cout = 0</code><br>④ <code>S = 1, Cout = 1</code><br>⑤ <code>S = 3, Cout = 0</code>  </p>
 <hr>
 <h2>Part 2. 컴퓨팅 시스템 · 네트워크 · 보안 · AI · DB (11번 ~ 22번)</h2>
-<p><strong>11.</strong> 리눅스(Linux) 환경에서 현재 작업 폴더(디렉터리)가 <code>/home/dimigo/exam/2027</code>일 때, <code>/home/dimigo/data/test.txt</code> 파일을 가리키는 <strong>상대 경로</strong>로 옳은 것은? [3점]</p>
-<p>① <code>./data/test.txt</code><br>② <code>../data/test.txt</code><br>③ <code>../../data/test.txt</code><br>④ <code>/data/test.txt</code><br>⑤ <code>../../../data/test.txt</code>  </p>
-<hr>
-<p><strong>12.</strong> 컴퓨터의 기억장치 특징에 대한 설명으로 <code>&lt;보기&gt;</code>에서 옳은 것만을 있는 대로 고른 것은? [3점]</p>
+<p><strong>11.</strong> 리눅스(Linux) 터미널에서 현재 작업 디렉터리가 <code>/home/dimigo/2027/exam</code>일 때, 아래 명령을 순서대로 실행한 후 최종적으로 위치하게 되는 <strong>절대 경로</strong>는? [3점]</p>
 <blockquote>
-<p><strong>&lt;보기&gt;</strong></p>
-<ul>
-<li><strong>ㄱ.</strong> RAM은 전원이 꺼지면 저장된 내용이 사라지는 휘발성 메모리이다.</li>
-<li><strong>ㄴ.</strong> SSD는 자기 원판과 헤드를 기계적으로 움직여 데이터를 읽고 쓰므로 충격에 약하다.</li>
-<li><strong>ㄷ.</strong> ROM에는 컴퓨터를 켤 때 필요한 기본 프로그램(부팅 정보)이 저장될 수 있으며, 전원이 꺼져도 내용이 유지된다.</li>
-<li><strong>ㄹ.</strong> 캐시 메모리는 주기억장치(RAM)보다 저장 용량은 작지만, 처리 속도가 훨씬 빨라 CPU와 주기억장치 사이의 병목 현상을 줄여 준다.</li>
-</ul>
+<ol>
+<li><code>cd ../note</code>  </li>
+<li><code>cd ../../data/./quiz</code>  </li>
+<li><code>cd ../final</code></li>
+</ol>
 </blockquote>
-<p>① ㄱ, ㄷ<br>② ㄱ, ㄹ<br>③ ㄱ, ㄷ, ㄹ<br>④ ㄴ, ㄷ, ㄹ<br>⑤ ㄱ, ㄴ, ㄷ, ㄹ  </p>
+<p>① <code>/home/dimigo/2027/final</code><br>② <code>/home/dimigo/data/quiz/final</code><br>③ <code>/home/dimigo/data/final</code><br>④ <code>/home/data/final</code><br>⑤ <code>/home/dimigo/exam/final</code>  </p>
+<hr>
+<p><strong>12.</strong> 다음 표는 컴퓨터의 기억장치 계층 구조를 비교한 것이다. 표의 <code>(가)</code>, <code>(나)</code>, <code>(다)</code>에 들어갈 내용으로 가장 적절한 것은? [3점]</p>
+<table>
+<thead>
+<tr>
+<th align="left">구분</th>
+<th align="center">레지스터</th>
+<th align="center">캐시 메모리</th>
+<th align="center">주기억장치(RAM)</th>
+<th align="center">보조기억장치(SSD)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>접근 속도</strong></td>
+<td align="center">가장 빠름</td>
+<td align="center">빠름</td>
+<td align="center">보통</td>
+<td align="center"><strong>(가)</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>저장 용량</strong></td>
+<td align="center">가장 작음</td>
+<td align="center">작음</td>
+<td align="center">보통</td>
+<td align="center"><strong>(나)</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>전원 꺼짐 시</strong></td>
+<td align="center">휘발성</td>
+<td align="center">휘발성</td>
+<td align="center">휘발성</td>
+<td align="center"><strong>(다)</strong></td>
+</tr>
+</tbody></table>
+<p>① (가) 가장 느림 / (나) 가장 큼 / (다) 비휘발성<br>② (가) 가장 느림 / (나) 가장 작음 / (다) 비휘발성<br>③ (가) 가장 빠름 / (나) 가장 큼 / (다) 휘발성<br>④ (가) 보통 / (나) 가장 큼 / (다) 비휘발성<br>⑤ (가) 가장 느림 / (나) 가장 큼 / (다) 휘발성  </p>
 <hr>
 <p><strong>13.</strong> 프로그래밍 언어와 번역 프로그램에 대한 설명으로 <code>&lt;보기&gt;</code>에서 옳은 것만을 있는 대로 고른 것은? [3점]</p>
 <blockquote>
@@ -412,35 +421,29 @@ hr {
 </blockquote>
 <p>① 거리: 51cm / 동작: 전방으로 계속 직진 / 액추에이터: 서보 모터, LED, 피에조 부저<br>② 거리: 51cm / 동작: 즉시 멈추고 경고음 / 액추에이터: 조도 센서, 서보 모터, LED<br>③ 거리: 102cm / 동작: 전방으로 계속 직진 / 액추에이터: 서보 모터, LED, 피에조 부저<br>④ 거리: 34cm / 동작: 즉시 멈추고 경고음 / 액추에이터: 가변 저항, 스피커, LED<br>⑤ 거리: 51cm / 동작: 전방으로 계속 직진 / 액추에이터: 초음파 센서, 온도 센서, 부저  </p>
 <hr>
-<p><strong>15.</strong> 다음 설명에 해당하는 (가) 네트워크 연결 형태(토폴로지)와 (나) 네트워크 장비를 바르게 짝지은 것은? [3점]</p>
-<blockquote>
-<ul>
-<li><strong>(가)</strong> 모든 컴퓨터가 중앙의 장치 하나에 각각 연결되어 있다. 컴퓨터 한 대가 고장 나도 나머지는 통신할 수 있지만, 중앙 장치가 고장 나면 전체 통신이 멈춘다.</li>
-<li><strong>(나)</strong> 여러 컴퓨터를 연결하는 장비로, 들어온 데이터를 목적지 MAC 주소를 확인하여 해당 장치에만 전송함으로써 허브(Hub)보다 불필요한 네트워크 혼잡을 줄여 준다.</li>
-</ul>
-</blockquote>
-<p>① (가) 망형(메시형) / (나) 라우터(Router)<br>② (가) 성형(스타형) / (나) 스위치(Switch)<br>③ (가) 성형(스타형) / (나) 리피터(Repeater)<br>④ (가) 링형 / (나) 스위치(Switch)<br>⑤ (가) 버스형 / (나) 모뎀(Modem)  </p>
-<hr>
-<p><strong>16.</strong> 다음 (가), (나) 사례에 해당하는 핵심 IT 기술 용어를 바르게 짝지은 것은? [3점]</p>
-<blockquote>
-<ul>
-<li><strong>(가)</strong> 프로그램을 PC에 따로 설치하지 않고 웹 브라우저로 접속해 문서 작성, 이메일, 화상 회의 등의 소프트웨어를 바로 사용하는 클라우드 서비스 방식</li>
-<li><strong>(나)</strong> 실제 공장의 설비나 도시 교통망과 똑같은 가상 모델을 컴퓨터 속에 만들고, 실제 설비의 센서 데이터를 실시간으로 반영하여 고장을 미리 예측하거나 실험해 보는 기술</li>
-</ul>
-</blockquote>
-<p>① (가) IaaS / (나) 메타버스<br>② (가) PaaS / (나) 증강현실<br>③ (가) SaaS / (나) 디지털 트윈<br>④ (가) SaaS / (나) 블록체인<br>⑤ (가) IaaS / (나) 디지털 트윈  </p>
-<hr>
-<p><strong>17.</strong> 사용자 인증 방식은 크게 <strong>아는 것(지식)</strong>, <strong>가진 것(소유)</strong>, <strong>신체 특징(생체)</strong> 세 가지로 나뉜다. 서로 다른 종류 두 가지를 함께 사용하는 <strong>2요소 인증(2FA)</strong> 에 해당하는 것만을 <code>&lt;보기&gt;</code>에서 있는 대로 고른 것은? [3점]</p>
+<p><strong>15.</strong> 네트워크 구성 및 장비에 관한 설명으로 <code>&lt;보기&gt;</code>에서 옳은 것만을 있는 대로 고른 것은? [4점]</p>
 <blockquote>
 <p><strong>&lt;보기&gt;</strong></p>
 <ul>
-<li><strong>ㄱ.</strong> 로그인 비밀번호 입력 후, 4자리 PIN 번호 추가 입력</li>
-<li><strong>ㄴ.</strong> 로그인 비밀번호 입력 후, 스마트폰 OTP 앱에 뜬 일회용 인증 번호 입력</li>
-<li><strong>ㄷ.</strong> 지문 인식 통과 후, 홍채 인식 추가 통과</li>
-<li><strong>ㄹ.</strong> 사원증(IC카드) 태그 후, 지문 인식으로 본인 확인</li>
+<li><strong>ㄱ.</strong> 중앙 장치 하나에 모든 컴퓨터가 연결된 성형(스타형) 구조에서는 컴퓨터 한 대와 연결된 선이 끊어져도 나머지 컴퓨터끼리는 통신할 수 있지만, 중앙 장치가 고장 나면 전체 통신이 멈춘다.</li>
+<li><strong>ㄴ.</strong> 모든 컴퓨터가 서로 일대일로 직접 연결된 망형(메시형) 구조에서는 케이블 1개가 끊어져도 다른 경로로 우회하여 모든 컴퓨터가 계속 통신할 수 있다.</li>
+<li><strong>ㄷ.</strong> 허브(Hub)는 들어온 데이터의 목적지 주소를 확인하여 해당 장치에만 전달하므로 스위치(Switch)보다 보안성과 전송 효율이 높다.</li>
+<li><strong>ㄹ.</strong> 라우터(Router)는 서로 다른 네트워크 사이에서 최적의 통신 경로를 결정하여 데이터를 전달한다.</li>
 </ul>
 </blockquote>
-<p>① ㄱ, ㄴ<br>② ㄱ, ㄷ<br>③ ㄴ, ㄹ<br>④ ㄴ, ㄷ, ㄹ<br>⑤ ㄱ, ㄴ, ㄹ  </p>
+<p>① ㄱ, ㄴ<br>② ㄱ, ㄷ<br>③ ㄴ, ㄹ<br>④ ㄱ, ㄴ, ㄹ<br>⑤ ㄱ, ㄷ, ㄹ  </p>
+<hr>
+<p><strong>16.</strong> 클라우드 컴퓨팅과 가상화 신기술에 대한 아래 (가), (나) 사례에 해당하는 용어를 바르게 짝지은 것은? [3점]</p>
+<blockquote>
+<ul>
+<li><strong>(가)</strong> 앱 개발자가 서버 하드웨어나 운영체제(OS)를 직접 설치·유지보수할 필요 없이, 클라우드 업체가 제공하는 개발·실행 환경 위에 자신이 작성한 프로그램 코드만 올려 바로 실행하고 배포하는 서비스 모델</li>
+<li><strong>(나)</strong> 단순한 3차원 가상 체험(VR)과 달리, 실제 스마트 공장의 기계 센서로부터 온도·진동 데이터를 실시간으로 전달받아 가상 모델에 똑같이 동기화함으로써 고장을 사전에 예측하는 기술</li>
+</ul>
+</blockquote>
+<p>① (가) IaaS / (나) 메타버스<br>② (가) PaaS / (나) 디지털 트윈<br>③ (가) SaaS / (나) 디지털 트윈<br>④ (가) PaaS / (나) 증강현실<br>⑤ (가) SaaS / (나) 블록체인  </p>
+<hr>
+<p><strong>17.</strong> 사용자 인증 방식은 <strong>아는 것(지식)</strong>, <strong>가진 것(소유)</strong>, <strong>신체 특징(생체)</strong> 세 가지 요소로 구분된다. 아래 5가지 보안 정책 중 <strong>유일하게 2요소 인증(2FA) 기준을 충족하지 못하는(동일한 요소만 중복 사용한) 취약한 정책</strong>은? [3점]</p>
+<p>① 사내 PC 로그인: 지문 인식 + 화면 잠금 패턴 입력<br>② 인터넷 뱅킹 이체: 로그인 비밀번호 + 스마트폰 OTP 앱 일회용 번호 입력<br>③ 연구소 출입 통제: 사원증(IC카드) 태그 + 홍채 인식<br>④ 학교 포털 본인 확인: 보안 질문 답변 입력 + 4자리 PIN 번호 입력<br>⑤ 관리자 계정 접속: 물리 보안 토큰(USB) 삽입 + 얼굴 인식  </p>
 <hr>
 <p><strong>18.</strong> 다음 영문 설명이 가리키는 컴퓨터 보안 공격 또는 악성 프로그램의 명칭으로 가장 적절한 것은? [3점]</p>
 <blockquote>
@@ -448,16 +451,8 @@ hr {
 </blockquote>
 <p>① Phishing (피싱)<br>② DDoS Attack (분산 서비스 거부 공격)<br>③ Ransomware (랜섬웨어)<br>④ Keylogger (키로거)<br>⑤ Zero-Day Attack (제로데이 공격)  </p>
 <hr>
-<p><strong>19.</strong> 저작권법에 따라 <code>&lt;보기&gt;</code>의 (가)~(다)로 만들어진 저작물의 종류와, <strong><code>[저작자 표시 - 비영리 - 동일 조건 변경 허락]</code>(BY-NC-SA)</strong> 조건의 CCL이 붙은 그림을 바탕으로 새 그림을 만들어 공개할 때의 설명으로 옳은 것은? [4점]</p>
-<blockquote>
-<p><strong>&lt;보기&gt;</strong></p>
-<ul>
-<li><strong>(가)</strong> 인기 웹툰을 원작으로 하여 극장판 애니메이션 시나리오를 새로 썼다.</li>
-<li><strong>(나)</strong> 여러 작가의 단편소설 중 주제가 어울리는 작품들을 골라 체계적으로 배열하여 단편선을 엮었다.</li>
-<li><strong>(다)</strong> 두 명의 개발자가 각자의 파트를 떼어내어 따로 이용할 수 없는 하나의 게임을 함께 개발하였다.</li>
-</ul>
-</blockquote>
-<p>① (가) 편집저작물 / (나) 2차적저작물 / (다) 공동저작물 / 새 그림에는 원저작자를 밝히지 않아도 된다.<br>② (가) 2차적저작물 / (나) 편집저작물 / (다) 공동저작물 / 새 그림도 원저작물과 같은 CCL 조건(BY-NC-SA)을 붙여 공개해야 한다.<br>③ (가) 2차적저작물 / (나) 공동저작물 / (다) 편집저작물 / 새 그림은 상업적(영리) 목적으로 판매할 수 있다.<br>④ (가) 편집저작물 / (나) 편집저작물 / (다) 공동저작물 / 원래 그림을 변형하거나 수정하는 것 자체가 금지된다.<br>⑤ (가) 2차적저작물 / (나) 편집저작물 / (다) 단독저작물 / 새 그림에는 변경 금지 조건을 붙여 공개해야 한다.  </p>
+<p><strong>19.</strong> 원작자가 <strong><code>[저작자 표시 - 비영리 - 동일 조건 변경 허락]</code>(BY-NC-SA)</strong> 조건의 CCL을 붙여 공개한 일러스트를 활용하려고 한다. 아래 5가지 활용 사례 중 <strong>저작권 이용 허락 조건(CCL)을 위반한 사례</strong>는? [4점]</p>
+<p>① 일러스트의 색감을 수정해 개인 무료 블로그 배경으로 올리면서 원작자 이름과 <code>BY-NC-SA</code> 조건을 함께 표시하였다.<br>② 일러스트를 바탕으로 새로운 캐릭터를 추가해 2차 창작 그림을 그린 뒤, 원작자를 밝히고 무료로 배포하면서 <code>BY-NC-SA</code> 조건을 붙였다.<br>③ 일러스트를 일부 변형하여 비영리 학교 동아리 홍보 포스터를 제작하고, 원작자 출처와 동일한 <code>BY-NC-SA</code> 조건을 표기하였다.<br>④ 일러스트를 수정해 새로운 그림을 만든 뒤, 원작자를 밝히고 무료(비영리)로 공개하면서 새 그림에는 <strong><code>변경 금지(ND)</code></strong> 조건을 붙여 배포하였다.<br>⑤ 원작자의 별도 허락 없이 그대로 비영리 학교 발표 자료에 인용하며 출처와 <code>BY-NC-SA</code> 조건을 명시하였다.  </p>
 <hr>
 <p><strong>20.</strong> 공장에서 제품의 불량 여부를 판별하는 인공지능 모델의 테스트 결과가 아래 표와 같다. 이 모델의 <strong>정확도(Accuracy)</strong> 와 실제 불량품에 대한 <strong>재현율(Recall)</strong> 을 바르게 짝지은 것은? [4점]</p>
 <table>
@@ -481,82 +476,103 @@ hr {
 </tbody></table>
 <p>① 정확도: 85% / 재현율: 80%<br>② 정확도: 87% / 재현율: 64%<br>③ 정확도: 87% / 재현율: 80%<br>④ 정확도: 90% / 재현율: 80%<br>⑤ 정확도: 87% / 재현율: 88.75%  </p>
 <hr>
-<p><strong>21.</strong> 학교 수강신청 데이터베이스에서 관리하는 아래 <strong>[수강신청 테이블]</strong> 에 대한 설명으로 <code>&lt;보기&gt;</code>에서 옳은 것만을 있는 대로 고른 것은? [3점]</p>
+<p><strong>21.</strong> 학교 도서관 시스템에서 관리하는 아래 두 테이블 <strong>[학생 테이블]</strong> 과 <strong>[도서대출 테이블]</strong> 에 대한 설명으로 <code>&lt;보기&gt;</code>에서 옳은 것만을 있는 대로 고른 것은? [3점]</p>
+<p><strong>[학생 테이블]</strong></p>
 <table>
 <thead>
 <tr>
 <th align="center">학번</th>
 <th align="center">학생명</th>
-<th align="center">신청과목</th>
-<th align="center">학점</th>
+<th align="center">학년</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center"><code>202701</code></td>
 <td align="center">김디미</td>
-<td align="center">정보</td>
-<td align="center">3</td>
+<td align="center">1</td>
 </tr>
 <tr>
 <td align="center"><code>202702</code></td>
 <td align="center">이코딩</td>
-<td align="center">알고리즘</td>
 <td align="center">2</td>
 </tr>
+</tbody></table>
+<p><strong>[도서대출 테이블]</strong></p>
+<table>
+<thead>
 <tr>
-<td align="center"><code>202703</code></td>
-<td align="center">김디미</td>
-<td align="center">인공지능</td>
-<td align="center">3</td>
+<th align="center">대출번호</th>
+<th align="center">학번</th>
+<th align="center">도서명</th>
+<th align="center">대출일</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>L-001</code></td>
+<td align="center"><code>202701</code></td>
+<td align="center">알고리즘 입문</td>
+<td align="center"><code>2027-03-02</code></td>
+</tr>
+<tr>
+<td align="center"><code>L-002</code></td>
+<td align="center"><code>202701</code></td>
+<td align="center">파이썬 기초</td>
+<td align="center"><code>2027-03-05</code></td>
+</tr>
+<tr>
+<td align="center"><code>L-003</code></td>
+<td align="center"><code>202702</code></td>
+<td align="center">네트워크 원리</td>
+<td align="center"><code>2027-03-06</code></td>
 </tr>
 </tbody></table>
 <blockquote>
 <p><strong>&lt;보기&gt;</strong></p>
 <ul>
-<li><strong>ㄱ.</strong> 이 테이블에서 <code>학번</code>, <code>학생명</code>, <code>신청과목</code>, <code>학점</code>과 같이 세로 열(Column)이 나타내는 데이터 속성을 <strong>필드(Field)</strong> 라고 한다.</li>
-<li><strong>ㄴ.</strong> 한 학생의 신청 내역이 담긴 각각의 가로 행(Row)을 <strong>레코드(Record, 튜플)</strong> 라고 하며, 표에는 총 3개의 레코드가 들어 있다.</li>
-<li><strong>ㄷ.</strong> 각 레코드를 중복 없이 유일하게 식별하는 <strong>기본 키(Primary Key)</strong> 로는 동명이인이 있을 수 있는 <code>학생명</code>보다 고유한 값인 <code>학번</code>이 가장 적절하다.</li>
+<li><strong>ㄱ.</strong> <code>[학생 테이블]</code>에서 <code>학번</code>, <code>학생명</code>, <code>학년</code>과 같이 세로 열(Column)이 나타내는 데이터 속성을 <strong>필드(Field)</strong> 라고 한다.</li>
+<li><strong>ㄴ.</strong> <code>[도서대출 테이블]</code>에서는 한 학생(<code>202701</code>)이 여러 권을 대출할 수 있으므로, <code>학번</code>만으로는 각 대출 레코드를 유일하게 구별하는 기본 키(Primary Key)로 삼을 수 없다.</li>
+<li><strong>ㄷ.</strong> <code>[도서대출 테이블]</code>의 <code>학번</code>은 <code>[학생 테이블]</code>의 기본 키를 참조하여 두 테이블을 연결하는 <strong>외래 키(Foreign Key)</strong> 역할을 한다.</li>
 </ul>
 </blockquote>
-<p>① ㄱ<br>② ㄱ, ㄴ<br>③ ㄱ, ㄷ<br>④ ㄴ, ㄷ<br>⑤ ㄱ, ㄴ, ㄷ  </p>
+<p>① ㄱ<br>② ㄱ, ㄴ<br>③ ㄴ, ㄷ<br>④ ㄱ, ㄷ<br>⑤ ㄱ, ㄴ, ㄷ  </p>
 <hr>
-<p><strong>22.</strong> 데이터베이스에서 하나의 논리적 작업 단위인 <strong>트랜잭션(Transaction)</strong> 은 모든 연산이 반영되거나 전혀 반영되지 않아야 하는 <strong>원자성</strong>과, 최종 확정(<code>Commit</code>)된 결과는 영구 보존되는 <strong>지속성</strong>을 가진다. 정전이 발생하면 시스템 재부팅 시 <strong>미완료 트랜잭션은 취소 복구(<code>Undo</code>)</strong> 하고, <strong>체크포인트(Checkpoint) 이후에 최종 확정(<code>Commit</code>)된 트랜잭션은 재실행 복구(<code>Redo</code>)</strong> 를 수행한다(체크포인트 이전에 확정된 트랜잭션은 이미 디스크에 안전하게 저장되어 있으므로 Redo 대상에서 제외된다).</p>
-<p>초기 잔액이 <strong>100,000원</strong>인 계좌에 대해 아래 표와 같이 4개의 트랜잭션 <code>T1~T4</code>가 실행되던 중 <strong>15시 20분에 정전</strong>이 발생하였다(체크포인트는 <strong>15시 10분</strong>에 수행되었다). 복구 완료 후 계좌의 <strong>최종 잔액</strong>과 <strong>Redo(재실행 복구) 대상</strong>을 바르게 짝지은 것은? [4점]</p>
+<p><strong>22.</strong> 데이터베이스에서 하나의 논리적 작업 단위인 <strong>트랜잭션(Transaction)</strong> 은 모든 연산이 성공하거나 아예 실행되지 않은 상태로 되돌리는 <strong>원자성</strong>과, 최종 확정(<code>Commit</code>)된 결과는 영구 보존되는 <strong>지속성</strong>을 가진다. 정전 시 시스템은 <strong>미완료 트랜잭션을 취소 복구(<code>Undo</code>)</strong> 하고, <strong>체크포인트(Checkpoint) 이후에 최종 확정(<code>Commit</code>)된 트랜잭션은 재실행 복구(<code>Redo</code>)</strong> 를 수행한다(체크포인트 이전에 확정된 트랜잭션은 이미 디스크에 안전하게 저장되어 있으므로 Redo 대상에서 제외된다).</p>
+<p>초기 상품 재고가 <strong>50개</strong>, 고객 포인트가 <strong>10,000P</strong>인 온라인 쇼핑몰에서 4개의 주문 트랜잭션 <code>T1~T4</code>가 실행되던 중 <strong>14시 30분에 서버 정전</strong>이 발생하였다(체크포인트는 <strong>14시 20분</strong>에 수행되었다). 복구 완료 후 시스템의 <strong>최종 상품 재고</strong>, <strong>최종 고객 포인트</strong>, <strong>Redo(재실행 복구) 대상</strong>을 바르게 짝지은 것은? [4점]</p>
 <table>
 <thead>
 <tr>
 <th align="center">트랜잭션</th>
-<th align="center">작업 내용</th>
+<th align="left">작업 내용</th>
 <th align="center">시작 시각</th>
 <th align="center">최종 확정(<code>Commit</code>) 시각</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center"><code>T1</code></td>
-<td align="center"><code>+20,000원</code> 입금</td>
-<td align="center">15:02</td>
-<td align="center">15:08 (체크포인트 이전)</td>
+<td align="left">재고 <code>-3개</code>, 포인트 <code>-2,000P</code></td>
+<td align="center">14:10</td>
+<td align="center">14:15 (체크포인트 이전)</td>
 </tr>
 <tr>
 <td align="center"><code>T2</code></td>
-<td align="center"><code>-30,000원</code> 출금</td>
-<td align="center">15:05</td>
-<td align="center">(15:20 정전 시점까지 미확정)</td>
+<td align="left">재고 <code>-5개</code>, 포인트 <code>-3,000P</code></td>
+<td align="center">14:18</td>
+<td align="center">(14:30 정전 시점까지 미확정)</td>
 </tr>
 <tr>
 <td align="center"><code>T3</code></td>
-<td align="center"><code>+45,000원</code> 입금</td>
-<td align="center">15:12</td>
-<td align="center">15:18 (체크포인트 이후)</td>
+<td align="left">재고 <code>-4개</code>, 포인트 <code>-1,500P</code></td>
+<td align="center">14:22</td>
+<td align="center">14:28 (체크포인트 이후)</td>
 </tr>
 <tr>
 <td align="center"><code>T4</code></td>
-<td align="center"><code>-10,000원</code> 출금</td>
-<td align="center">15:15</td>
-<td align="center">(15:20 정전 시점까지 미확정)</td>
+<td align="left">재고 <code>-2개</code>, 포인트 <code>-1,000P</code></td>
+<td align="center">14:25</td>
+<td align="center">(14:30 정전 시점까지 미확정)</td>
 </tr>
 </tbody></table>
-<p>① 최종 잔액: 120,000원 / Redo 대상: <code>T1</code><br>② 최종 잔액: 145,000원 / Redo 대상: <code>T3</code><br>③ 최종 잔액: 165,000원 / Redo 대상: <code>T3</code><br>④ 최종 잔액: 165,000원 / Redo 대상: <code>T1, T3</code><br>⑤ 최종 잔액: 125,000원 / Redo 대상: <code>T3, T4</code>  </p>
+<p>① 최종 재고: 47개 / 최종 포인트: 8,000P / Redo 대상: <code>T1</code><br>② 최종 재고: 43개 / 최종 포인트: 6,500P / Redo 대상: <code>T1, T3</code><br>③ 최종 재고: 43개 / 최종 포인트: 6,500P / Redo 대상: <code>T3</code><br>④ 최종 재고: 46개 / 최종 포인트: 8,500P / Redo 대상: <code>T3</code><br>⑤ 최종 재고: 41개 / 최종 포인트: 5,500P / Redo 대상: <code>T3, T4</code>  </p>
 <hr>
 <h2>Part 3. 영어 지문 독해 변형 (23번 ~ 24번)</h2>
 <p><strong>23.</strong> 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것은? [3점]</p>
@@ -568,17 +584,17 @@ hr {
 </blockquote>
 <p>① (A) - (C) - (B)<br>② (B) - (A) - (C)<br>③ (B) - (C) - (A)<br>④ (C) - (A) - (B)<br>⑤ (C) - (B) - (A)  </p>
 <hr>
-<p><strong>24.</strong> 다음 글을 바탕으로 <code>&lt;보기&gt;</code>의 <strong>Cookie</strong>에 대해 설명한 내용 중 옳은 것만을 있는 대로 고른 것은? [4점]</p>
+<p><strong>24.</strong> 다음 글을 바탕으로 <code>&lt;보기&gt;</code>의 <strong>Web Cache</strong>와 <strong>Browser History</strong>에 대해 설명한 내용 중 옳은 것만을 있는 대로 고른 것은? [4점]</p>
 <blockquote>
-<p>When you visit a website, it often saves a small text file called a <strong>cookie</strong> on your device. <strong>First-party cookies</strong> are created directly by the website you are visiting. They are helpful because they remember your login status, language preference, or items in your shopping cart. In contrast, <strong>third-party cookies</strong> are placed by external domains, such as advertising networks, rather than the site you are viewing. While first-party cookies improve convenience on a single site, third-party cookies can track your browsing history across multiple websites to build a user profile for targeted ads. For privacy protection, modern browsers allow users to block third-party cookies while keeping first-party cookies active.</p>
+<p>When you browse the web, your browser stores different types of data locally to improve your experience. A <strong>web cache</strong> temporarily saves heavy static resources—such as images, stylesheets, and scripts—so that pages load much faster on your next visit without downloading the same files again from the server. Meanwhile, <strong>browser history</strong> keeps a chronological list of the web page URLs you have visited, allowing you to revisit previous pages easily. Clearing the web cache frees up disk space and forces the browser to fetch fresh files from the server, whereas clearing browser history only removes the record of visited URLs without deleting cached page resources.</p>
 </blockquote>
 <blockquote>
 <p><strong>&lt;보기&gt;</strong></p>
 <ul>
-<li><strong>ㄱ.</strong> First-party cookies are stored on the user&#39;s device to remember login status or shopping cart items.</li>
-<li><strong>ㄴ.</strong> Third-party cookies are not saved on the user&#39;s device, but only on the advertising company&#39;s server.</li>
-<li><strong>ㄷ.</strong> Blocking third-party cookies in a browser necessarily prevents websites from remembering your language preference.</li>
-<li><strong>ㄹ.</strong> Third-party cookies are created by external domains and can be used to track browsing across different websites.</li>
+<li><strong>ㄱ.</strong> A web cache speeds up loading by storing static resources like images locally on the user&#39;s device.</li>
+<li><strong>ㄴ.</strong> Browser history stores copies of website images and stylesheets so they do not need to be downloaded again.</li>
+<li><strong>ㄷ.</strong> Deleting browser history automatically deletes all files stored in the web cache as well.</li>
+<li><strong>ㄹ.</strong> Clearing the web cache makes the browser request up-to-date resources from the server on the next visit.</li>
 </ul>
 </blockquote>
 <p>① ㄱ, ㄷ<br>② ㄱ, ㄹ<br>③ ㄴ, ㄷ<br>④ ㄱ, ㄴ, ㄹ<br>⑤ ㄱ, ㄷ, ㄹ  </p>
@@ -835,11 +851,11 @@ k ← k + 1
 </tr>
 </tbody></table>
 <hr>
-<p><strong>31.</strong> 실습실 사용을 신청한 6개 동아리 <code>A~F</code>의 이용 희망 시간이 아래와 같을 때, <strong>1개 실습실에 최대로 배정할 수 있는 동아리 수</strong>와 <strong>6개 동아리 전체를 겹치지 않게 수용하기 위한 최소 실습실 수</strong>를 바르게 짝지은 것은? (단, 앞 동아리의 종료 시간과 다음 동아리의 시작 시간이 같은 경우는 겹치지 않는 것으로 본다.) [3점]</p>
+<p><strong>31.</strong> 데이터 센터에서 6개의 AI 학습 작업 <code>A~F</code>를 서버에 배정하려고 한다. 한 서버에서 어떤 작업이 끝난 후 <strong>최소 1시간의 냉각·정비 시간</strong>이 지나야만 같은 서버에서 다음 작업을 시작할 수 있다(예: 11시에 끝난 작업 다음에는 12시 이후 시작 작업만 가능). <strong>서버 1대에 최대로 배정할 수 있는 작업 수</strong>와 <strong>6개 작업 전체를 처리하기 위한 최소 서버 수</strong>를 바르게 짝지은 것은? [4점]</p>
 <blockquote>
-<p><strong>&lt;이용 희망 시간&gt;</strong><br><code>A(09~12)</code>, <code>B(10~13)</code>, <code>C(12~14)</code>, <code>D(11~15)</code>, <code>E(14~17)</code>, <code>F(13~16)</code></p>
+<p><strong>&lt;작업 희망 시간&gt;</strong><br><code>A(09~11)</code>, <code>B(10~12)</code>, <code>C(12~14)</code>, <code>D(13~15)</code>, <code>E(15~17)</code>, <code>F(16~18)</code></p>
 </blockquote>
-<p>① 최대 2개 / 최소 3개<br>② 최대 3개 / 최소 2개<br>③ 최대 3개 / 최소 3개<br>④ 최대 3개 / 최소 4개<br>⑤ 최대 4개 / 최소 3개  </p>
+<p>① 최대 2개 / 최소 2대<br>② 최대 2개 / 최소 3대<br>③ 최대 3개 / 최소 2대<br>④ 최대 3개 / 최소 3대<br>⑤ 최대 4개 / 최소 2대  </p>
 <hr>
 <p><strong>32.</strong> 9글자 영문 대문자 평문을 아래 그림과 같이 <code>3×3</code> 표의 1번~9번 칸에 <strong>가로줄 순서로 한 글자씩 채운 뒤</strong>,</p>
 <ol>
@@ -868,7 +884,7 @@ k ← k + 1
 </tbody></table>
 <p>① <code>R</code> / <code>ALGORITHM</code><br>② <code>T</code> / <code>ALGORITHM</code><br>③ <code>R</code> / <code>ALGORITNM</code><br>④ <code>I</code> / <code>COMPUTER</code><br>⑤ <code>G</code> / <code>ALGORITHM</code>  </p>
 <hr>
-<p><strong>33.</strong> 그림과 같은 <code>4×4</code> 실내 격자 공간의 세 지점 <code>(1, 3)</code>, <code>(4, 4)</code>, <code>(3, 1)</code>에 각각 무선 공유기 <code>AP1</code>, <code>AP2</code>, <code>AP3</code>가 설치되어 있다. 두 좌표 <code>(x₁, y₁)</code>과 <code>(x₂, y₂)</code> 사이의 <strong>격자 거리(맨해튼 거리)</strong> 는 가로 거리와 세로 거리의 합(<code>|x₁ - x₂| + |y₁ - y₂|</code>)으로 계산된다. 실내의 한 칸 <code>(x, y)</code>에 있는 스마트폰에서 측정한 각 공유기까지의 격자 거리가 <code>&lt;측정 결과&gt;</code>와 같을 때, 스마트폰이 위치한 칸의 좌표 <code>(x, y)</code>는? [3점]</p>
+<p><strong>33.</strong> 그림과 같은 <code>5×5</code> 실내 격자 공간의 세 지점 <code>(1, 5)</code>, <code>(5, 4)</code>, <code>(2, 1)</code>에 각각 무선 기지국 <code>AP1</code>, <code>AP2</code>, <code>AP3</code>가 설치되어 있다. 두 좌표 <code>(x₁, y₁)</code>과 <code>(x₂, y₂)</code> 사이의 <strong>격자 거리(맨해튼 거리)</strong> 는 가로 거리와 세로 거리의 합(<code>|x₁ - x₂| + |y₁ - y₂|</code>)으로 계산된다. 실내의 한 칸 <code>(x, y)</code>에 있는 자율주행 로봇이 측정한 각 기지국까지의 거리가 <code>&lt;측정 결과&gt;</code>와 같을 때, 로봇이 위치한 좌표 <code>(x, y)</code>는? [4점]</p>
 <table>
 <thead>
 <tr>
@@ -877,18 +893,29 @@ k ← k + 1
 <th align="center">2</th>
 <th align="center">3</th>
 <th align="center">4</th>
+<th align="center">5</th>
 </tr>
 </thead>
 <tbody><tr>
+<td align="center"><strong>5</strong></td>
+<td align="center"><strong>AP1 (1,5)</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
 <td align="center"><strong>4</strong></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center"><strong>AP2 (4,4)</strong></td>
+<td align="center"></td>
+<td align="center"><strong>AP2 (5,4)</strong></td>
 </tr>
 <tr>
 <td align="center"><strong>3</strong></td>
-<td align="center"><strong>AP1 (1,3)</strong></td>
+<td align="center"></td>
+<td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -899,40 +926,42 @@ k ← k + 1
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center"><strong>1</strong></td>
 <td align="center"></td>
+<td align="center"><strong>AP3 (2,1)</strong></td>
 <td align="center"></td>
-<td align="center"><strong>AP3 (3,1)</strong></td>
+<td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody></table>
 <blockquote>
 <p><strong>&lt;측정 결과&gt;</strong></p>
 <ul>
-<li><code>AP1 (1, 3)</code>까지의 격자 거리: <strong>2</strong></li>
-<li><code>AP2 (4, 4)</code>까지의 격자 거리: <strong>2</strong></li>
-<li><code>AP3 (3, 1)</code>까지의 격자 거리: <strong>2</strong></li>
+<li><code>AP1 (1, 5)</code>까지의 격자 거리: <strong>3</strong></li>
+<li><code>AP2 (5, 4)</code>까지의 격자 거리: <strong>2</strong></li>
+<li><code>AP3 (2, 1)</code>까지의 격자 거리: <strong>4</strong></li>
 </ul>
 </blockquote>
-<p>① <code>(2, 2)</code><br>② <code>(2, 3)</code><br>③ <code>(3, 2)</code><br>④ <code>(3, 3)</code><br>⑤ <code>(4, 2)</code>  </p>
+<p>① <code>(2, 3)</code><br>② <code>(3, 3)</code><br>③ <code>(3, 4)</code><br>④ <code>(4, 3)</code><br>⑤ <code>(4, 4)</code>  </p>
 <hr>
 <h2>Part 5. 수리 추론 · 공간 지각 · 논리 퍼즐 (34번 ~ 42번)</h2>
-<p><strong>34.</strong> 1부터 연속하는 홀수의 합은 <code>1 = 1²</code>, <code>1 + 3 = 2²</code>, <code>1 + 3 + 5 = 3²</code>, ...과 같이 제곱수가 된다. 이를 이용하여 <code>15 + 17 + 19 + ... + 59</code>의 값을 구하면? [3점]</p>
-<p>① 825<br>② 841<br>③ 851<br>④ 864<br>⑤ 900  </p>
+<p><strong>34.</strong> 1부터 연속하는 홀수의 합은 <code>1 = 1²</code>, <code>1 + 3 = 2²</code>, <code>1 + 3 + 5 = 3²</code>, ...과 같이 제곱수가 된다. 이를 이용하여, 다음 식 <strong><code>13 + 15 + 17 + ... + k = 448</code></strong> 을 만족하는 마지막 홀수 <strong><code>k</code></strong> 의 값을 구하면? [4점]</p>
+<p>① 39<br>② 41<br>③ 43<br>④ 45<br>⑤ 47  </p>
 <hr>
-<p><strong>35.</strong> 다음 두 수열에 공통으로 나타나는 수 중에서 <strong>200 이하</strong>인 수는 모두 몇 개인가? [3점]</p>
+<p><strong>35.</strong> 다음 두 수열에 공통으로 나타나는 <strong>300 이하</strong>의 수 중에서, <strong>3의 배수를 제외</strong>하고 남는 수는 모두 몇 개인가? [4점]</p>
 <blockquote>
 <ul>
 <li><strong>수열 1</strong>: <code>2, 7, 12, 17, 22, ...</code> (5씩 커짐)</li>
 <li><strong>수열 2</strong>: <code>4, 11, 18, 25, 32, ...</code> (7씩 커짐)</li>
 </ul>
 </blockquote>
-<p>① 4개<br>② 5개<br>③ 6개<br>④ 7개<br>⑤ 8개  </p>
+<p>① 5개<br>② 6개<br>③ 7개<br>④ 8개<br>⑤ 9개  </p>
 <hr>
-<p><strong>36.</strong> 계단을 한 번에 <strong>1칸, 2칸 또는 3칸씩</strong> 오를 수 있다. 1칸짜리 계단을 오르는 방법은 1가지, 2칸은 2가지, 3칸은 4가지이다. <strong>8칸짜리 계단</strong>을 끝까지 오르는 방법의 수는? [3점]</p>
-<p>① 44<br>② 68<br>③ 74<br>④ 81<br>⑤ 96  </p>
+<p><strong>36.</strong> 계단을 한 번에 <strong>1칸, 2칸 또는 3칸씩</strong> 오를 수 있다. 단, <strong>4번 칸은 공사 중이어서 절대 밟을 수 없다</strong>고 할 때, 바닥(0번)에서 출발하여 <strong>7칸짜리 계단(7번 칸)</strong> 끝까지 오르는 방법의 수는? [4점]</p>
+<p>① 12<br>② 14<br>③ 16<br>④ 18<br>⑤ 20  </p>
 <hr>
 <p><strong>37.</strong> 다항식 <code>(3x² - ax + 2)(x² + 2x - 4)</code>를 전개한 식에서 <strong>이차항(<code>x²</code>)의 계수가 <code>-16</code></strong> 일 때, 상수 <code>a</code>의 값과 이 <code>a</code>의 값을 대입한 이차방정식 <strong><code>x² - ax - 10 = 0</code>의 양수인 근</strong>을 바르게 짝지은 것은? [4점]</p>
 <table>
@@ -970,47 +999,47 @@ k ← k + 1
 </tr>
 </tbody></table>
 <hr>
-<p><strong>38.</strong> 가로의 길이가 <code>22m</code>, 세로의 길이가 <code>14m</code>인 직사각형 모양의 스마트팜 부지에 폭이 <code>x m</code>로 일정한 관리 통로를 <strong>가로 방향(가로변과 평행)으로 2개</strong>, <strong>세로 방향(세로변과 평행)으로 1개</strong> 내었더니, 통로를 제외한 나머지 재배 구역의 넓이 합이 <code>200m²</code>가 되었다. 이때 관리 통로의 폭 <code>x</code>의 값과, 부지 내에 만들어진 <strong>관리 통로 전체의 넓이</strong>를 바르게 짝지은 것은? (단, 모든 통로는 부지의 각 변과 수직 또는 평행하게 끝까지 이어진다.) [4점]</p>
+<p><strong>38.</strong> 가로의 길이가 <code>16cm</code>, 세로의 길이가 <code>10cm</code>인 직사각형 모양의 사진 둘레에, 사방으로 폭이 <code>x cm</code>로 일정한 액자 테두리를 둘렀더니 테두리를 포함한 <strong>액자 전체의 넓이가 <code>280cm²</code></strong> 가 되었다. 이때 액자 테두리의 폭 <code>x</code>와, <strong>테두리 부분만의 넓이</strong>를 바르게 짝지은 것은? [4점]</p>
 <table>
 <thead>
 <tr>
 <th align="center">번호</th>
-<th align="center">통로의 폭 (<code>x</code>)</th>
-<th align="center">관리 통로 전체의 넓이</th>
+<th align="center">테두리의 폭 (<code>x</code>)</th>
+<th align="center">테두리 부분만의 넓이</th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="center">①</td>
-<td align="center">1.5m</td>
-<td align="center">96m²</td>
+<td align="center">1.5cm</td>
+<td align="center">100cm²</td>
 </tr>
 <tr>
 <td align="center">②</td>
-<td align="center">2m</td>
-<td align="center">100m²</td>
+<td align="center">2cm</td>
+<td align="center">110cm²</td>
 </tr>
 <tr>
 <td align="center">③</td>
-<td align="center">2m</td>
-<td align="center">108m²</td>
+<td align="center">2cm</td>
+<td align="center">120cm²</td>
 </tr>
 <tr>
 <td align="center">④</td>
-<td align="center">2.5m</td>
-<td align="center">120m²</td>
+<td align="center">2.5cm</td>
+<td align="center">130cm²</td>
 </tr>
 <tr>
 <td align="center">⑤</td>
-<td align="center">3m</td>
-<td align="center">144m²</td>
+<td align="center">3cm</td>
+<td align="center">140cm²</td>
 </tr>
 </tbody></table>
 <hr>
 <p><strong>39.</strong> 어떤 스트리밍 서비스가 월 이용료 <strong>12,000원</strong>에 가입자 <strong>4,000명</strong>을 확보하고 있다. 요금을 <strong>1,000원 내릴 때마다</strong> 가입자가 <strong>500명씩 증가</strong>할 때, 월 구독료 수입이 최대가 되는 요금과 최대 수입은? [4점]</p>
 <p>① 9,000원 / 4,950만 원<br>② 10,000원 / 5,000만 원<br>③ 10,500원 / 4,987.5만 원<br>④ 11,000원 / 4,950만 원<br>⑤ 8,000원 / 4,800만 원  </p>
 <hr>
-<p><strong>40.</strong> 농도가 <strong>10%</strong> 인 소금물 <strong>250g</strong>이 담긴 비커에서 알코올램프로 물만 일정량 증발시킨 후, 여기에 소금 <strong>15g</strong>을 더 넣었더니 농도가 <strong>20%</strong> 인 소금물이 되었다. 이 과정에서 <strong>증발시킨 물의 양</strong>은? [4점]</p>
-<p>① 50g<br>② 60g<br>③ 65g<br>④ 75g<br>⑤ 85g  </p>
+<p><strong>40.</strong> 농도가 <strong>6%</strong> 인 소금물 <strong>200g</strong>과 농도가 <strong>15%</strong> 인 소금물 <strong>100g</strong>을 잘 섞은 뒤, 여기에 <strong>순수한 물</strong>을 일정량 더 부었더니 농도가 <strong>5%</strong> 인 소금물이 되었다. 이 과정에서 <strong>더 부은 물의 양</strong>은? [4점]</p>
+<p>① 180g<br>② 200g<br>③ 240g<br>④ 260g<br>⑤ 300g  </p>
 <hr>
 <p><strong>41.</strong> 그림은 1부터 6까지 적힌 정육면체의 전개도이다. 이 전개도를 접어 정육면체를 만들었을 때, 한 시점에서 바라본 모습(윗면, 앞면, 오른쪽 면)으로 <strong>나타날 수 없는 것</strong>은? [3점]</p>
 <svg width="260" height="170" viewBox="0 0 260 170" xmlns="http://www.w3.org/2000/svg" style="background:#fff; border:1px solid #ccc; margin:8px 0;">
@@ -1031,37 +1060,18 @@ k ← k + 1
   <text x="147" y="133" font-size="16" font-weight="bold" text-anchor="middle">6</text>
 </svg><p>① 윗면 1, 앞면 3, 오른쪽 면 4<br>② 윗면 1, 앞면 4, 오른쪽 면 5<br>③ 윗면 6, 앞면 4, 오른쪽 면 3<br>④ 윗면 3, 앞면 2, 오른쪽 면 1<br>⑤ 윗면 2, 앞면 3, 오른쪽 면 1  </p>
 <hr>
-<p><strong>42.</strong> 아래와 같은 3층짜리 사물함의 1번~5번 칸에 <strong>정보, 수학, 영어, 과학, 미술</strong> 다섯 과목의 교과서를 한 칸에 한 권씩 꽂으려고 한다. 교과서 배치에 대한 정보가 다음 <code>&lt;조건&gt;</code>과 같을 때, <strong>반드시 참인 것</strong>은? [3점]</p>
-<table>
-<thead>
-<tr>
-<th align="center">층수</th>
-<th align="center">사물함 칸 배치</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>3층</strong></td>
-<td align="center"><code>[ 1번 칸 ]</code> <code>[ 2번 칸 ]</code></td>
-</tr>
-<tr>
-<td align="center"><strong>2층</strong></td>
-<td align="center"><code>[ 3번 칸 ]</code></td>
-</tr>
-<tr>
-<td align="center"><strong>1층</strong></td>
-<td align="center"><code>[ 4번 칸 ]</code> <code>[ 5번 칸 ]</code></td>
-</tr>
-</tbody></table>
+<p><strong>42.</strong> 왼쪽부터 1번~5번까지 번호가 붙은 일렬 좌석에 다섯 명의 학생 <code>A, B, C, D, E</code>가 한 명씩 앉아 있다. 다음 다섯 학생의 진술 중 <strong>단 1명만 거짓말</strong>을 하고 나머지 4명은 모두 참을 말했을 때, <strong>반드시 참인 것</strong>은? [4점]</p>
 <blockquote>
-<p><strong>&lt;조건&gt;</strong></p>
+<p><strong>&lt;진술&gt;</strong></p>
 <ul>
-<li><strong>ㄱ.</strong> 미술 교과서는 짝수 번호 칸(2번 또는 4번)에 꽂혀 있다.</li>
-<li><strong>ㄴ.</strong> 정보 교과서는 과학 교과서보다 위층에 꽂혀 있다.</li>
-<li><strong>ㄷ.</strong> 수학 교과서와 과학 교과서는 같은 층에 꽂혀 있다.</li>
-<li><strong>ㄹ.</strong> 영어 교과서는 2층(3번 칸)에 꽂혀 있다.</li>
+<li><strong>A</strong>: &quot;나는 1번 자리에 앉았다.&quot;</li>
+<li><strong>B</strong>: &quot;나는 4번 자리에 앉았다.&quot;</li>
+<li><strong>C</strong>: &quot;D는 나보다 바로 오른쪽(번호가 1 큰) 자리에 앉았다.&quot;</li>
+<li><strong>D</strong>: &quot;E는 5번 자리에 앉았다.&quot;</li>
+<li><strong>E</strong>: &quot;A는 1번 자리에 앉지 않았다.&quot;</li>
 </ul>
 </blockquote>
-<p>① 수학 교과서는 3층에 꽂혀 있다.<br>② 정보 교과서는 1층에 꽂혀 있다.<br>③ 미술 교과서는 2번 칸(3층)에 꽂혀 있다.<br>④ 과학 교과서는 2번 칸(3층)에 꽂혀 있다.<br>⑤ 미술 교과서는 4번 칸(1층)에 꽂혀 있다.  </p>
+<p>① A는 1번 자리에 앉았다.<br>② C는 2번 자리에 앉았다.<br>③ B는 4번 자리에 앉았다.<br>④ D는 3번 자리에 앉았다.<br>⑤ E는 4번 자리에 앉았다.  </p>
 
 </body>
 </html>

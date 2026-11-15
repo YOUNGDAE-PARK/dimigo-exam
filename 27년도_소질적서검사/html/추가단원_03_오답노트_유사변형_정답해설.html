@@ -15,22 +15,9 @@ pre {
   overflow-x: auto;
   page-break-inside: avoid;
 }
-pre code {
-  border: none;
-  padding: 0;
-  font-size: inherit;
-}
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  page-break-inside: avoid;
-}
-hr {
-  border: none;
-  border-top: 1px dashed #cccccc;
-  margin: 10px 0;
-}
+pre code { border: none; padding: 0; font-size: inherit; }
+svg { display: block; max-width: 100%; height: auto; page-break-inside: avoid; }
+hr { border: none; border-top: 1px dashed #cccccc; margin: 10px 0; }
 </style>
 <script>
 (function() {
@@ -235,7 +222,7 @@ hr {
 <td align="center"><strong>1</strong></td>
 <td align="center">②</td>
 <td align="center"><strong>12</strong></td>
-<td align="center">③</td>
+<td align="center">①</td>
 <td align="center"><strong>23</strong></td>
 <td align="center">③</td>
 <td align="center"><strong>34</strong></td>
@@ -259,13 +246,13 @@ hr {
 <td align="center"><strong>25</strong></td>
 <td align="center">②</td>
 <td align="center"><strong>36</strong></td>
-<td align="center">④</td>
+<td align="center">③</td>
 </tr>
 <tr>
 <td align="center"><strong>4</strong></td>
 <td align="center">①</td>
 <td align="center"><strong>15</strong></td>
-<td align="center">②</td>
+<td align="center">④</td>
 <td align="center"><strong>26</strong></td>
 <td align="center">③</td>
 <td align="center"><strong>37</strong></td>
@@ -275,7 +262,7 @@ hr {
 <td align="center"><strong>5</strong></td>
 <td align="center">③</td>
 <td align="center"><strong>16</strong></td>
-<td align="center">③</td>
+<td align="center">②</td>
 <td align="center"><strong>27</strong></td>
 <td align="center">①</td>
 <td align="center"><strong>38</strong></td>
@@ -285,7 +272,7 @@ hr {
 <td align="center"><strong>6</strong></td>
 <td align="center">②</td>
 <td align="center"><strong>17</strong></td>
-<td align="center">③</td>
+<td align="center">④</td>
 <td align="center"><strong>28</strong></td>
 <td align="center">④</td>
 <td align="center"><strong>39</strong></td>
@@ -305,7 +292,7 @@ hr {
 <td align="center"><strong>8</strong></td>
 <td align="center">③</td>
 <td align="center"><strong>19</strong></td>
-<td align="center">②</td>
+<td align="center">④</td>
 <td align="center"><strong>30</strong></td>
 <td align="center">③</td>
 <td align="center"><strong>41</strong></td>
@@ -337,7 +324,7 @@ hr {
 <td align="center"><strong>22</strong></td>
 <td align="center">③</td>
 <td align="center"><strong>33</strong></td>
-<td align="center">④</td>
+<td align="center">③</td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
@@ -368,24 +355,27 @@ hr {
 <hr>
 <p><strong>3. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 16진수 → 10진수 변환 및 시간 단위 환산</li>
+<li><strong>핵심 개념</strong>: 분·초 → 10진수 초 → 16진수 역변환</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>16진수 <code>2B7</code>의 각 자리값은 <code>16² = 256</code>, <code>16¹ = 16</code>, <code>16⁰ = 1</code>입니다.</li>
-<li><code>B = 11</code>이므로 10진수 초로 바꾸면 <code>(2 × 256) + (11 × 16) + 7 = 512 + 176 + 7 = 695초</code>입니다.</li>
-<li><code>695 ÷ 60 = 몫 11, 나머지 35</code>이므로 남은 시간은 <strong>11분 35초</strong>입니다.</li>
+<li><code>9분 17초</code>를 초 단위로 환산하면 <code>(9 × 60) + 17 = 540 + 17 = 557초</code>입니다.</li>
+<li><code>557</code>을 <code>16</code>으로 계속 나누거나 <code>16² = 256</code>으로 자리값을 구하면:<ul>
+<li><code>557 = (2 × 256) + 45</code> → <code>45 = (2 × 16) + 13</code></li>
+</ul>
+</li>
+<li><code>13</code>은 16진수로 <code>D</code>이므로 타이머에 표시될 코드는 <code>22D</code>입니다.</li>
 </ul>
 </li>
 </ul>
 <hr>
 <p><strong>4. [정답] ①</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 16진수 RGB 색상 코드 연산</li>
+<li><strong>핵심 개념</strong>: 16진수 RGB 색상 코드 평균 역산</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>각 채널을 두 자리씩 분리하여 10진수로 바꾼 뒤 평균을 구하고 다시 16진수로 변환합니다.</li>
-<li><strong>R</strong>: <code>28(16) = 40</code>, <code>48(16) = 72</code> → 평균 <code>(40 + 72) ÷ 2 = 56 = 38(16)</code></li>
-<li><strong>G</strong>: <code>64(16) = 100</code>, <code>A4(16) = 164</code> → 평균 <code>(100 + 164) ÷ 2 = 132 = 84(16)</code></li>
-<li><strong>B</strong>: <code>C0(16) = 192</code>, <code>E0(16) = 224</code> → 평균 <code>(192 + 224) ÷ 2 = 208 = D0(16)</code></li>
-<li>따라서 결과 색상 코드는 <code>#3884D0</code>입니다.</li>
+<li><code>(A + B) ÷ 2 = 평균</code>이므로 <strong><code>B = (2 × 평균) - A</code></strong> 로 역산합니다.</li>
+<li><strong>R</strong>: <code>50(16) = 80</code>, <code>20(16) = 32</code> → <code>(2 × 80) - 32 = 128 = 80(16)</code></li>
+<li><strong>G</strong>: <code>78(16) = 120</code>, <code>40(16) = 64</code> → <code>(2 × 120) - 64 = 176 = B0(16)</code></li>
+<li><strong>B</strong>: <code>B0(16) = 176</code>, <code>80(16) = 128</code> → <code>(2 × 176) - 128 = 224 = E0(16)</code></li>
+<li>따라서 섞은 색 <code>B</code>의 코드는 <code>#80B0E0</code>입니다.</li>
 </ul>
 </li>
 </ul>
@@ -404,11 +394,11 @@ hr {
 <hr>
 <p><strong>6. [정답] ②</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 허프만 부호화(가변 길이 압축)와 고정 길이 비교</li>
+<li><strong>핵심 개념</strong>: 허프만 부호화 원리 직접 적용 및 압축 절약 계산</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>문자열 <code>ABAACABADA</code>에서 각 글자의 개수는 <code>A: 6개</code>, <code>B: 2개</code>, <code>C: 1개</code>, <code>D: 1개</code>(총 10글자)입니다.</li>
-<li><strong>(가) 가변 길이 전체 비트 수</strong>: <code>(6 × 1) + (2 × 2) + (1 × 3) + (1 × 3) = 6 + 4 + 3 + 3 = 16비트</code>입니다.</li>
-<li><strong>(나) 절약된 비트 수</strong>: 2비트 고정 방식은 <code>10 × 2 = 20비트</code>가 필요하므로, <code>20 - 16 = 4비트</code>가 절약됩니다.</li>
+<li>가장 많이 나오는 <code>A(10회)</code>에 1비트(<code>0</code>), 두 번째로 많은 <code>B(5회)</code>에 2비트(<code>10</code>), 나머지 <code>C(3회)</code>와 <code>D(2회)</code>에 3비트(<code>110, 111</code>)를 배정하는 것이 최적입니다.</li>
+<li><strong>최소 전체 비트 수</strong>: <code>(10 × 1) + (5 × 2) + (3 × 3) + (2 × 3) = 10 + 10 + 9 + 6 = 35비트</code>입니다.</li>
+<li><strong>절약된 비트 수</strong>: 2비트 고정 방식(<code>20 × 2 = 40비트</code>) 대비 <code>40 - 35 = 5비트</code>가 절약됩니다.</li>
 </ul>
 </li>
 </ul>
@@ -426,25 +416,23 @@ hr {
 <hr>
 <p><strong>8. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 런-길이 압축(RLE) 비트 계산</li>
+<li><strong>핵심 개념</strong>: 런-길이 압축(RLE) 역산 및 연속성이 없을 때의 역효과</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>원본 크기</strong>: 14글자 × 8비트 = <strong>112비트</strong>입니다.</li>
-<li><strong>압축 후 크기</strong>: <code>AAAAA</code>(1묶음), <code>BBBB</code>(1묶음), <code>CCCCC</code>(1묶음) 총 <strong>3개의 묶음</strong>이 만들어지며, 한 묶음당 12비트이므로 <code>3 × 12 = 36비트</code>입니다.</li>
-<li><strong>절약된 비트 수</strong>: <code>112 - 36 = 76비트</code>입니다.</li>
+<li><strong>원본 크기 역산</strong>: <code>A6 B3 C1 D5</code>는 총 <code>6 + 3 + 1 + 5 = 15글자</code>를 압축한 결과이므로, 압축 전 원본 크기는 <code>15 × 8 = 120비트</code>입니다.</li>
+<li><strong><code>ABCDEFGH</code> 압축 시</strong>: 연속해서 반복되는 문자가 전혀 없으므로 8개 모두 <code>문자 + 1</code> 형태의 12비트 묶음으로 저장됩니다. 따라서 압축 후 크기는 <code>8 × 12 = 96비트</code>가 되어 원본(<code>8 × 8 = 64비트</code>)보다 오히려 <strong>32비트 증가</strong>합니다.</li>
 </ul>
 </li>
 </ul>
 <hr>
 <p><strong>9. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 네트워크 전송 속도(<code>bps</code>)와 파일 용량(<code>Byte</code>) 단위 변환</li>
+<li><strong>핵심 개념</strong>: 파일 용량(<code>GB → MB → Mb</code>)과 전송 시간으로부터 속도(<code>Mbps</code>) 역산</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>전송 속도는 <strong>비트(<code>Mbps</code>)</strong> 단위이고 파일 용량은 <strong>바이트(<code>MB</code>)</strong> 단위이므로 반드시 단위를 통일해야 합니다.</li>
-<li><code>300MB = 300 × 8 = 2,400Mb</code>입니다.</li>
-<li>걸리는 시간 = <code>2,400Mb ÷ 200Mbps = 12초</code>입니다.</li>
+<li><code>1.5GB = 1,500MB</code>이며, 비트(<code>bit</code>) 단위로 변환하면 <code>1,500 × 8 = 12,000Mb</code>입니다.</li>
+<li><code>1분 = 60초</code>가 걸렸으므로 평균 전송 속도는 <code>12,000Mb ÷ 60초 = 200Mbps</code>입니다.</li>
 </ul>
 </li>
-<li><strong>함정 주의</strong>: <code>300 ÷ 200 = 1.5초</code>로 계산하면 비트와 바이트 변환(<code>× 8</code>)을 빠뜨린 함정(①번)에 걸리게 됩니다.</li>
+<li><strong>함정 주의</strong>: <code>1,500 ÷ 60 = 25</code>로 계산하면 바이트→비트 변환(<code>× 8</code>)을 누락한 함정(①번)에 빠지게 됩니다.</li>
 </ul>
 <hr>
 <p><strong>10. [정답] ④</strong></p>
@@ -461,23 +449,22 @@ hr {
 <h2>Part 2. 컴퓨팅 시스템 · 네트워크 · 보안 · AI · DB (11번 ~ 22번)</h2>
 <p><strong>11. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 파일 시스템의 상대 경로(<code>.</code>, <code>..</code>)</li>
+<li><strong>핵심 개념</strong>: 상대 경로 이동(<code>.</code>: 현재 폴더, <code>..</code>: 상위 폴더) 추적</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>현재 위치는 <code>/home/dimigo/exam/2027</code>입니다.</li>
-<li><code>..</code> 한 번 이동하면 <code>/home/dimigo/exam</code>이 되고, <code>../..</code> 두 번 상위 폴더로 이동하면 <code>/home/dimigo</code>에 도착합니다.</li>
-<li>여기서 <code>data/test.txt</code>로 들어가면 되므로 올바른 상대 경로는 <code>../../data/test.txt</code>입니다.</li>
+<li>시작 위치: <code>/home/dimigo/2027/exam</code></li>
+<li>1단계(<code>cd ../note</code>): 상위(<code>2027</code>)로 올라가 <code>note</code> 진입 → <code>/home/dimigo/2027/note</code></li>
+<li>2단계(<code>cd ../../data/./quiz</code>): <code>..</code> 두 번(<code>/home/dimigo</code>) → <code>data</code> → <code>.</code>(현재 유지) → <code>quiz</code> → <code>/home/dimigo/data/quiz</code></li>
+<li>3단계(<code>cd ../final</code>): 상위(<code>data</code>)로 올라가 <code>final</code> 진입 → <code>/home/dimigo/data/final</code></li>
 </ul>
 </li>
 </ul>
 <hr>
-<p><strong>12. [정답] ③</strong></p>
+<p><strong>12. [정답] ①</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 기억장치 계층 구조와 RAM/ROM/SSD/캐시 특징</li>
+<li><strong>핵심 개념</strong>: 기억장치 계층 구조(속도·용량·휘발성)</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>ㄱ (O)</strong>: RAM은 전원이 끊기면 데이터가 지워지는 휘발성 메모리입니다.</li>
-<li><strong>ㄴ (X)</strong>: 자기 원판과 헤드를 기계적으로 움직이는 것은 <strong>HDD</strong>에 대한 설명입니다. SSD는 반도체(플래시 메모리)를 사용하여 소음이 없고 충격에 강합니다.</li>
-<li><strong>ㄷ (O)</strong>: ROM은 비휘발성 메모리로, 부팅에 필요한 기본 프로그램(BIOS/UEFI 등)이 저장됩니다.</li>
-<li><strong>ㄹ (O)</strong>: 캐시 메모리는 CPU와 RAM 사이의 속도 차이를 줄이기 위한 초고속·소용량 메모리입니다.</li>
+<li>CPU 내부의 레지스터에서 보조기억장치(SSD)로 내려갈수록 <strong>접근 속도는 느려지고</strong>, <strong>저장 용량은 커집니다</strong>.</li>
+<li>또한 레지스터·캐시·RAM은 전원이 꺼지면 내용이 사라지는 휘발성이지만, SSD는 전원이 꺼져도 데이터가 유지되는 <strong>비휘발성</strong>입니다. 따라서 <code>(가) 가장 느림 / (나) 가장 큼 / (다) 비휘발성</code>입니다.</li>
 </ul>
 </li>
 </ul>
@@ -505,34 +492,32 @@ hr {
 </li>
 </ul>
 <hr>
-<p><strong>15. [정답] ②</strong></p>
+<p><strong>15. [정답] ④</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 네트워크 토폴로지(성형)와 스위치(Switch) 장비</li>
+<li><strong>핵심 개념</strong>: 네트워크 토폴로지(성형/망형) 장애 영향 및 허브/스위치/라우터 비교</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>(가)</strong> 중앙 장치 하나에 모든 노드가 연결되는 형태는 <strong>성형(스타형)</strong> 입니다.</li>
-<li><strong>(나)</strong> 허브(Hub)는 들어온 데이터를 연결된 모든 장치에 무조건 보내지만, <strong>스위치(Switch)</strong> 는 목적지 MAC 주소를 확인하여 해당 장치에만 데이터를 전송합니다.</li>
+<li><strong>ㄱ (O)</strong>, <strong>ㄴ (O)</strong>: 성형은 중앙 장치 고장 시 전체 마비, 망형은 모든 노드가 연결되어 선 1개 단선 시에도 우회 통신이 가능합니다.</li>
+<li><strong>ㄷ (X)</strong>: 목적지 MAC 주소를 확인해 해당 장치에만 전달하여 효율·보안성이 높은 것은 <strong>스위치(Switch)</strong> 이며, 허브는 모든 장치에 그대로 뿌립니다.</li>
+<li><strong>ㄹ (O)</strong>: 라우터는 서로 다른 네트워크 간 경로를 결정합니다.</li>
 </ul>
 </li>
 </ul>
 <hr>
-<p><strong>16. [정답] ③</strong></p>
+<p><strong>16. [정답] ②</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 클라우드 서비스(SaaS)와 디지털 트윈</li>
+<li><strong>핵심 개념</strong>: PaaS(플랫폼 제공)와 디지털 트윈(실시간 센서 연동)</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>(가)</strong> 웹 브라우저를 통해 완성된 소프트웨어를 바로 이용하는 서비스는 <strong>SaaS</strong>(Software as a Service)입니다.</li>
-<li><strong>(나)</strong> 현실 세계의 사물이나 설비를 가상 공간에 똑같이 복제해 실시간 데이터를 반영하고 시뮬레이션하는 기술은 <strong>디지털 트윈</strong>(Digital Twin)입니다.</li>
+<li><strong>(가)</strong> 하드웨어·OS 관리 없이 코드만 올려 실행·배포할 수 있는 개발 플랫폼 서비스는 <strong>PaaS</strong>(Platform as a Service)입니다.</li>
+<li><strong>(나)</strong> 현실 설비의 센서 데이터를 실시간 반영하여 가상 모델과 동기화하고 예측하는 기술은 <strong>디지털 트윈</strong>입니다.</li>
 </ul>
 </li>
 </ul>
 <hr>
-<p><strong>17. [정답] ③</strong></p>
+<p><strong>17. [정답] ④</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 다요소 인증(2FA) 범주 구분</li>
+<li><strong>핵심 개념</strong>: 다요소 인증(2FA) 정책 점검</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>ㄱ (X)</strong>: 비밀번호(지식) + PIN 번호(지식) → 같은 종류(1요소)</li>
-<li><strong>ㄴ (O)</strong>: 비밀번호(지식) + 스마트폰 OTP 앱(소유) → 서로 다른 2요소</li>
-<li><strong>ㄷ (X)</strong>: 지문(생체) + 홍채(생체) → 같은 종류(1요소)</li>
-<li><strong>ㄹ (O)</strong>: IC카드(소유) + 지문(생체) → 서로 다른 2요소</li>
+<li>④번의 <code>보안 질문 답변(지식)</code>과 <code>4자리 PIN 번호(지식)</code>는 모두 <strong>아는 것(지식)</strong> 범주에 속하므로 단일 요소만 중복 사용한 취약한 정책입니다. (① 생체+지식, ② 지식+소유, ③ 소유+생체, ⑤ 소유+생체로 모두 2요소 인증 충족)</li>
 </ul>
 </li>
 </ul>
@@ -546,14 +531,12 @@ hr {
 </li>
 </ul>
 <hr>
-<p><strong>19. [정답] ②</strong></p>
+<p><strong>19. [정답] ④</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 저작물의 종류와 CCL(저작물 이용 허락 표시)</li>
+<li><strong>핵심 개념</strong>: CCL 동일 조건 변경 허락(<code>SA</code>) 위반 사례 판별</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>(가)</strong> 원작을 각색·변형한 것은 <strong>2차적저작물</strong>입니다.</li>
-<li><strong>(나)</strong> 여러 작품을 주제에 맞게 선택·배열한 것은 <strong>편집저작물</strong>입니다.</li>
-<li><strong>(다)</strong> 분리 이용할 수 없는 하나의 저작물을 여럿이 만든 것은 <strong>공동저작물</strong>입니다.</li>
-<li><strong>CCL <code>BY-NC-SA</code></strong>: 저작자 표시(BY), 비영리(NC), <strong>동일 조건 변경 허락(SA)</strong> 이므로, 2차적저작물을 만들어 공개할 때는 원저작물과 <strong>같은 CCL 조건(BY-NC-SA)</strong> 을 적용해야 합니다.</li>
+<li>원작물의 조건이 <code>BY-NC-SA</code>이므로 <strong>동일 조건 변경 허락(<code>SA</code>)</strong> 에 따라 변형한 2차 저작물에도 반드시 원작과 동일한 <code>BY-NC-SA</code> 조건을 붙여야 합니다.</li>
+<li>④번은 무료(비영리)이고 출처를 밝혔더라도, 새 그림에 <code>변경 금지(ND)</code> 조건을 임의로 붙여 배포했으므로 <strong><code>SA</code> 조건을 위반</strong>했습니다.</li>
 </ul>
 </li>
 </ul>
@@ -572,23 +555,23 @@ hr {
 <hr>
 <p><strong>21. [정답] ⑤</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 관계형 데이터베이스 테이블 구성 요소</li>
+<li><strong>핵심 개념</strong>: 관계형 데이터베이스의 기본 키(Primary Key)와 외래 키(Foreign Key)</li>
 <li><strong>상세 해설</strong>:<ul>
 <li><strong>ㄱ (O)</strong>: 테이블의 세로 열(Column)은 <strong>필드(Field, 속성)</strong> 입니다.</li>
-<li><strong>ㄴ (O)</strong>: 테이블의 가로 행(Row)은 <strong>레코드(Record, 튜플)</strong> 이며 데이터 3줄(3개)이 존재합니다.</li>
-<li><strong>ㄷ (O)</strong>: 기본 키(Primary Key)는 중복될 수 없으므로, 동명이인(<code>김디미</code>)이 존재하는 <code>학생명</code>이 아니라 고유한 <code>학번</code>이 적합합니다.</li>
+<li><strong>ㄴ (O)</strong>: 한 학생이 여러 번 대출할 수 있으므로 <code>[도서대출 테이블]</code>에서 <code>학번</code>은 중복될 수 있으며(<code>202701</code>이 2회 등장), 고유한 <code>대출번호</code>가 기본 키가 되어야 합니다.</li>
+<li><strong>ㄷ (O)</strong>: <code>[도서대출 테이블]</code>의 <code>학번</code>이 <code>[학생 테이블]</code>의 기본 키(<code>학번</code>)를 참조하여 두 테이블을 연결하므로 <strong>외래 키(Foreign Key)</strong> 입니다.</li>
 </ul>
 </li>
 </ul>
 <hr>
 <p><strong>22. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 데이터베이스 트랜잭션 복구(Undo/Redo)와 체크포인트</li>
+<li><strong>핵심 개념</strong>: 쇼핑몰 주문 트랜잭션의 Undo/Redo 및 체크포인트</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><code>T1</code>: 체크포인트(15:10) 이전에 Commit 완료 → 이미 디스크에 안전하게 저장되어 있으므로 <strong>Redo 대상에서 제외</strong>되며, 최종 잔액에 반영(<code>+20,000원</code>)됩니다.</li>
-<li><code>T2</code>, <code>T4</code>: 정전 시점(15:20)까지 미확정 상태 → 원자성을 지키기 위해 <strong>Undo(취소 복구)</strong> 되어 반영되지 않습니다.</li>
-<li><code>T3</code>: 체크포인트 이후에 Commit 완료 → 정전 시 디스크 저장이 보장되지 않았을 수 있으므로 <strong>Redo(재실행 복구) 대상</strong>이 되며 최종 잔액에 반영(<code>+45,000원</code>)됩니다.</li>
-<li>따라서 최종 잔액은 <code>100,000 + 20,000 + 45,000 = 165,000원</code>이고, Redo 대상은 <code>T3</code>입니다.</li>
+<li><code>T1</code>: 체크포인트(14:20) 이전에 Commit 완료 → 이미 디스크에 안전하게 저장되어 있으므로 <strong>Redo 대상에서 제외</strong>되며, 최종 결과에 반영됩니다.</li>
+<li><code>T2</code>, <code>T4</code>: 정전 시점(14:30)까지 미확정 상태 → 원자성에 따라 <strong>Undo(취소 복구)</strong> 되어 반영되지 않습니다.</li>
+<li><code>T3</code>: 체크포인트 이후에 Commit 완료 → <strong>Redo(재실행 복구) 대상</strong>이 되며 최종 결과에 반영됩니다.</li>
+<li>따라서 최종 상품 재고는 <code>50 - 3 - 4 = 43개</code>, 최종 고객 포인트는 <code>10,000 - 2,000 - 1,500 = 6,500P</code>, Redo 대상은 <code>T3</code>입니다.</li>
 </ul>
 </li>
 </ul>
@@ -608,12 +591,12 @@ hr {
 <hr>
 <p><strong>24. [정답] ②</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: First-party vs Third-party 쿠키 영문 독해</li>
+<li><strong>핵심 개념</strong>: Web Cache와 Browser History 영문 독해</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>ㄱ (O)</strong>: First-party 쿠키는 사용자 기기에 저장되어 로그인 상태나 장바구니를 기억합니다.</li>
-<li><strong>ㄴ (X)</strong>: 지문 첫 문장과 설명에 따르면 쿠키(First-party, Third-party 모두)는 광고 회사 서버가 아니라 <strong>사용자 기기(<code>on your device</code>)</strong> 에 저장됩니다.</li>
-<li><strong>ㄷ (X)</strong>: Third-party 쿠키를 차단하더라도 First-party 쿠키는 유지할 수 있으므로 언어 설정 기억 기능에는 문제가 없습니다.</li>
-<li><strong>ㄹ (O)</strong>: Third-party 쿠키는 외부 도메인이 생성하며 여러 웹사이트에 걸친 탐색 기록을 추적할 수 있습니다.</li>
+<li><strong>ㄱ (O)</strong>: 웹 캐시는 이미지 등 정적 리소스를 로컬 기기에 임시 저장하여 다음 방문 시 로딩 속도를 높입니다.</li>
+<li><strong>ㄴ (X)</strong>: 이미지·스타일시트를 저장하는 것은 브라우저 히스토리가 아니라 <strong>웹 캐시(web cache)</strong> 입니다. 히스토리는 방문한 URL 목록만 기록합니다.</li>
+<li><strong>ㄷ (X)</strong>: 브라우저 히스토리를 삭제해도 캐시된 리소스는 삭제되지 않는다(<code>without deleting cached page resources</code>)고 명시되어 있습니다.</li>
+<li><strong>ㄹ (O)</strong>: 웹 캐시를 비우면 브라우저는 다음 방문 시 서버로부터 최신 파일을 새로 받아옵니다.</li>
 </ul>
 </li>
 </ul>
@@ -708,10 +691,10 @@ hr {
 <hr>
 <p><strong>31. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 활동 선택 문제(탐욕 알고리즘)와 구간 스케줄링</li>
+<li><strong>핵심 개념</strong>: 냉각·정비 간격이 포함된 작업 스케줄링</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><strong>1개 실습실 최대 배정</strong>: 종료 시간이 빠른 순으로 겹치지 않게 고르면 <code>A(09~12) → C(12~14) → E(14~17)</code>로 <strong>최대 3개</strong>입니다.</li>
-<li><strong>전체 수용 최소 실습실</strong>: <code>11~12시</code> 구간에 <code>A, B, D</code>가 동시에 겹치고 <code>12~13시</code> 구간에 <code>B, C, D</code>가 동시에 겹치므로 최소 3개의 실습실이 필요합니다. 실제로 제1실(<code>A, C, E</code>), 제2실(<code>B, F</code>), 제3실(<code>D</code>)로 <strong>최소 3개</strong>에 모두 배정 가능합니다.</li>
+<li><strong>서버 1대 최대 배정</strong>: 종료 시간이 빠른 순으로 1시간 간격(<code>종료 시각 + 1 ≤ 다음 시작 시각</code>)을 지켜 고르면 <code>A(09~11) → C(12~14) → E(15~17)</code>로 <strong>최대 3개</strong>입니다.</li>
+<li><strong>최소 서버 수</strong>: 제1서버에 <code>A(09~11), C(12~14), E(15~17)</code>를 배정하고, 제2서버에 <code>B(10~12), D(13~15), F(16~18)</code>를 배정하면 모든 작업이 1시간 간격을 만족하며 <strong>최소 2대</strong>로 처리됩니다.</li>
 </ul>
 </li>
 </ul>
@@ -734,23 +717,21 @@ hr {
 </li>
 </ul>
 <hr>
-<p><strong>33. [정답] ④</strong></p>
+<p><strong>33. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 맨해튼 거리(격자 거리) 연립 조건 만족 좌표 탐색</li>
+<li><strong>핵심 개념</strong>: <code>5×5</code> 격자 맨해튼 거리 연립 조건 탐색</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><code>AP2(4, 4)</code>까지의 거리가 <code>2</code>인 칸은 <code>(2, 4), (3, 3), (4, 2)</code>입니다.</li>
-<li>이 중 <code>AP1(1, 3)</code>까지의 거리 <code>|x - 1| + |y - 3| = 2</code>를 만족하는 칸을 확인하면:<ul>
-<li><code>(2, 4)</code>: <code>1 + 1 = 2</code> (만족)</li>
-<li><code>(3, 3)</code>: <code>2 + 0 = 2</code> (만족)</li>
-<li><code>(4, 2)</code>: <code>3 + 1 = 4</code> (제외)</li>
+<li><code>AP2(5, 4)</code>까지의 거리 <code>|x - 5| + |y - 4| = 2</code>를 만족하는 후보 좌표 중 <code>AP1(1, 5)</code>까지의 거리 <code>|x - 1| + |y - 5| = 3</code>을 동시에 만족하는 좌표를 찾습니다.<ul>
+<li><code>(3, 4)</code>: <code>AP1</code> 거리 <code>|3-1| + |4-5| = 2 + 1 = 3</code> (만족), <code>AP2</code> 거리 <code>|3-5| + |4-4| = 2</code> (만족)</li>
+<li><code>(4, 3)</code>: <code>AP1</code> 거리 <code>3 + 2 = 5</code> (제외), <code>(4, 5)</code>: <code>AP1</code> 거리 <code>3 + 0 = 3</code> (만족)</li>
 </ul>
 </li>
-<li>마지막으로 <code>AP3(3, 1)</code>까지의 거리 <code>|x - 3| + |y - 1| = 2</code>를 확인하면:<ul>
-<li><code>(2, 4)</code>: <code>1 + 3 = 4</code> (제외)</li>
-<li><code>(3, 3)</code>: <code>0 + 2 = 2</code> (<strong>유일하게 모두 만족</strong>)</li>
+<li>마지막으로 <code>AP3(2, 1)</code>까지의 거리 <code>|x - 2| + |y - 1| = 4</code>를 확인하면:<ul>
+<li><code>(4, 5)</code>: <code>2 + 4 = 6</code> (제외)</li>
+<li><code>(3, 4)</code>: <code>1 + 3 = 4</code> (<strong>유일하게 모두 만족</strong>)</li>
 </ul>
 </li>
-<li>따라서 스마트폰의 좌표는 <code>(3, 3)</code>입니다.</li>
+<li>따라서 로봇의 위치는 <code>(3, 4)</code>입니다.</li>
 </ul>
 </li>
 </ul>
@@ -758,40 +739,35 @@ hr {
 <h2>Part 5. 수리 추론 · 공간 지각 · 논리 퍼즐 (34번 ~ 42번)</h2>
 <p><strong>34. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 연속된 홀수의 합(<code>n²</code>)을 활용한 구간 합</li>
+<li><strong>핵심 개념</strong>: 연속된 홀수의 합(<code>n²</code>) 역산</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><code>1 + 3 + 5 + ... + 59</code>는 1부터 59까지 총 <strong>30개</strong>의 홀수 합이므로 <code>30² = 900</code>입니다.</li>
-<li>구하려는 식은 앞부분 <code>1 + 3 + ... + 13</code>(총 <strong>7개</strong>, <code>7² = 49</code>)이 빠져 있으므로, <code>900 - 49 = 851</code>입니다.</li>
+<li><code>1</code>부터 <code>11</code>까지의 홀수 합(<code>1 + 3 + 5 + 7 + 9 + 11</code>)은 6개의 합이므로 <code>6² = 36</code>입니다.</li>
+<li><code>13</code>부터 <code>k</code>까지의 합이 <code>448</code>이므로, <code>1</code>부터 <code>k</code>까지의 총합은 <code>448 + 36 = 484</code>입니다.</li>
+<li><code>484 = 22²</code>이므로 <code>k</code>는 22번째 홀수입니다. 따라서 <code>k = 2 × 22 - 1 = 43</code>입니다.</li>
 </ul>
 </li>
 </ul>
 <hr>
 <p><strong>35. [정답] ②</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 두 등차수열의 공통항 수열</li>
+<li><strong>핵심 개념</strong>: 두 등차수열의 공통항과 배수 조건 소거</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>두 수열을 나열해 첫 번째 공통항을 찾습니다.<ul>
-<li>수열 1: <code>2, 7, 12, 17, 22, 27, 32, ...</code></li>
-<li>수열 2: <code>4, 11, 18, 25, 32, ...</code></li>
-</ul>
-</li>
-<li>첫 번째 공통항은 <code>32</code>이며, 두 수열의 공차 <code>5</code>와 <code>7</code>의 최소공배수인 <code>35</code>씩 커집니다.</li>
-<li>200 이하의 공통항: <code>32, 67, 102, 137, 172</code> (다음 항 <code>207</code>은 200 초과) → 모두 <strong>5개</strong>입니다.</li>
+<li>첫 번째 공통항은 <code>32</code>이고, 공통 공차는 <code>5</code>와 <code>7</code>의 최소공배수인 <code>35</code>입니다.</li>
+<li>300 이하의 공통항을 나열하면 <code>32, 67, 102, 137, 172, 207, 242, 277</code>로 총 8개입니다.</li>
+<li>이 중 <strong>3의 배수</strong>(<code>102</code>, <code>207</code>) 2개를 제외하면 남는 수는 <strong>6개</strong>입니다.</li>
 </ul>
 </li>
 </ul>
 <hr>
-<p><strong>36. [정답] ④</strong></p>
+<p><strong>36. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 계단 오르기 점화식 (트리보나치 수열)</li>
+<li><strong>핵심 개념</strong>: 금지 칸 제약이 있는 계단 오르기 점화식</li>
 <li><strong>상세 해설</strong>:<ul>
-<li><code>n</code>번째 칸에 오르는 방법의 수를 <code>a(n)</code>이라 하면 <code>a(n) = a(n-1) + a(n-2) + a(n-3)</code>이 성립합니다.</li>
-<li><code>a(1) = 1</code>, <code>a(2) = 2</code>, <code>a(3) = 4</code></li>
-<li><code>a(4) = 1 + 2 + 4 = 7</code></li>
-<li><code>a(5) = 2 + 4 + 7 = 13</code></li>
-<li><code>a(6) = 4 + 7 + 13 = 24</code></li>
-<li><code>a(7) = 7 + 13 + 24 = 44</code></li>
-<li><code>a(8) = 13 + 24 + 44 = 81</code>가지입니다.</li>
+<li><code>k</code>번 칸에 도달하는 방법의 수를 <code>a(k)</code>라 하면 <code>a(0) = 1</code>, <code>a(1) = 1</code>, <code>a(2) = 2</code>, <code>a(3) = 1 + 1 + 2 = 4</code>입니다.</li>
+<li><strong>4번 칸은 밟을 수 없으므로 <code>a(4) = 0</code></strong> 으로 둡니다.</li>
+<li><code>a(5) = a(4) + a(3) + a(2) = 0 + 4 + 2 = 6</code></li>
+<li><code>a(6) = a(5) + a(4) + a(3) = 6 + 0 + 4 = 10</code></li>
+<li><code>a(7) = a(6) + a(5) + a(4) = 10 + 6 + 0 = 16</code>가지입니다.</li>
 </ul>
 </li>
 </ul>
@@ -809,12 +785,12 @@ hr {
 <hr>
 <p><strong>38. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 도형 내 통로 넓이 문제 (평행이동 아이디어)</li>
+<li><strong>핵심 개념</strong>: 액자 테두리 넓이 (이차방정식 활용)</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>통로를 변 쪽으로 밀어붙이면 재배 구역은 가로 <code>(22 - x)m</code>, 세로 <code>(14 - 2x)m</code>인 하나의 직사각형이 됩니다.</li>
-<li><code>(22 - x)(14 - 2x) = 200</code>을 전개하여 정리하면 <code>2x² - 58x + 308 = 200</code>, <code>x² - 29x + 54 = 0</code>, <code>(x - 2)(x - 27) = 0</code>입니다.</li>
-<li><code>x &lt; 7</code>이어야 하므로 통로의 폭은 <code>x = 2m</code>입니다.</li>
-<li>관리 통로 전체의 넓이 = 전체 부지 넓이 - 재배 구역 넓이 = <code>(22 × 14) - 200 = 308 - 200 = 108m²</code>입니다.</li>
+<li>사진의 사방으로 폭 <code>x cm</code>씩 테두리가 추가되므로, 액자 전체의 가로는 <code>(16 + 2x)cm</code>, 세로는 <code>(10 + 2x)cm</code>가 됩니다.</li>
+<li><code>(16 + 2x)(10 + 2x) = 280</code>을 정리하면 <code>(8 + x)(5 + x) = 70</code>, <code>x² + 13x - 30 = 0</code>, <code>(x - 2)(x + 15) = 0</code>입니다.</li>
+<li><code>x &gt; 0</code>이므로 테두리의 폭은 <code>x = 2cm</code>입니다.</li>
+<li>테두리 부분만의 넓이 = 액자 전체 넓이 - 사진 넓이 = <code>280 - (16 × 10) = 280 - 160 = 120cm²</code>입니다.</li>
 </ul>
 </li>
 </ul>
@@ -835,12 +811,12 @@ hr {
 <hr>
 <p><strong>40. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 소금물 농도 방정식</li>
+<li><strong>핵심 개념</strong>: 두 소금물 혼합 후 물 추가 농도 방정식</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>처음 소금의 양 = <code>250 × (10 / 100) = 25g</code>입니다.</li>
-<li>물 <code>x g</code>을 증발시키고 소금 <code>15g</code>을 더 넣었으므로, 나중 소금의 양은 <code>25 + 15 = 40g</code>이고, 나중 소금물의 양은 <code>250 - x + 15 = (265 - x)g</code>입니다.</li>
-<li>농도가 <code>20%</code>이므로 <code>40 / (265 - x) = 20 / 100 = 1 / 5</code>입니다.</li>
-<li>따라서 <code>265 - x = 200</code>, 증발시킨 물의 양은 <code>x = 65g</code>입니다.</li>
+<li>두 소금물에 들어있는 총 소금의 양 = <code>(200 × 6 / 100) + (100 × 15 / 100) = 12 + 15 = 27g</code>입니다.</li>
+<li>물 <code>x g</code>을 더 부은 후 전체 소금물의 양은 <code>(200 + 100 + x) = (300 + x)g</code>입니다.</li>
+<li>농도가 <code>5%</code>이므로 <code>27 / (300 + x) = 5 / 100 = 1 / 20</code>입니다.</li>
+<li>따라서 <code>300 + x = 540</code>, 더 부은 물의 양은 <code>x = 240g</code>입니다.</li>
 </ul>
 </li>
 </ul>
@@ -857,13 +833,12 @@ hr {
 <hr>
 <p><strong>42. [정답] ③</strong></p>
 <ul>
-<li><strong>핵심 개념</strong>: 조건 소거를 통한 위치 배치 추리</li>
+<li><strong>핵심 개념</strong>: 모순 진술(1명 거짓)을 활용한 논리 추리</li>
 <li><strong>상세 해설</strong>:<ul>
-<li>조건 <strong>ㄹ</strong>에 의해 <code>3번 칸(2층) = 영어</code>가 확정됩니다.</li>
-<li>조건 <strong>ㄷ</strong>에 의해 수학과 과학은 같은 층(3층 또는 1층)에 있어야 하는데, 조건 <strong>ㄴ</strong>에서 정보가 과학보다 위층이므로 과학은 맨 위층(3층)에 있을 수 없습니다. 따라서 <strong>수학과 과학은 1층(4, 5번 칸)</strong> 에 배치됩니다.</li>
-<li>조건 <strong>ㄱ</strong>에서 미술은 짝수 칸(2번 또는 4번)인데 1층(4, 5번)은 이미 수학·과학이 차지했으므로, <strong>미술은 <code>2번 칸(3층)</code></strong> 에 확정됩니다.</li>
-<li>남은 <strong><code>1번 칸(3층)</code>은 정보</strong>가 됩니다.</li>
-<li>따라서 반드시 참인 것은 ③번 <strong>미술 교과서는 2번 칸(3층)에 꽂혀 있다</strong>입니다.</li>
+<li><strong>A</strong>(&quot;나는 1번&quot;)와 <strong>E</strong>(&quot;A는 1번이 아니다&quot;)는 서로 모순이므로, <strong>둘 중 한 명만 거짓말</strong>을 하고 있습니다.</li>
+<li>문제 조건상 단 1명만 거짓말을 하므로, 나머지 <strong>B, C, D의 진술은 모두 참</strong>이 됩니다.</li>
+<li>따라서 <strong><code>B = 4번</code></strong>, <strong><code>E = 5번</code></strong> 이 확정되며, <code>C</code>와 <code>D</code>는 이웃해 <code>(C, D)</code> 순서로 앉습니다.</li>
+<li>가능한 배치는 <code>(A, C, D, B, E)</code>(E가 거짓) 또는 <code>(C, D, A, B, E)</code>(A가 거짓) 두 가지이지만, 두 경우 모두에서 <strong>③번 B는 4번 자리에 앉았다</strong>가 반드시 참입니다.</li>
 </ul>
 </li>
 </ul>
